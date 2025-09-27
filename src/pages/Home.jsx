@@ -9,8 +9,11 @@ import { useAppState } from "../AppStateContext";
 import { Link } from "react-router";
 import Icon from "../components/atoms/Icon";
 
-import Articles from "../data/articles";
 import ArticleSection from "../components/molecules/Article";
+import Card from "../components/molecules/Card";
+
+import ArticlesData from "../data/Articles";
+import CardsData from "../data/Cards";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -63,8 +66,18 @@ function Page() {
           <Crosshatch />
         </Section>
 
-        {Articles.map((article) => (
-          <ArticleSection key={article.title} article={article} />
+        <Section className="gap-xl">
+          <Row>
+            {CardsData.map((item) => (
+              <Col key={item.title}>
+                <Card data={item} />
+              </Col>
+            ))}
+          </Row>
+        </Section>
+
+        {ArticlesData.map((article) => (
+          <ArticleSection key={article.title} data={article} />
         ))}
 
         <Section className="home-awards">

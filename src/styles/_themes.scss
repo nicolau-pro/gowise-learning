@@ -1,0 +1,19 @@
+@use "colors";
+
+.theme- {
+  &primary {
+    color: colors.$primary-highlight;
+  }
+  &secondary {
+    color: colors.$secondary;
+  }
+  &tertiary {
+    color: colors.$tertiary;
+  }
+  &light {
+    color: white;
+  }
+  &dark {
+    color: colors.$neutral;
+  }
+}

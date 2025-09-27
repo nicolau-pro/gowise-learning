@@ -25,12 +25,16 @@ footer {
     width: 100%;
     height: fit-content;
 
+    &.gap-xl {
+      margin-top: vars.$gap-xl;
+    }
+
     div.row {
       display: flex;
-      gap: 3em;
+      gap: vars.$gap-normal;
       width: 100%;
-      max-width: 1400px;
-      padding: 2em;
+      max-width: vars.$content-width;
+      padding: vars.$gap-small;
 
       &.nogap {
         gap: 0;

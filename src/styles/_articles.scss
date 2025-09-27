@@ -2,23 +2,13 @@
 @use "variables" as vars;
 
 section.article {
-  padding-top: vars.$gap-xl;
+  padding: vars.$gap-xl;
 
   article {
-    &.theme- {
-      &primary {
-        color: colors.$primary-highlight;
-      }
-      &secondary {
-        color: colors.$secondary;
-      }
-      &tertiary {
-        color: colors.$tertiary;
-      }
-    }
+    max-width: vars.$content-width - 2 * vars.$gap-small;
 
     > .row {
-      $border-radius: 1.5em;
+      $border-radius: vars.$radius-large;
       background-color: color-mix(in srgb, currentColor 5%, transparent);
       border-radius: $border-radius;
       overflow: hidden;
@@ -30,7 +20,7 @@ section.article {
         content: "";
         position: absolute;
         inset: 0 auto 0 0;
-        border-radius: calc($border-radius + $border-width);
+        border-radius: $border-radius + $border-width;
         padding: $border-width;
         background: linear-gradient(
           to top right,

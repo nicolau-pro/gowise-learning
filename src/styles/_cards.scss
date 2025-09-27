@@ -1,0 +1,116 @@
+@use "colors";
+@use "variables" as vars;
+
+article.card {
+  border-radius: vars.$radius-large;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  .heading {
+    height: 60px;
+    background-color: color-mix(in srgb, white 20%, transparent);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    h2 {
+      text-align: center;
+      height: 100%;
+      font-family: "optima-nova-lt-pro-cond", sans-serif;
+    }
+
+    hr {
+      width: 100%;
+      border: none;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        white 50%,
+        transparent 100%
+      );
+      margin: 0;
+    }
+  }
+
+  .content {
+    background: linear-gradient(
+      to top,
+      white 0%,
+      color-mix(in srgb, white 80%, transparent) 40%
+    );
+    margin: vars.$gap-small;
+    margin-top: 330px;
+    border-radius: vars.$radius-large - 0.75 * vars.$gap-small;
+    padding: vars.$gap-small vars.$gap-small * 1.5;
+
+    .details {
+      font-size: 22px;
+      line-height: 36px;
+      margin-bottom: 1em;
+      text-align: center;
+      // color: color-mix(in srgb, colors.$neutral 80%, white);
+    }
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    a[role="button"] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      padding: 0 30px;
+      border-radius: 99px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: white;
+      background-color: colors.$neutral;
+      margin: auto;
+      transition: filter 0.1s ease-out;
+
+      &.theme-primary {
+        background: linear-gradient(
+          to bottom,
+          colors.$primary_glow 0%,
+          colors.$primary_highlight 73%,
+          colors.$primary 100%
+        );
+      }
+
+      &.theme-secondary {
+        background: linear-gradient(
+          to bottom,
+          colors.$secondary_highlight 0%,
+          colors.$secondary 73%,
+          colors.$secondary_dark 100%
+        );
+      }
+
+      &.theme-tertiary {
+        background: linear-gradient(
+          to bottom,
+          colors.$tertiary_glow 0%,
+          colors.$tertiary 73%,
+          colors.$tertiary_dark 100%
+        );
+      }
+
+      &:hover,
+      &:focus-visible {
+        filter: brightness(1.1);
+      }
+    }
+  }
+}

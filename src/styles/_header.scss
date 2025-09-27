@@ -20,7 +20,7 @@ header {
     position: relative;
     flex: 1;
     height: 100%;
-    max-width: min(1400px, 100vw);
+    max-width: min(vars.$content-width, 100vw);
     padding: 0 2em;
 
     &:before,

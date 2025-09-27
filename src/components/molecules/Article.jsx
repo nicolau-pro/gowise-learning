@@ -1,30 +1,26 @@
 import React from "react";
-
 import Section from "../layout/Section";
 import Row from "../layout/Row";
 import Col from "../layout/Col";
 
-export default function ArticleSection(props) {
+export default function ArticleSection({ data }) {
+  const { title, contentSide, theme, paragraphs, image, imageAlt } = data;
+
   return (
-    <Section key={props.article.title} className="article">
-      <article
-        className={`content-side-${props.article.contentSide} theme-${props.article.theme}`}
-      >
+    <Section key={title} className="article">
+      <article className={`content-side-${contentSide} theme-${theme}`}>
         <Row nogap nopadding>
           <Col className="content-wrapper">
             <div className="content">
-              <h2>{props.article.title}</h2>
+              <h2>{title}</h2>
               <hr />
-              {props.article.paragraphs.map((paragraph, i) => (
+              {paragraphs.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
           </Col>
           <Col className="image-wrapper">
-            <img
-              src={`/media/${props.article.image}`}
-              alt={props.article.imageAlt}
-            />
+            <img src={`/media/${image}`} alt={imageAlt} />
           </Col>
         </Row>
       </article>

@@ -2,6 +2,7 @@
 @use "sass:color";
 
 @use "colors";
+@use "themes";
 @use "general";
 @use "spacing";
 @use "typography";
@@ -15,7 +16,8 @@
 @use "page-themes";
 @use "details";
 @use "sections";
-@use "articles";
 
+@use "articles";
+@use "cards";
 @use "video-crossfade";
 @use "misc";
