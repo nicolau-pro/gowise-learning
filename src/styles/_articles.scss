@@ -38,6 +38,7 @@ section.article {
         );
         aspect-ratio: 1/1;
         height: calc(100% - 2 * $border-width);
+        width: 50%;
         -webkit-mask: linear-gradient(#fff 0 0) content-box,
           linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
