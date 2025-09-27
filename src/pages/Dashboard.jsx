@@ -8,11 +8,6 @@ function Dashboard() {
 
   return (
     <>
-      {/* <div>
-        <span>{HeaderReady ? "HEADER" : "header"} </span>
-        <span>{OutletReady ? "OUTLET" : "outlet"} </span>
-        <span>{FooterReady ? "FOOTER" : "footer"} </span>
-      </div> */}
       <Header />
       <Outlet />
       <Footer />

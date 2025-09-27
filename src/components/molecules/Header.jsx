@@ -9,9 +9,6 @@ const Header = () => {
 
   const Links = [
     { path: "", name: "Home", icon: "home" },
-    { path: "career", name: "Career", icon: "timeline" },
-    { path: "projects", name: "Projects", icon: "view_in_ar" },
-    { path: "awards", name: "Awards", icon: "emoji_events" },
     { path: "contact", name: "Contact", icon: "account_circle" },
   ];
 
