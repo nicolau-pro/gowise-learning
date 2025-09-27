@@ -20,7 +20,7 @@ function Page() {
 
   const Welcome = {
     h1: "Welcome",
-    h2: "I'm Radu Nicolau",
+    h2: "To GoWise Learning",
     h3: "Here's a brief history of my work in UK, some of the most successful projects and campaigns with the awards they brought alongside the testimonials from the CEOs, team leads and brand/product owners.",
   };
 

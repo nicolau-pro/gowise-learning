@@ -1,5 +1,5 @@
 const MetaData = {
-  website: "GoWise Learning ",
+  website: "GoWise Learning",
   domain: "gowiselearning.co.uk",
   fb_app_id: "966242223397117", // ???
 };

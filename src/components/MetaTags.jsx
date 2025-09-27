@@ -7,7 +7,7 @@ function MetaTags(props) {
 
   const social = {
     author: website,
-    description: `${website.toUpperCase()} ${breadcrumbs} ${description}`,
+    description: `${website} ${breadcrumbs} ${description}`,
     article: section,
     image: image,
     imageAlt: `${website.toUpperCase()} - ${section}`,
