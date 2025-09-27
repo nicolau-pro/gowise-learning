@@ -10,6 +10,7 @@ import { Link } from "react-router";
 import Icon from "../components/atoms/Icon";
 
 import Articles from "../data/articles";
+import ArticleSection from "../components/molecules/Article";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -63,26 +64,7 @@ function Page() {
         </Section>
 
         {Articles.map((article) => (
-          <Section key={article.title} className="article">
-            <article
-              className={`content-side-${article.contentSide} theme-${article.theme}`}
-            >
-              <Row nogap nopadding>
-                <Col className="content-wrapper">
-                  <div className="content">
-                    <h2>{article.title}</h2>
-                    <hr />
-                    {article.paragraphs.map((paragraph, i) => (
-                      <p key={i}>{paragraph}</p>
-                    ))}
-                  </div>
-                </Col>
-                <Col className="image-wrapper">
-                  <img src={`/media/${article.image}`} alt={article.imageAlt} />
-                </Col>
-              </Row>
-            </article>
-          </Section>
+          <ArticleSection key={article.title} article={article} />
         ))}
 
         <Section className="home-awards">
