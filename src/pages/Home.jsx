@@ -76,7 +76,7 @@ function Page() {
                   ))}
                 </Col>
                 <Col className="image">
-                  <img src={`/media/${article.image}`} alt={article.alt} />
+                  <img src={`/media/${article.image}`} alt={article.imageAlt} />
                 </Col>
               </Row>
             </article>
