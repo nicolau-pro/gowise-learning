@@ -127,65 +127,7 @@ $brands: (
   }
 }
 
-@mixin section-career($brand) {
-  $color-light: map.get($brand-primary-color, $brand);
-  $color-dark: map.get($brand-secondary-color, $brand);
-  $color-text: map.get($brand-text-color, $brand);
-
-  .section-career {
-    position: relative;
-
-    &.#{$brand} {
-      color: $color-text;
-      @include mixins.fixed-background($color-light, $color-dark);
-
-      &::before {
-        @include mixins.crosshatch-transparent-gradient(
-          $color-light,
-          $color-dark,
-          vars.$crosshatch-size
-        );
-      }
-
-      &-jobs {
-        background-position: center;
-        background-size: cover;
-        background-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.7) 90%,
-            rgba(0, 0, 0, 0.8) 100%
-          ),
-          url("/social/#{$brand}.jpg");
-
-        a {
-          color: $color-text;
-        }
-      }
-    }
-  }
-}
-
-@mixin award-button($brand) {
-  $color-background: map.get($brand-button-color, $brand);
-  $color-text: map.get($brand-button-text, $brand);
-  $color-outline: map.get($brand-button-outline, $brand);
-
-  .button-award {
-    &.#{$brand} {
-      background-color: $color-background;
-      color: $color-text;
-
-      &.button-outline {
-        color: $color-outline;
-      }
-    }
-  }
-}
-
 @each $brand in $brands {
   @include page-theme($brand);
   @include crosshatch-theme($brand);
-  @include section-career($brand);
-  @include award-button($brand);
 }

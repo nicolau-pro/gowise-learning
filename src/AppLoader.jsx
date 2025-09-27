@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-import Awards from "./pages/awards/Awards";
 import Contact from "./pages/contact/Contact";
 
 import { useAppState } from "./AppStateContext";
@@ -22,9 +21,6 @@ function AppLoader() {
       <Routes>
         <Route path={rootPath} element={<Dashboard />}>
           <Route index element={<Home />} />
-          <Route path="awards">
-            <Route index element={<Awards />} />
-          </Route>
           <Route path="contact">
             <Route index element={<Contact />} />
           </Route>

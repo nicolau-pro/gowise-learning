@@ -2,32 +2,6 @@
 @use "variables" as vars;
 
 section {
-  &.awards {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/social/awards.jpg");
-
-    .crosshatch {
-      @include mixins.crosshatch(black);
-    }
-  }
-
-  &.career {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/social/career.jpg");
-  }
-
-  &.projects {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/social/projects.jpg");
-
-    .crosshatch {
-      @include mixins.crosshatch(black);
-    }
-  }
-
   &.contact {
     background-position: center;
     background-size: cover;
@@ -70,36 +44,6 @@ section {
     }
     .crosshatch {
       @include mixins.crosshatch(black);
-    }
-  }
-
-  &.home-career {
-    background-position: center;
-    background-size: cover;
-    background-image: $section-gradient, url("/social/career.jpg");
-
-    .crosshatch {
-      @include mixins.crosshatch(white);
-    }
-  }
-
-  &.home-projects {
-    background-position: center;
-    background-size: cover;
-    background-image: $section-gradient, url("/social/projects.jpg");
-
-    .crosshatch {
-      @include mixins.crosshatch(white);
-    }
-  }
-
-  &.home-awards {
-    background-position: center;
-    background-size: cover;
-    background-image: $section-gradient, url("/social/awards.jpg");
-
-    .crosshatch {
-      @include mixins.crosshatch(white);
     }
   }
 }

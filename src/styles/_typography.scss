@@ -1,20 +1,70 @@
 @use "sass:math";
 
-@font-face {
-  font-family: "Lexend";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lexend/v24/wlpwgwvFAVdoq2_v-6QU.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
-}
+@import url("https://use.typekit.net/wiq3geo.css");
+
+// Almaq Refined
+// font-family: "almaq-refined", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Basic Sans Regular
+// font-family: "basic-sans", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Basic Sans Regular It
+// font-family: "basic-sans", sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// Basic Sans Bold
+// font-family: "basic-sans", sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// Basic Sans Bold It
+// font-family: "basic-sans", sans-serif;
+// font-weight: 700;
+// font-style: italic;
+
+// Optima nova LT Pro Regular
+// font-family: "optima-nova-lt-pro", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Optima nova LT Pro Italic
+// font-family: "optima-nova-lt-pro", sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// Optima nova LT Pro Bold
+// font-family: "optima-nova-lt-pro", sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// Optima nova LT Pro Bold Italic
+// font-family: "optima-nova-lt-pro", sans-serif;
+// font-weight: 700;
+// font-style: italic;
+
+// Optima nova LT Pro Titling Initials
+// font-family: "optima-nova-lt-pro-titling", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Optima nova LT Pro Condensed
+// font-family: "optima-nova-lt-pro-cond", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Optima nova LT Pro Bold Condensed
+// font-family: "optima-nova-lt-pro-cond", sans-serif;
+// font-weight: 700;
+// font-style: normal;
 
 html,
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: "basic-sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -28,6 +78,17 @@ h3,
 h4,
 h5,
 h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "optima-nova-lt-pro", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -48,6 +109,7 @@ h1,
   @include heading-font(1);
 
   &.hero {
+    font-family: "almaq-refined", sans-serif;
     font-size: 100px;
 
     @media (max-width: 767px) {
