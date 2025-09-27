@@ -68,14 +68,16 @@ function Page() {
               className={`content-side-${article.contentSide} theme-${article.theme}`}
             >
               <Row nogap nopadding>
-                <Col className="content">
-                  <h2>{article.title}</h2>
-                  <hr />
-                  {article.paragraphs.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
-                  ))}
+                <Col className="content-wrapper">
+                  <div className="content">
+                    <h2>{article.title}</h2>
+                    <hr />
+                    {article.paragraphs.map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
+                  </div>
                 </Col>
-                <Col className="image">
+                <Col className="image-wrapper">
                   <img src={`/media/${article.image}`} alt={article.imageAlt} />
                 </Col>
               </Row>

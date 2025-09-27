@@ -46,9 +46,11 @@ section.article {
         z-index: -1;
       }
 
-      .content {
-        padding: vars.$gap-large;
-        font-size: 21px;
+      .content-wrapper {
+        .content {
+          padding: vars.$gap-large;
+          font-size: 21px;
+        }
 
         h2 {
           font-size: 2em;
@@ -67,18 +69,17 @@ section.article {
 
         p {
           color: color-mix(in srgb, colors.$neutral 60%, white);
-          line-height: 1.5em;
+          line-height: 1.6em;
           font-weight: 300;
-          margin: 0;
-          padding-bottom: 1em;
+          letter-spacing: 0.015em;
 
-          &:last-of-type {
-            padding-bottom: 0;
+          &:not(:last-of-type) {
+            padding-bottom: 1em;
           }
         }
       }
 
-      .image {
+      .image-wrapper {
         position: relative;
         overflow: hidden;
 
