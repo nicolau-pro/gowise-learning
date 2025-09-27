@@ -9,6 +9,8 @@ import { useAppState } from "../AppStateContext";
 import { Link } from "react-router";
 import Icon from "../components/atoms/Icon";
 
+import Articles from "../data/articles";
+
 function Page() {
   const { setOutletReady } = useAppState();
 
@@ -60,57 +62,26 @@ function Page() {
           <Crosshatch />
         </Section>
 
-        <Section className="home-career">
-          <Row className="pt-6 pb-8 blurred-gradient">
-            <Col className="span-4">
-              <h2 className="hero">Career</h2>
-              <h3 className="mt-1 text-thin">
-                Since 2012, I've built a successful UK career, leading
-                award-winning projects in AR, mobile, and web, consistently
-                delivering innovative, high-impact solutions through strong
-                technical skills and creative problem-solving.
-              </h3>
-              <Link
-                to="/career"
-                role="button"
-                className="mt-2 button-read-more button-outline"
-              >
-                <h2 className="h3 text-thin">
-                  <span>CAREER </span>
-                  <Icon>arrow_forward_ios</Icon>
-                </h2>
-              </Link>
-            </Col>
-            <Col />
-          </Row>
-        </Section>
-
-        <Section className="home-projects">
-          <Crosshatch />
-          <Row className="pt-6 pb-8 blurred-gradient">
-            <Col className="span-4">
-              <h2 className="hero">Projects</h2>
-              <h3 className="mt-1 text-thin">
-                Among my most important award-winning projects are interactive
-                AR campaigns for Pepsi Max and Covergirl, the high-performance
-                Lending Stream platform for Gain Credit, and building Blippar’s
-                global developer portal, including its comprehensive
-                documentation and demos.
-              </h3>
-              <Link
-                to="/projects"
-                role="button"
-                className="mt-2 button-read-more button-outline"
-              >
-                <h2 className="h3 text-thin">
-                  <span>PROJECTS </span>
-                  <Icon>arrow_forward_ios</Icon>
-                </h2>
-              </Link>
-            </Col>
-            <Col />
-          </Row>
-        </Section>
+        {Articles.map((article) => (
+          <Section key={article.title} className="article">
+            <article
+              className={`content-side-${article.contentSide} theme-${article.theme}`}
+            >
+              <Row nogap nopadding>
+                <Col className="content">
+                  <h2>{article.title}</h2>
+                  <hr />
+                  {article.paragraphs.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </Col>
+                <Col className="image">
+                  <img src={`/media/${article.image}`} alt={article.alt} />
+                </Col>
+              </Row>
+            </article>
+          </Section>
+        ))}
 
         <Section className="home-awards">
           <Crosshatch />

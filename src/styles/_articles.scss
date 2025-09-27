@@ -1,0 +1,106 @@
+@use "colors";
+@use "variables" as vars;
+
+section.article {
+  padding-top: vars.$gap-xl;
+
+  article {
+    &.theme- {
+      &primary {
+        color: colors.$primary-highlight;
+      }
+      &secondary {
+        color: colors.$secondary;
+      }
+      &tertiary {
+        color: colors.$tertiary;
+      }
+    }
+
+    > .row {
+      background-color: color-mix(in srgb, currentColor 5%, transparent);
+      border-radius: 1.5em;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+
+      &:before {
+        $border-width: 2px;
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        border-radius: inherit;
+        padding: $border-width;
+        background: linear-gradient(
+          to top right,
+          color-mix(in srgb, currentColor 50%, transparent) 10%,
+          transparent 40%
+        );
+        aspect-ratio: 1/1;
+        height: calc(100% - 2 * $border-width);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .content {
+        padding: vars.$gap-large;
+        font-size: 21px;
+
+        h2 {
+          font-size: 2em;
+          font-weight: 600;
+          line-height: 1.2em;
+        }
+
+        hr {
+          color: currentColor;
+          height: 0px;
+          margin: 1.5em 0;
+          border: 0;
+          display: block;
+          border-bottom: 2px dotted currentColor;
+        }
+
+        p {
+          color: color-mix(in srgb, colors.$neutral 60%, white);
+          line-height: 1.5em;
+          font-weight: 300;
+          margin: 0;
+          padding-bottom: 1em;
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .image {
+        position: relative;
+        overflow: hidden;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* cover without distortion */
+          object-position: center; /* center horizontally & vertically */
+          display: block;
+        }
+      }
+    }
+
+    &.content-side-right {
+      > .row {
+        flex-direction: row-reverse;
+
+        &:before {
+          inset: 0 0 0 auto;
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
+}
