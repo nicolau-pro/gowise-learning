@@ -1,0 +1,97 @@
+@use "sass:color";
+
+.tech-stack {
+  .material-icons {
+    margin-right: 0.33em;
+  }
+}
+
+.award-logo {
+  width: 100%;
+  max-width: min(160px, 50vw);
+  margin: 0.5em 0;
+  $color: white;
+
+  background-image: linear-gradient(
+    to top right,
+    transparent 0%,
+    transparent 10%,
+    $color 10%,
+    $color 50%,
+    color.adjust($color, $alpha: -0.1) 50%,
+    color.adjust($color, $alpha: -0.1) 90%,
+    transparent 90%,
+    transparent 100%
+  );
+}
+
+.background-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blurred-gradient {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.7) 0%,
+    transparent 100%
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  mask-image: linear-gradient(to bottom right, black 50%, transparent 80%);
+
+  @media (max-width: 767px) {
+    mask-image: none;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-links {
+  $color-base: white;
+  $color-text: color.adjust($color-base, $lightness: -50%);
+  $color-highlight: color.adjust($color-base, $lightness: -10%);
+  $font-size: 1.7em;
+
+  a {
+    text-decoration: none;
+    margin-bottom: $font-size;
+    font-size: $font-size;
+    opacity: 0.85;
+    width: fit-content;
+    padding-right: 0.5em;
+
+    span {
+      color: $color-highlight;
+      font-size: $font-size;
+      font-weight: 300;
+      transition: all 0.1s ease-out;
+
+      &.material-icons {
+        font-weight: normal;
+        margin-bottom: -0.15em;
+        margin-right: 0.2em;
+
+        color: $color-text;
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      span {
+        color: $color-base;
+        text-shadow: 0 0 1em $color-base;
+
+        &.material-icons {
+          color: $color-base;
+          scale: 1.3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use "variables" as vars;
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-x: hidden;
+  padding-top: vars.$menu-desktop-size;
+
+  @media (max-width: 767px) {
+    padding-top: vars.$menu-mobile-size;
+  }
+}
+
+main,
+footer {
+  > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+
+    div.row {
+      display: flex;
+      gap: 3em;
+      width: 100%;
+      max-width: 1000px;
+      padding: 2em;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+
+    div.line {
+      display: flex;
+      width: 100%;
+
+      @media (max-width: 767px) {
+        gap: 1em;
+        flex-direction: column;
+      }
+    }
+
+    div.col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      @for $i from 2 through 10 {
+        &.span-#{$i} {
+          flex: #{$i};
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-centered {
+    align-items: center;
+
+    * {
+      text-align: center;
+    }
+  }
+
+  .mobile-no-gap {
+    gap: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}

@@ -1,0 +1,162 @@
+@use "variables" as vars;
+
+header {
+  $size: vars.$menu-desktop-size;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: $size;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  * {
+    color: black;
+  }
+
+  nav {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    max-width: min(1000px, 100vw);
+    padding: 0 2em;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      background-color: white;
+      width: 1000vw;
+      height: vars.$menu-desktop-size;
+    }
+
+    &:before {
+      left: calc(-1000vw + 2em);
+    }
+
+    &:after {
+      left: calc(vars.$menu-desktop-size + 2em);
+    }
+
+    @media (max-width: 767px) {
+      &:before {
+        content: none;
+      }
+
+      &:after {
+        left: vars.$menu-mobile-size;
+        height: vars.$menu-mobile-size;
+      }
+    }
+
+    ul {
+      background-size: $size;
+      background-position: 100.1% 0;
+      background-repeat: no-repeat;
+      height: 100%;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 0;
+      }
+
+      .logo {
+        $blur: 6px;
+        backdrop-filter: blur($blur);
+        -webkit-backdrop-filter: blur($blur);
+
+        @media (max-width: 767px) {
+          backdrop-filter: blur(0.5 * $blur);
+          -webkit-backdrop-filter: blur(0.5 * $blur);
+        }
+      }
+
+      a,
+      .logo {
+        width: $size;
+        max-width: $size;
+      }
+
+      a {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        font-size: 0.8em;
+        font-weight: 300;
+        transition: background-color 0.1s ease-out, color 0.1s ease-out,
+          letter-spacing 0.5s ease-out, font-weight 0.5s ease-out;
+
+        span {
+          color: inherit;
+        }
+
+        &:hover,
+        &:focus-visible,
+        &.current {
+          background-color: black;
+          color: white;
+          font-weight: 400;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    $size: vars.$menu-mobile-size;
+
+    height: $size;
+
+    nav {
+      height: 100%;
+      padding: 0;
+
+      ul {
+        background-image: none;
+        justify-content: space-between;
+
+        li {
+          flex: 1;
+          padding: 0;
+
+          &:first-of-type {
+            max-width: $size;
+          }
+        }
+
+        .logo {
+          width: $size;
+          max-width: $size;
+        }
+
+        a {
+          width: 100%;
+          font-size: 0.6em;
+          font-weight: 400;
+
+          &:hover,
+          &:focus-visible,
+          &.current {
+            letter-spacing: 0;
+          }
+
+          span:first-of-type {
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1215 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "User API",
+    "version": "1.0.0",
+    "description": "API to manage website content for R5.RO"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Company": {
+        "type": "object",
+        "required": ["name", "theme", "description"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Auto-generated company ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the company"
+          },
+          "theme": {
+            "type": "string",
+            "description": "Theme identifier for UI or branding"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the company"
+          },
+          "details": {
+            "type": "string",
+            "description": "Extended details about the company"
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Meta description for SEO or tagging"
+              }
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "example": {
+          "id": 1,
+          "name": "Blippar",
+          "theme": "blippar",
+          "description": "One of the UK's first tech unicorns, specialises in AR.",
+          "details": "Founded in 2011... scaled globally to 500+ employees by 2018.",
+          "meta": {
+            "description": "One of the UK's first tech unicorns, specialises in AR."
+          },
+          "createdAt": "2025-06-02T12:00:00Z",
+          "updatedAt": "2025-06-02T12:00:00Z"
+        }
+      },
+      "Job": {
+        "type": "object",
+        "required": [
+          "companyId",
+          "title",
+          "dateFrom",
+          "description",
+          "bulletpoints",
+          "tech"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Auto-generated job ID"
+          },
+          "companyId": {
+            "type": "integer",
+            "description": "ID of the associated company"
+          },
+          "title": {
+            "type": "string",
+            "description": "Job title or role"
+          },
+          "dateFrom": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of the job (defaults to first of month)"
+          },
+          "dateTo": {
+            "type": "string",
+            "format": "date",
+            "description": "End date of the job (nullable for current jobs)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed job description"
+          },
+          "bulletpoints": {
+            "type": "array",
+            "description": "List of achievements or responsibilities",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tech": {
+            "type": "array",
+            "description": "Technologies used in this role",
+            "items": {
+              "type": "string"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "example": {
+          "id": 1,
+          "companyId": 1,
+          "title": "Lead Engineer/Senior Developer/UX-UI Specialist",
+          "dateFrom": "2014-05-01",
+          "dateTo": "2018-04-01",
+          "description": "Directed, mentored, and supported a team of developers...",
+          "bulletpoints": [
+            "Streamlined and operationalized application functionalities...",
+            "Led development programme across multiple countries...",
+            "Originated and launched an automation system...",
+            "Commended by top management for exemplary performance..."
+          ],
+          "tech": [1, 2, 3, 5, 18, 20],
+          "createdAt": "2025-06-02T12:00:00Z",
+          "updatedAt": "2025-06-02T12:00:00Z"
+        }
+      },
+      "Tech": {
+        "type": "object",
+        "required": ["name", "icon"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Auto-generated tech ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the technology/tool"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon identifier (e.g. material icon name)"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp"
+          }
+        },
+        "example": {
+          "id": 1,
+          "name": "3DS Max",
+          "icon": "view_in_ar",
+          "createdAt": "2025-06-02T12:00:00Z",
+          "updatedAt": "2025-06-02T12:00:00Z"
+        }
+      },
+      "Testimonial": {
+        "type": "object",
+        "required": ["name", "companyId", "quote", "text"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the person giving the testimonial",
+            "example": "Erwan Maigret"
+          },
+          "companyId": {
+            "type": "integer",
+            "description": "Reference to the company ID",
+            "example": 1
+          },
+          "position": {
+            "type": "string",
+            "description": "Job position of the person",
+            "example": "Lead AR API Engineer"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri",
+            "description": "Link to LinkedIn or personal profile",
+            "example": "https://www.linkedin.com/in/erwanmaigret/"
+          },
+          "quote": {
+            "type": "string",
+            "description": "Short quote or summary of the testimonial",
+            "example": "Nothing stops him"
+          },
+          "fullText": {
+            "type": "string",
+            "description": "Full testimonial text",
+            "example": "Radu is the swiss-army knife of 3D and AR..."
+          },
+          "media": {
+            "type": "string",
+            "description": "Optional media reference",
+            "example": "Erwan"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-01-01T12:00:00Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-01-02T12:00:00Z"
+          }
+        }
+      },
+      "Award": {
+        "type": "object",
+        "required": [
+          "companyId",
+          "projectId",
+          "prize",
+          "icon",
+          "event",
+          "year",
+          "description",
+          "logo"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Auto-generated award ID"
+          },
+          "companyId": {
+            "type": "integer",
+            "description": "ID of the associated company"
+          },
+          "projectId": {
+            "type": "integer",
+            "description": "ID of the associated project"
+          },
+          "prize": {
+            "type": "string",
+            "description": "Name of the prize won"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon identifier (e.g. star)"
+          },
+          "event": {
+            "type": "string",
+            "description": "Name of the event where the award was given"
+          },
+          "year": {
+            "type": "integer",
+            "description": "Year the award was received"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the award"
+          },
+          "logo": {
+            "type": "string",
+            "description": "Filename or URL of the event's logo"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp"
+          }
+        },
+        "example": {
+          "id": 1,
+          "companyId": 1,
+          "projectId": 1,
+          "prize": "Grand Prix WINNER",
+          "icon": "star",
+          "event": "The Drum Marketing Awards",
+          "year": 2013,
+          "description": "Best Augmented Reality Experience",
+          "logo": "dma-awards.webp",
+          "createdAt": "2025-06-02T12:00:00Z",
+          "updatedAt": "2025-06-02T12:00:00Z"
+        }
+      },
+      "Project": {
+        "type": "object",
+        "required": [
+          "client",
+          "name",
+          "year",
+          "companyId",
+          "paragraphs",
+          "metaDescription"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Auto-generated project ID"
+          },
+          "client": {
+            "type": "string",
+            "description": "Client name associated with the project"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project"
+          },
+          "year": {
+            "type": "integer",
+            "description": "Year the project was delivered"
+          },
+          "companyId": {
+            "type": "integer",
+            "description": "ID of the associated company"
+          },
+          "paragraphs": {
+            "type": "array",
+            "description": "Project description paragraphs",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metaImage": {
+            "type": "string",
+            "description": "Meta image path or URL (optional)"
+          },
+          "metaDescription": {
+            "type": "string",
+            "description": "Short meta description for the project"
+          },
+          "videoLink": {
+            "type": "string",
+            "description": "Optional link to a video presentation"
+          },
+          "videoTheme": {
+            "type": "string",
+            "description": "Optional visual theme for the video"
+          },
+          "image": {
+            "type": "string",
+            "description": "Main project image path or URL (optional)"
+          },
+          "externalLink": {
+            "type": "string",
+            "description": "External link related to the project (optional)"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp"
+          }
+        },
+        "example": {
+          "id": 1,
+          "client": "MRMC",
+          "name": "Orbital",
+          "year": 2014,
+          "companyId": 1,
+          "paragraphs": [
+            "The Orbital is a powerful robotic camera rig developed to capture high volume product shots and video.",
+            "Assaff Rawner praised the pre-emptive collision detection system, solving a 25-year challenge."
+          ],
+          "metaImage": "/social/project-milo.jpg",
+          "metaDescription": "The Orbital is a powerful robotic camera rig developed to capture high volume product shots and video",
+          "videoLink": "https://youtu.be/NG9zCjQIk-M",
+          "videoTheme": "milo",
+          "image": "/projects/Orbital.png",
+          "externalLink": "https://www.aquacard.co.uk/",
+          "createdAt": "2025-06-05T12:00:00Z",
+          "updatedAt": "2025-06-05T12:00:00Z"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/companies": {
+      "get": {
+        "summary": "Retrieve all companies",
+        "tags": ["Companies"],
+        "responses": {
+          "200": {
+            "description": "List of companies",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new company",
+        "tags": ["Companies"],
+        "requestBody": {
+          "description": "Company info",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Company"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Company created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Company"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/companies/{id}": {
+      "get": {
+        "summary": "Get a company by ID",
+        "tags": ["Companies"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Company ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Company"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Company not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a company by ID",
+        "tags": ["Companies"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Company ID"
+          }
+        ],
+        "requestBody": {
+          "description": "Company info to update",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Company"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Company updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Company"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Company not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a company by ID",
+        "tags": ["Companies"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Company ID"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Company deleted successfully"
+          },
+          "404": {
+            "description": "Company not found"
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "summary": "Retrieve all jobs",
+        "tags": ["Jobs"],
+        "responses": {
+          "200": {
+            "description": "List of jobs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new job",
+        "tags": ["Jobs"],
+        "requestBody": {
+          "description": "Job data to create",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Job"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Job created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/jobs/{id}": {
+      "get": {
+        "summary": "Get a job by ID",
+        "tags": ["Jobs"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Job ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Job found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Job not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a job by ID",
+        "tags": ["Jobs"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Job ID"
+          }
+        ],
+        "requestBody": {
+          "description": "Job data to update",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Job"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Job updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Job not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a job by ID",
+        "tags": ["Jobs"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "Job ID"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Job deleted successfully"
+          },
+          "404": {
+            "description": "Job not found"
+          }
+        }
+      }
+    },
+    "/tech": {
+      "get": {
+        "summary": "Retrieve all tech items",
+        "tags": ["Tech"],
+        "responses": {
+          "200": {
+            "description": "List of tech items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Tech" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new tech item",
+        "tags": ["Tech"],
+        "requestBody": {
+          "description": "Tech item info",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Tech" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Tech item created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Tech" }
+              }
+            }
+          },
+          "400": { "description": "Invalid input" }
+        }
+      }
+    },
+    "/tech/{id}": {
+      "get": {
+        "summary": "Get a tech item by ID",
+        "tags": ["Tech"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Tech item ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tech item found",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Tech" }
+              }
+            }
+          },
+          "404": { "description": "Tech item not found" }
+        }
+      },
+      "put": {
+        "summary": "Update a tech item by ID",
+        "tags": ["Tech"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Tech item ID"
+          }
+        ],
+        "requestBody": {
+          "description": "Tech item info to update",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Tech" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tech item updated",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Tech" }
+              }
+            }
+          },
+          "404": { "description": "Tech item not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a tech item by ID",
+        "tags": ["Tech"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Tech item ID"
+          }
+        ],
+        "responses": {
+          "204": { "description": "Tech item deleted successfully" },
+          "404": { "description": "Tech item not found" }
+        }
+      }
+    },
+    "/testimonials": {
+      "get": {
+        "summary": "Get all testimonials",
+        "tags": ["Testimonials"],
+        "responses": {
+          "200": {
+            "description": "A list of testimonials",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Testimonial"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new testimonial",
+        "tags": ["Testimonials"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Testimonial"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Testimonial created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Testimonial"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/testimonials/{id}": {
+      "get": {
+        "summary": "Get a testimonial by ID",
+        "tags": ["Testimonials"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Testimonial found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Testimonial"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Testimonial not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a testimonial by ID",
+        "tags": ["Testimonials"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Testimonial"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Testimonial updated successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "404": {
+            "description": "Testimonial not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a testimonial by ID",
+        "tags": ["Testimonials"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Testimonial deleted successfully"
+          },
+          "404": {
+            "description": "Testimonial not found"
+          }
+        }
+      }
+    },
+    "/awards": {
+      "get": {
+        "summary": "Retrieve all awards",
+        "tags": ["Awards"],
+        "responses": {
+          "200": {
+            "description": "List of awards",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Award" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new award",
+        "tags": ["Awards"],
+        "requestBody": {
+          "description": "Award data",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Award" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Award created successfully",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Award" }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/awards/{id}": {
+      "get": {
+        "summary": "Get an award by ID",
+        "tags": ["Awards"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Award ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Award found",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Award" }
+              }
+            }
+          },
+          "404": {
+            "description": "Award not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an award by ID",
+        "tags": ["Awards"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Award ID"
+          }
+        ],
+        "requestBody": {
+          "description": "Award data to update",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Award" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Award updated",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Award" }
+              }
+            }
+          },
+          "404": {
+            "description": "Award not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete an award by ID",
+        "tags": ["Awards"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Award ID"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Award deleted successfully"
+          },
+          "404": {
+            "description": "Award not found"
+          }
+        }
+      }
+    },
+    "/projects": {
+      "get": {
+        "summary": "Retrieve all projects",
+        "tags": ["Projects"],
+        "responses": {
+          "200": {
+            "description": "List of projects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Project" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new project",
+        "tags": ["Projects"],
+        "requestBody": {
+          "description": "Project info",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Project" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Project created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Project" }
+              }
+            }
+          },
+          "400": { "description": "Invalid input" }
+        }
+      }
+    },
+    "/projects/{id}": {
+      "get": {
+        "summary": "Get a project by ID",
+        "tags": ["Projects"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Project ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project found",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Project" }
+              }
+            }
+          },
+          "404": { "description": "Project not found" }
+        }
+      },
+      "put": {
+        "summary": "Update a project by ID",
+        "tags": ["Projects"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Project ID"
+          }
+        ],
+        "requestBody": {
+          "description": "Project info to update",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Project" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Project updated",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Project" }
+              }
+            }
+          },
+          "404": { "description": "Project not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a project by ID",
+        "tags": ["Projects"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "required": true,
+            "description": "Project ID"
+          }
+        ],
+        "responses": {
+          "204": { "description": "Project deleted successfully" },
+          "404": { "description": "Project not found" }
+        }
+      }
+    }
+  }
+}

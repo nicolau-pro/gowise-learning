@@ -1,0 +1,85 @@
+@use "variables" as vars;
+
+@mixin fixed-background($color-light, $color-dark) {
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, $color-light, $color-dark);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@function crosshatch-gradient($color) {
+  @return linear-gradient(
+    45deg,
+    $color 0%,
+    $color 1 * 12.5%,
+    transparent 1 * 12.5%,
+    transparent 3 * 12.5%,
+    $color 3 * 12.5%,
+    $color 5 * 12.5%,
+    transparent 5 * 12.5%,
+    transparent 7 * 12.5%,
+    $color 7 * 12.5%,
+    $color 100%
+  );
+}
+
+@mixin crosshatch-background($size: vars.$crosshatch-size) {
+  background-size: $size $size;
+  background-repeat: repeat;
+  background-attachment: initial;
+}
+
+@mixin crosshatch($color, $size: vars.$crosshatch-size) {
+  @include crosshatch-background($size);
+  background-image: crosshatch-gradient($color);
+}
+
+@mixin crosshatch-transparent-gradient(
+  $color-light,
+  $color-dark,
+  $size: vars.$crosshatch-size
+) {
+  content: "";
+  position: absolute;
+  top: -$size;
+  left: 0;
+  width: 100%;
+  height: $size;
+
+  @include fixed-background($color-light, $color-dark);
+  mask-image: crosshatch-gradient(black);
+  mask-repeat: repeat;
+  mask-size: $size;
+}
+
+@mixin slanted-button($size) {
+  height: $size;
+  padding: 0 $size * 1.5;
+  clip-path: polygon(0 0, calc(100% - $size) 0, 100% 100%, $size 100%);
+  transition: all 0.1s ease-out;
+
+  > span {
+    &:first-of-type {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .material-icons {
+    transition: all 0.1s ease-out;
+    margin-left: 0.2em;
+    scale: 1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    letter-spacing: 0.05em;
+    filter: brightness(1.1);
+
+    .material-icons {
+      margin-left: 2em;
+      scale: 1.2;
+    }
+  }
+}

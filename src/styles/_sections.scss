@@ -1,0 +1,105 @@
+@use "mixins" as mixins;
+@use "variables" as vars;
+
+section {
+  &.awards {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/social/awards.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(black);
+    }
+  }
+
+  &.career {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/social/career.jpg");
+  }
+
+  &.projects {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/social/projects.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(black);
+    }
+  }
+
+  &.contact {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/social/contact.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(black);
+    }
+  }
+
+  & h1.hero.shade {
+    text-shadow: rgba(0, 0, 0, 0.7) 0 0 0.2em;
+  }
+
+  $section-gradient: linear-gradient(
+    to bottom,
+    black vars.$crosshatch-size,
+    transparent 50%,
+    black 100%
+  );
+
+  &.home {
+    background-color: white;
+    color: black;
+
+    .my-portrait {
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("/portraits/radu-nicolau.webp");
+      margin-bottom: -1 * vars.$crosshatch-size;
+      mix-blend-mode: multiply;
+    }
+
+    @media (max-width: 767px) {
+      .my-portrait {
+        margin-top: -0.5 * vars.$crosshatch-size;
+        height: 120vw;
+      }
+    }
+    .crosshatch {
+      @include mixins.crosshatch(black);
+    }
+  }
+
+  &.home-career {
+    background-position: center;
+    background-size: cover;
+    background-image: $section-gradient, url("/social/career.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(white);
+    }
+  }
+
+  &.home-projects {
+    background-position: center;
+    background-size: cover;
+    background-image: $section-gradient, url("/social/projects.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(white);
+    }
+  }
+
+  &.home-awards {
+    background-position: center;
+    background-size: cover;
+    background-image: $section-gradient, url("/social/awards.jpg");
+
+    .crosshatch {
+      @include mixins.crosshatch(white);
+    }
+  }
+}
