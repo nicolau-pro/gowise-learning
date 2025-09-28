@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "../layout/Section";
-import Row from "../layout/Row";
-import Icon from "../atoms/Icon";
+import Section from "layout/Section";
+import Row from "layout/Row";
+import Icon from "atoms/Icon";
 
 export default function Testimonial({ data, theme }) {
   const { quote, stars, person } = data;

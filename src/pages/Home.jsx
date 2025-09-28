@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
-import { useAppState } from "../AppStateContext";
-import MetaTags from "../components/meta/MetaTags";
-import Row from "../components/layout/Row";
-import Col from "../components/layout/Col";
-import Section from "../components/layout/Section";
-import ArticleSection from "../components/molecules/Article";
-import Card from "../components/molecules/Card";
-import Step from "../components/molecules/Step";
-import ArticlesData from "../data/Articles";
-import CardsData from "../data/Cards";
-import StepsData from "../data/Steps";
-import TestimonialsData from "../data/Testimonials";
+import { useAppState } from "appState";
+import MetaTags from "meta/MetaTags";
 
-import TestimonialSection from "../components/molecules/Testimonial";
+import Row from "layout/Row";
+import Col from "layout/Col";
+import Section from "layout/Section";
+
+import ArticleSection from "components/Article";
+import Card from "components/Card";
+import Step from "components/Step";
+import TestimonialSection from "components/Testimonial";
+
+import ArticlesData from "data/Articles";
+import CardsData from "data/Cards";
+import StepsData from "data/Steps";
+import TestimonialsData from "data/Testimonials";
 
 function Page() {
   const { setOutletReady } = useAppState();

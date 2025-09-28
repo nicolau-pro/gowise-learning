@@ -1,11 +1,11 @@
-import Section from "../layout/Section";
-import Row from "../layout/Row";
-import Col from "../layout/Col";
+import Section from "layout/Section";
+import Row from "layout/Row";
+import Col from "layout/Col";
 import { Link } from "react-router";
 
 import ContactLinks from "./ContactLinks";
 
-import Icon from "../atoms/Icon";
+import Icon from "atoms/Icon";
 
 const Footer = () => {
   return (

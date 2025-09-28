@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 
-import Row from "../../components/layout/Row";
-import Col from "../../components/layout/Col";
-import Section from "../../components/layout/Section";
+import Row from "layout/Row";
+import Col from "layout/Col";
+import Section from "layout/Section";
 
-import MetaTags from "../../components/meta/MetaTags";
-import ContactLinks from "../../components/molecules/ContactLinks";
+import MetaTags from "meta/MetaTags";
+import ContactLinks from "components/ContactLinks";
 
 import { useAppState } from "../../AppStateContext";
 

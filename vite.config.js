@@ -8,10 +8,12 @@ export default defineConfig({
   base: "/",
   resolve: {
     alias: {
+      data: path.resolve(__dirname, "src/data"),
       atoms: path.resolve(__dirname, "src/components/atoms"),
       layout: path.resolve(__dirname, "src/components/layout"),
       components: path.resolve(__dirname, "src/components/molecules"),
-      meta: path.resolve(__dirname, "src/components"),
+      meta: path.resolve(__dirname, "src/components/meta"),
+      appState: path.resolve(__dirname, "src/AppStateContext.jsx"),
     },
   },
 });
