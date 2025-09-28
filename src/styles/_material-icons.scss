@@ -1,7 +1,9 @@
 // https://fonts.google.com/icons
 
+@use "variables" as vars;
+
 @font-face {
-  font-family: "Material Icons";
+  font-family: vars.$font-icons;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
@@ -9,7 +11,7 @@
 }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: vars.$font-icons;
   font-weight: normal;
   font-style: normal;
   font-size: 1em;

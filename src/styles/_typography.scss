@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables" as vars;
 
 // @import url("https://use.typekit.net/wiq3geo.css");
 
@@ -27,7 +28,7 @@
 // Black: 900;
 
 body {
-  font-family: "basic-sans", sans-serif;
+  font-family: vars.$font-body;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -51,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "optima-nova-lt-pro", sans-serif;
+  font-family: vars.$font-headings;
   padding: 0;
   margin: 0;
 }
@@ -72,7 +73,7 @@ h1,
   @include heading-font(1);
 
   &.hero {
-    font-family: "almaq-refined", sans-serif;
+    font-family: vars.$font-hero;
     font-size: 100px;
 
     @media (max-width: 767px) {

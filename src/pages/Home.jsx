@@ -1,19 +1,14 @@
 import React, { useEffect } from "react";
+import { useAppState } from "../AppStateContext";
+import MetaTags from "../components/MetaTags";
 import Row from "../components/layout/Row";
 import Col from "../components/layout/Col";
 import Section from "../components/layout/Section";
-import Crosshatch from "../components/decorators/Crosshatch";
-import MetaTags from "../components/MetaTags";
-
-import { useAppState } from "../AppStateContext";
-import { Link } from "react-router";
-import Icon from "../components/atoms/Icon";
-
 import ArticleSection from "../components/molecules/Article";
 import Card from "../components/molecules/Card";
-
 import ArticlesData from "../data/Articles";
 import CardsData from "../data/Cards";
+import StepsData from "../data/Steps";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -51,7 +46,6 @@ function Page() {
 
             <Col className="span-3" />
           </Row>
-          <Crosshatch />
         </Section>
 
         <Section className="home desktop-hidden">
@@ -63,7 +57,28 @@ function Page() {
             </Col>
           </Row>
           <Row className="my-portrait"></Row>
-          <Crosshatch />
+        </Section>
+
+        <Section className="testimonial theme-tertiary">
+          <Row>
+            <Col>
+              <article>
+                <div className="quotes">"</div>
+                <div className="content">
+                  <div className="stars">*****</div>
+                  <h2>
+                    I was able to easily find the best tutor for my son from a
+                    range of different candidates!
+                  </h2>
+                </div>
+                <div className="person">
+                  <img alt="portratit of Caroline, mum" />
+                  <p className="name">Caroline</p>
+                  <p className="title">mum</p>
+                </div>
+              </article>
+            </Col>
+          </Row>
         </Section>
 
         <Section className="gap-xl">
@@ -80,28 +95,22 @@ function Page() {
           <ArticleSection key={article.title} data={article} />
         ))}
 
-        <Section className="home-awards">
-          <Crosshatch />
-          <Row className="pt-6 pb-8 blurred-gradient">
-            <Col className="span-4">
-              <h2 className="hero">Awards</h2>
-              <h3 className="mt-1 text-thin">
-                Here's a brief history of my work in the UK, some of the most
-                successful projects and campaigns with the awards they brought
-                and testimonials from the team leads and product owners.
-              </h3>
-              <Link
-                to="/awards"
-                role="button"
-                className="mt-2 button-read-more button-outline"
-              >
-                <h2 className="h3 text-thin">
-                  <span>AWARDS </span>
-                  <Icon>arrow_forward_ios</Icon>
-                </h2>
-              </Link>
-            </Col>
-            <Col />
+        <Section className="gap-xl">
+          <Row>
+            <h2>Easy as 1-2-3</h2>
+          </Row>
+          <Row>
+            {StepsData.map((item) => (
+              <Col key={item.number}>
+                <article className="step">
+                  <div className="content">
+                    <h3>{item.title}</h3>
+                    <p>{item.details}</p>
+                  </div>
+                  <div className="number">{item.number}</div>
+                </article>
+              </Col>
+            ))}
           </Row>
         </Section>
       </main>
