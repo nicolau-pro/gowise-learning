@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { useAppState } from "appState";
-import MetaTags from "meta/MetaTags";
+import MetaTags from "metaTags";
 
-import Row from "layout/Row";
-import Col from "layout/Col";
-import Section from "layout/Section";
+import { Section, Row, Col } from "layout";
 
 import ArticleSection from "components/Article";
 import Card from "components/Card";

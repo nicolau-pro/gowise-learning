@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router";
-import { Contact } from "../../data/variables";
-import Icon from "../atoms/Icon";
+import { Contact } from "variables";
+import Icon from "icons";
 
 const ContactLinks = () => {
   return (

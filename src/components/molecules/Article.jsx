@@ -1,7 +1,5 @@
 import React from "react";
-import Section from "layout/Section";
-import Row from "layout/Row";
-import Col from "layout/Col";
+import { Section, Row, Col } from "layout";
 
 export default function ArticleSection({ data }) {
   const { title, contentSide, theme, paragraphs, image, imageAlt } = data;

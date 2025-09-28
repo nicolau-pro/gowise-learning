@@ -4,10 +4,10 @@ import Row from "layout/Row";
 import Col from "layout/Col";
 import Section from "layout/Section";
 
-import MetaTags from "meta/MetaTags";
+import MetaTags from "metaTags";
 import ContactLinks from "components/ContactLinks";
 
-import { useAppState } from "../../AppStateContext";
+import { useAppState } from "appState";
 
 function Page() {
   const { setOutletReady } = useAppState();

@@ -9,10 +9,12 @@ export default defineConfig({
   resolve: {
     alias: {
       data: path.resolve(__dirname, "src/data"),
+      variables: path.resolve(__dirname, "src/data/variables.jsx"),
       atoms: path.resolve(__dirname, "src/components/atoms"),
+      icons: path.resolve(__dirname, "src/components/atoms/Icon.jsx"),
       layout: path.resolve(__dirname, "src/components/layout"),
       components: path.resolve(__dirname, "src/components/molecules"),
-      meta: path.resolve(__dirname, "src/components/meta"),
+      metaTags: path.resolve(__dirname, "src/components/meta/MetaTags.jsx"),
       appState: path.resolve(__dirname, "src/AppStateContext.jsx"),
     },
   },
