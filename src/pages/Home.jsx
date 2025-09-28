@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import { useAppState } from "../AppStateContext";
-import MetaTags from "../components/MetaTags";
+import MetaTags from "../components/meta/MetaTags";
 import Row from "../components/layout/Row";
 import Col from "../components/layout/Col";
 import Section from "../components/layout/Section";
 import ArticleSection from "../components/molecules/Article";
 import Card from "../components/molecules/Card";
+import Step from "../components/molecules/Step";
 import ArticlesData from "../data/Articles";
 import CardsData from "../data/Cards";
 import StepsData from "../data/Steps";
+import TestimonialsData from "../data/Testimonials";
+
+import TestimonialSection from "../components/molecules/Testimonial";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -59,27 +63,7 @@ function Page() {
           <Row className="my-portrait"></Row>
         </Section>
 
-        <Section className="testimonial theme-tertiary">
-          <Row>
-            <Col>
-              <article>
-                <div className="quotes">"</div>
-                <div className="content">
-                  <div className="stars">*****</div>
-                  <h2>
-                    I was able to easily find the best tutor for my son from a
-                    range of different candidates!
-                  </h2>
-                </div>
-                <div className="person">
-                  <img alt="portratit of Caroline, mum" />
-                  <p className="name">Caroline</p>
-                  <p className="title">mum</p>
-                </div>
-              </article>
-            </Col>
-          </Row>
-        </Section>
+        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
 
         <Section className="gap-xl">
           <Row>
@@ -102,17 +86,13 @@ function Page() {
           <Row>
             {StepsData.map((item) => (
               <Col key={item.number}>
-                <article className="step">
-                  <div className="content">
-                    <h3>{item.title}</h3>
-                    <p>{item.details}</p>
-                  </div>
-                  <div className="number">{item.number}</div>
-                </article>
+                <Step data={item} />
               </Col>
             ))}
           </Row>
         </Section>
+
+        <Section className="gap-xl">#</Section>
       </main>
     </>
   );

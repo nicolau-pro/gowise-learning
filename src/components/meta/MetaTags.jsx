@@ -1,5 +1,5 @@
 import React from "react";
-import { MetaData, breadcrumbs } from "../data/variables";
+import { MetaData, breadcrumbs } from "../../data/variables";
 
 function MetaTags(props) {
   const { section, description, image, url } = props;

@@ -1,0 +1,99 @@
+@use "colors";
+@use "variables" as vars;
+
+section.testimonial {
+  $portrait-size: 240px;
+  margin-top: $portrait-size * 0.5;
+  $background-light: color-mix(in srgb, currentColor 8%, white);
+  $background-dark: color-mix(in srgb, currentColor 12%, white);
+
+  background: linear-gradient(
+    to right,
+    $background-light 50%,
+    $background-dark 50%
+  );
+
+  .row {
+    background: linear-gradient(to right, $background-light, $background-dark);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  article {
+    display: flex;
+    position: relative;
+
+    > * {
+      flex: 1;
+    }
+
+    .quote {
+      max-height: $portrait-size * 0.5;
+      color: white;
+      font-size: 400px;
+      line-height: 0.8em;
+      min-width: $portrait-size * 0.5;
+      max-width: $portrait-size * 0.5;
+      user-select: none;
+
+      span {
+        margin-left: -0.05em;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: vars.$gap-normal * 0.75 0 vars.$gap-normal 0;
+
+      .stars {
+        font-size: 48px;
+        color: color-mix(in srgb, currentColor 50%, transparent);
+      }
+
+      h2 {
+        font-family: vars.$font-body;
+        font-weight: 200;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        font-style: italic;
+        color: color-mix(in srgb, colors.$neutral 80%, white);
+        text-align: center;
+        max-width: 80%;
+        margin-top: 0.25em;
+      }
+    }
+
+    .person {
+      min-width: $portrait-size;
+      max-width: $portrait-size;
+      margin-top: -$portrait-size * 0.5;
+      width: $portrait-size;
+
+      img {
+        aspect-ratio: 1/1;
+        width: $portrait-size;
+        border-radius: 50%;
+      }
+
+      p {
+        margin-left: 50%;
+        color: color-mix(in srgb, colors.$neutral 80%, white);
+
+        &.name {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 18px;
+          margin-top: 0.5em;
+        }
+
+        &.title {
+          font-weight: 200;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

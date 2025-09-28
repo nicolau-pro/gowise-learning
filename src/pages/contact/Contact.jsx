@@ -4,8 +4,7 @@ import Row from "../../components/layout/Row";
 import Col from "../../components/layout/Col";
 import Section from "../../components/layout/Section";
 
-import MetaTags from "../../components/MetaTags";
-import Crosshatch from "../../components/decorators/Crosshatch";
+import MetaTags from "../../components/meta/MetaTags";
 import ContactLinks from "../../components/molecules/ContactLinks";
 
 import { useAppState } from "../../AppStateContext";
@@ -33,7 +32,6 @@ function Page() {
               <h1 className="hero shade">Contact</h1>
             </Col>
           </Row>
-          <Crosshatch className="awards" />
         </Section>
         <Section className="contact-links">
           <Row className="mobile-hidden">
@@ -44,7 +42,6 @@ function Page() {
               <ContactLinks />
             </Col>
           </Row>
-          <Crosshatch className="awards" />
         </Section>
       </main>
     </>
