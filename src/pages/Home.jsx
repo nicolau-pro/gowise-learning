@@ -40,7 +40,7 @@ function Page() {
       />
 
       <main>
-        <Section className="home mobile-hidden">
+        <Section className="home">
           <Row className="my-portrait">
             <Col className="pt-2 pb-8 span-3">
               <h1 className="hero">{Welcome.h1}</h1>
@@ -50,17 +50,6 @@ function Page() {
 
             <Col className="span-3" />
           </Row>
-        </Section>
-
-        <Section className="home desktop-hidden">
-          <Row>
-            <Col className="mt-1">
-              <h1 className="hero">{Welcome.h1}</h1>
-              <h2>{Welcome.h2}</h2>
-              <h3 className="mt-2 text-thin">{Welcome.h3}</h3>
-            </Col>
-          </Row>
-          <Row className="my-portrait"></Row>
         </Section>
 
         <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
