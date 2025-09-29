@@ -4,7 +4,10 @@ import Button from "atoms/Button";
 
 export default function Hero({ data }) {
   return (
-    <Section className="hero">
+    <Section
+      className="hero"
+      style={{ backgroundImage: `url(/media/${data.strip})` }}
+    >
       <Row>
         <Col>
           <h1 className="hero">{data.h1.toUpperCase()}</h1>

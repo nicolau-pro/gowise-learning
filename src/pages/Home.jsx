@@ -12,6 +12,7 @@ import Card from "components/Card";
 import Step from "components/Step";
 import TestimonialSection from "components/Testimonial";
 
+import WelcomeData from "data/Welcome";
 import ArticlesData from "data/Articles";
 import CardsData from "data/Cards";
 import StepsData from "data/Steps";
@@ -23,25 +24,6 @@ function Page() {
   useEffect(() => {
     setOutletReady(true);
   }, []);
-
-  const Welcome = {
-    h1: "Welcome",
-    h2: "To GoWise Learning",
-    h3: "We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically.",
-    button: {
-      link: "/contact",
-      theme: "secondary",
-      text: "Book a free consultation",
-    },
-    person: {
-      portrait: "anamaria-blanaru.jpg",
-      name: "Anamaria Blanaru",
-      title: "GoWise Learning CEO",
-      strong: "OUR PROMISE:",
-      quote:
-        "Every child is seen, valued, and supported to reach their full potential, with learning designed around their unique strengths, learning style, needs, and personality.",
-    },
-  };
 
   return (
     <>
@@ -56,8 +38,8 @@ function Page() {
       />
 
       <main>
-        <HeroSection data={Welcome} />
-        <HeroQuoteSection data={Welcome.person} />
+        <HeroSection data={WelcomeData} />
+        <HeroQuoteSection data={WelcomeData.person} />
 
         <Section className="gap-xl">
           <Row>
