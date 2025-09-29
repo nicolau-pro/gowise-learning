@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "atoms/Button";
+
 export default function Card({ data }) {
   const { image, title, theme, details, button } = data;
 
@@ -14,13 +16,7 @@ export default function Card({ data }) {
       </div>
       <div className="content">
         <p className="details">{details}</p>
-        <a
-          href={button.link || "#"}
-          role="button"
-          className={`theme-${button.theme}`}
-        >
-          <span>{button.text}</span>
-        </a>
+        <Button link={button.link} theme={button.theme} text={button.text} />
       </div>
     </article>
   );

@@ -10,7 +10,7 @@ export default function Testimonial({ data, theme }) {
     <Section className={`testimonial theme-${theme}`}>
       <Row>
         <article>
-          <div className="quote">
+          <div className="quotation-mark">
             <span>”</span>
           </div>
           <div className="content">

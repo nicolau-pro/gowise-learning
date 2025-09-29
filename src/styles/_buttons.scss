@@ -1,0 +1,52 @@
+@use "colors";
+@use "variables" as vars;
+
+a[role="button"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 30px;
+  border-radius: 99px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+  background-color: colors.$neutral;
+  margin: auto;
+  transition: filter 0.1s ease-out;
+
+  &.theme-primary {
+    background: linear-gradient(
+      to bottom,
+      colors.$primary_glow 0%,
+      colors.$primary_highlight 73%,
+      colors.$primary 100%
+    );
+  }
+
+  &.theme-secondary {
+    background: linear-gradient(
+      to bottom,
+      colors.$secondary_highlight 0%,
+      colors.$secondary 73%,
+      colors.$secondary_dark 100%
+    );
+  }
+
+  &.theme-tertiary {
+    background: linear-gradient(
+      to bottom,
+      colors.$tertiary_glow 0%,
+      colors.$tertiary 73%,
+      colors.$tertiary_dark 100%
+    );
+  }
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1.1);
+  }
+}

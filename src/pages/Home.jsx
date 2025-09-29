@@ -22,9 +22,16 @@ function Page() {
   }, []);
 
   const Welcome = {
+    company: "GoWise Learning",
     h1: "Welcome",
-    h2: "To GoWise Learning",
-    h3: "Here's a brief history of my work in UK, some of the most successful projects and campaigns with the awards they brought alongside the testimonials from the CEOs, team leads and brand/product owners.",
+    h3: "We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically.",
+    person: {
+      portrait: "anamaria-blanaru.jpg",
+      name: "Anamaria Blanaru",
+      title: "GoWise Learning CEO",
+      quote:
+        "Every child is seen, valued, and supported to reach their full potential, with learning designed around their unique strengths, learning style, needs, and personality.",
+    },
   };
 
   return (
@@ -40,19 +47,38 @@ function Page() {
       />
 
       <main>
-        <Section className="home">
-          <Row className="my-portrait">
-            <Col className="pt-2 pb-8 span-3">
-              <h1 className="hero">{Welcome.h1}</h1>
-              <h2>{Welcome.h2}</h2>
+        <Section className="hero">
+          <Row>
+            <Col>
+              <h1 className="hero">{Welcome.h1.toUpperCase()}</h1>
+              <h2>{`To ${Welcome.company}`.toUpperCase()}</h2>
               <h3 className="mt-2 text-thin">{Welcome.h3}</h3>
             </Col>
-
-            <Col className="span-3" />
           </Row>
         </Section>
-
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <Section className="hero-quote">
+          <Row>
+            <article>
+              <div className="quotation-mark">
+                <span>”</span>
+              </div>
+              <h3 className="quote">
+                <strong>OUR PROMISE: </strong>
+                <span>{Welcome.person.quote}</span>
+              </h3>
+              <div className="portrait">
+                <img
+                  src={`/media/${Welcome.person.portrait}`}
+                  alt={`${Welcome.person.name}, ${Welcome.person.title}`}
+                />
+              </div>
+              <div className="person">
+                <p className="name">{Welcome.person.name}</p>
+                <p className="title">{Welcome.person.title}</p>
+              </div>
+            </article>
+          </Row>
+        </Section>
 
         <Section className="gap-xl">
           <Row>
@@ -67,6 +93,8 @@ function Page() {
         {ArticlesData.map((article) => (
           <ArticleSection key={article.title} data={article} />
         ))}
+
+        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
 
         <Section className="gap-xl">
           <Row>

@@ -1,0 +1,89 @@
+@use "colors";
+@use "variables" as vars;
+
+section.hero {
+}
+
+section.hero-quote {
+  $portrait-size: 240px;
+  $background-light: colors.$primary_highlight;
+  $background-dark: colors.$primary;
+
+  background: linear-gradient(
+    to right,
+    $background-light 50%,
+    $background-dark 50%
+  );
+
+  .row {
+    background: linear-gradient(to right, $background-light, $background-dark);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    article {
+      display: flex;
+      color: white;
+      padding: vars.$gap-medium 0;
+
+      .quote {
+        font-family: vars.$font-body;
+        font-size: 24px;
+        line-height: 1.5em;
+        font-style: italic;
+        font-weight: 200;
+        margin-left: -1em;
+        letter-spacing: 0.015em;
+
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      .quotation-mark {
+        max-height: $portrait-size * 0.5;
+        color: white;
+        font-size: 400px;
+        line-height: 0.4em;
+        min-width: $portrait-size * 0.5;
+        max-width: $portrait-size * 0.5;
+        user-select: none;
+        opacity: 0.1;
+
+        span {
+          margin-left: -0.05em;
+        }
+      }
+
+      .person {
+        min-width: $portrait-size;
+        letter-spacing: 0.06em;
+
+        .name {
+          font-size: 18px;
+          line-height: 36px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        .title {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 200;
+        }
+      }
+
+      .portrait {
+        min-width: $portrait-size;
+        max-width: $portrait-size;
+        width: $portrait-size;
+        margin: -$portrait-size * 0.5 - vars.$gap-medium * 0.5 vars.$gap-normal;
+
+        img {
+          aspect-ratio: 1/1;
+          width: $portrait-size;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
