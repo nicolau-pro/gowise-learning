@@ -5,6 +5,8 @@ import MetaTags from "metaTags";
 import { Section, Row, Col } from "layout";
 import Button from "atoms/Button";
 
+import HeroSection from "components/Hero";
+import HeroQuoteSection from "components/HeroQuote";
 import ArticleSection from "components/Article";
 import Card from "components/Card";
 import Step from "components/Step";
@@ -23,13 +25,19 @@ function Page() {
   }, []);
 
   const Welcome = {
-    company: "GoWise Learning",
     h1: "Welcome",
+    h2: "To GoWise Learning",
     h3: "We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically.",
+    button: {
+      link: "/contact",
+      theme: "secondary",
+      text: "Book a free consultation",
+    },
     person: {
       portrait: "anamaria-blanaru.jpg",
       name: "Anamaria Blanaru",
       title: "GoWise Learning CEO",
+      strong: "OUR PROMISE:",
       quote:
         "Every child is seen, valued, and supported to reach their full potential, with learning designed around their unique strengths, learning style, needs, and personality.",
     },
@@ -48,44 +56,8 @@ function Page() {
       />
 
       <main>
-        <Section className="hero">
-          <Row>
-            <Col>
-              <h1 className="hero">{Welcome.h1.toUpperCase()}</h1>
-              <h2>{`To ${Welcome.company}`}</h2>
-              <h3 className="mt-2 text-thin">{Welcome.h3}</h3>
-              <Button
-                className="cta"
-                link="/contact"
-                theme="secondary"
-                text="Book a free consultation"
-              />
-            </Col>
-          </Row>
-        </Section>
-        <Section className="hero-quote">
-          <Row>
-            <article>
-              <div className="quotation-mark">
-                <span>”</span>
-              </div>
-              <h3 className="quote">
-                <strong>OUR PROMISE: </strong>
-                <span>{Welcome.person.quote}</span>
-              </h3>
-              <div className="portrait">
-                <img
-                  src={`/media/${Welcome.person.portrait}`}
-                  alt={`${Welcome.person.name}, ${Welcome.person.title}`}
-                />
-              </div>
-              <div className="person">
-                <p className="name">{Welcome.person.name}</p>
-                <p className="title">{Welcome.person.title}</p>
-              </div>
-            </article>
-          </Row>
-        </Section>
+        <HeroSection data={Welcome} />
+        <HeroQuoteSection data={Welcome.person} />
 
         <Section className="gap-xl">
           <Row>

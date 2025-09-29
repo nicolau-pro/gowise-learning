@@ -25,7 +25,7 @@ section.hero {
     );
 
     .hero {
-      margin-top: 0.25em;
+      margin-top: vars.$gap-normal;
       color: white;
     }
 
@@ -47,10 +47,12 @@ section.hero {
       line-height: 1.6em;
       color: white;
       max-width: 70%;
+      font-weight: 300;
+      margin-top: vars.$gap-normal;
     }
 
     .cta {
-      margin-top: 2em;
+      margin-top: vars.$gap-normal;
       margin-bottom: 1.5em;
       max-width: fit-content;
       padding-right: 3em;
