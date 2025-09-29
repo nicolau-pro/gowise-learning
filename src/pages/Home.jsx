@@ -28,12 +28,9 @@ function Page() {
   return (
     <>
       <MetaTags
-        section="RADU NICOLAU - Welcome!"
-        description="A brief history of my work in the UK, some of the most
-                successful projects and campaigns with the awards they brought
-                alongside the testimonials from the CEOs, team leads and
-                brand/product owners"
-        image="/social/radu-nicolau.jpg"
+        section="GoWise Learning - Welcome!"
+        description="We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically."
+        image="/social/GoWise-Learning.jpg"
         url="/"
       />
 
