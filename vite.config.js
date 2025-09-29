@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       data: path.resolve(__dirname, "src/data"),
+      utils: path.resolve(__dirname, "src/data/utils"),
       variables: path.resolve(__dirname, "src/data/variables.jsx"),
       atoms: path.resolve(__dirname, "src/components/atoms"),
       icons: path.resolve(__dirname, "src/components/atoms/Icon.jsx"),

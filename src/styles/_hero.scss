@@ -2,6 +2,59 @@
 @use "variables" as vars;
 
 section.hero {
+  background-image: url("/media/hero-strip.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  animation: slide-bg 3600s linear infinite;
+
+  .row {
+    max-width: vars.$content-width + 2 * vars.$gap-xl;
+    justify-content: center;
+
+    .col {
+      max-width: vars.$content-width - 2 * vars.$gap-small;
+    }
+
+    background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, colors.$primary 0%, transparent) 0%,
+      color-mix(in srgb, colors.$primary 90%, transparent) vars.$gap-xl,
+      color-mix(in srgb, colors.$primary 90%, transparent) 65%,
+      color-mix(in srgb, colors.$primary 0%, transparent) 100%
+    );
+
+    .hero {
+      margin-top: 0.25em;
+      color: white;
+    }
+
+    h2 {
+      color: colors.$warning;
+      font-size: 51px;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+      margin: 0;
+      padding: 0;
+      line-height: 1em;
+    }
+
+    h3 {
+      font-family: vars.$font-body;
+      font-size: 24px;
+      line-height: 1.5em;
+      color: white;
+      max-width: 70%;
+    }
+
+    .cta {
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+      max-width: fit-content;
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+  }
 }
 
 section.hero-quote {
@@ -85,5 +138,14 @@ section.hero-quote {
         }
       }
     }
+  }
+}
+
+@keyframes slide-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100000px 0;
   }
 }

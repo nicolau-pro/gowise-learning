@@ -3,6 +3,7 @@ import { useAppState } from "appState";
 import MetaTags from "metaTags";
 
 import { Section, Row, Col } from "layout";
+import Button from "atoms/Button";
 
 import ArticleSection from "components/Article";
 import Card from "components/Card";
@@ -51,8 +52,14 @@ function Page() {
           <Row>
             <Col>
               <h1 className="hero">{Welcome.h1.toUpperCase()}</h1>
-              <h2>{`To ${Welcome.company}`.toUpperCase()}</h2>
+              <h2>{`To ${Welcome.company}`}</h2>
               <h3 className="mt-2 text-thin">{Welcome.h3}</h3>
+              <Button
+                className="cta"
+                link="/contact"
+                theme="secondary"
+                text="Book a free consultation"
+              />
             </Col>
           </Row>
         </Section>
@@ -106,6 +113,17 @@ function Page() {
                 <Step data={item} />
               </Col>
             ))}
+          </Row>
+          <Row>
+            <Col />
+            <Col>
+              <Button
+                link="/contact"
+                theme="secondary"
+                text="Book a free consultation"
+              />
+            </Col>
+            <Col />
           </Row>
         </Section>
       </main>

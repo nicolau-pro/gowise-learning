@@ -1,4 +1,5 @@
-import { JoinClasses } from "../../data/utils";
+import { JoinClasses } from "utils";
+
 const Row = (props) => {
   const { className = "", children, nogap, nopadding, ...rest } = props;
   return (

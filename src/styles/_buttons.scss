@@ -15,7 +15,6 @@ a[role="button"] {
   text-transform: uppercase;
   color: white;
   background-color: colors.$neutral;
-  margin: auto;
   transition: filter 0.1s ease-out;
 
   &.theme-primary {
