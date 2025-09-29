@@ -56,9 +56,6 @@ function Page() {
 
         <Section className="gap-xl">
           <Row>
-            <h2>Easy as 1-2-3</h2>
-          </Row>
-          <Row>
             {StepsData.map((item) => (
               <Col key={item.number}>
                 <Step data={item} />
