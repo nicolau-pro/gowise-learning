@@ -19,8 +19,8 @@ section.hero {
     background-image: linear-gradient(
       to right,
       color-mix(in srgb, colors.$primary 0%, transparent) 0%,
-      color-mix(in srgb, colors.$primary 90%, transparent) vars.$gap-xl,
-      color-mix(in srgb, colors.$primary 90%, transparent) 65%,
+      color-mix(in srgb, colors.$primary 95%, transparent) vars.$gap-xl,
+      color-mix(in srgb, colors.$primary 95%, transparent) 65%,
       color-mix(in srgb, colors.$primary 0%, transparent) 100%
     );
 
