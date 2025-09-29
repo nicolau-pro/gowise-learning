@@ -1,53 +1,168 @@
-@use "sass:color";
-@use "mixins" as mixins;
+@use "colors";
+@use "variables" as vars;
 
 footer {
   position: relative;
-  $background-color: #111111;
-  background-color: $background-color;
+  margin-top: vars.$gap-xl;
 
-  $color-text: color.adjust(white, $lightness: -50%);
-  $color-highlight: color.adjust(white, $lightness: -10%);
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, colors.$neutral 60%, white),
+    color-mix(in srgb, colors.$neutral 80%, white)
+  );
+  color: color-mix(in srgb, colors.$neutral 30%, white);
 
-  color: $color-text;
+  $card-width: 220px;
+  $card-gap: vars.$gap-large;
 
-  $size: 5em;
-  $shade: color.adjust($background-color, $lightness: 2%);
-
-  background-size: $size $size, cover;
-  background-repeat: repeat;
-
-  background-image: mixins.crosshatch-gradient($shade),
-    linear-gradient(to top, $shade 10%, transparent 100%);
-
-  display: flex;
-  font-size: 0.9em;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -$size;
-    left: 0;
-    width: 100%;
-    height: $size;
-    @include mixins.crosshatch($shade);
-
-    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  > section {
+    > .row {
+      background-image: url("/media/logo-icon-transparent.svg");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      min-height: 480px;
+      margin: 20px auto;
+      height: 100%;
+    }
   }
 
-  a {
-    color: $color-text;
-    text-decoration: none;
-    transition: color 0.1s ease-out;
-    $gap: 0.25em;
-    padding: $gap 2 * $gap;
-    margin: $gap 2 * $gap $gap -2 * $gap;
-    border-radius: 99px;
-    width: fit-content;
+  .row.top {
+    margin-top: vars.$gap-small;
+    .logo {
+      max-width: $card-width + $card-gap;
+      display: flex;
+      max-height: vars.$gap-large;
+
+      a {
+        height: 80px;
+        width: 241.46px;
+        border-radius: 40px 10px 10px 40px;
+      }
+    }
+
+    .contact {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      justify-content: center;
+      height: vars.$gap-large;
+
+      li {
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: currentColor;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 600;
+
+          .icon {
+            margin-right: 0.5em;
+            margin-bottom: -0.1em;
+          }
+
+          transition: color 0.1s ease-out;
+
+          &:hover,
+          &:focus-visible {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .row.cards {
+    align-items: flex-start;
+    gap: $card-gap;
+    margin-top: vars.$gap-large;
+
+    a {
+      text-decoration: none;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: $card-width;
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .details {
+        font-size: 14px;
+        line-height: 1.5em;
+        font-weight: 300;
+      }
+
+      .cta {
+        font-size: 14px;
+        .text {
+          font-weight: 600;
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+
+        .icon {
+          font-size: 1.7em;
+          line-height: 0.6em;
+        }
+      }
+    }
+  }
+
+  .row.bottom {
+    border-top: 1px solid currentColor;
+    margin-top: vars.$gap-large;
+
+    > .col {
+      margin-top: vars.$gap-small;
+    }
+
+    .copyright {
+      font-size: 14px;
+      line-height: 1.2em;
+      font-weight: 300;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 1em;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon-link {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+    }
+  }
+
+  a,
+  .icon-link {
+    color: currentColor;
+    filter: brightness(1);
+    transition: filter 0.1s ease-out;
 
     &:hover,
     &:focus-visible {
-      color: $color-highlight;
+      filter: brightness(2);
     }
   }
 }

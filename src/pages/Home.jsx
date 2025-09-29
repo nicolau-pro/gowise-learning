@@ -91,8 +91,6 @@ function Page() {
             ))}
           </Row>
         </Section>
-
-        <Section className="gap-xl">#</Section>
       </main>
     </>
   );
