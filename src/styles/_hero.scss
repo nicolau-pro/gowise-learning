@@ -55,6 +55,7 @@ section.hero {
       max-width: fit-content;
       padding-right: 3em;
       padding-left: 3em;
+      box-shadow: 0 5px 3px color-mix(in srgb, black 50%, transparent);
     }
   }
 }
@@ -131,7 +132,7 @@ section.hero-quote {
         min-width: $portrait-size;
         max-width: $portrait-size;
         width: $portrait-size;
-        margin: -$portrait-size * 0.5 - vars.$gap-medium * 0.5 vars.$gap-normal;
+        margin: -$portrait-size * 0.5 - vars.$gap-medium vars.$gap-normal;
 
         img {
           aspect-ratio: 1/1;
