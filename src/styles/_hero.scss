@@ -77,7 +77,7 @@ section.hero-quote {
     padding-top: 0;
     padding-bottom: 0;
 
-    article {
+    .hero-quote-body {
       display: flex;
       color: white;
       padding: vars.$gap-medium 0;

@@ -4,7 +4,7 @@
 section.article {
   padding: vars.$gap-xl;
 
-  article {
+  .article-body {
     max-width: vars.$content-width - 2 * vars.$gap-small;
 
     > .row {

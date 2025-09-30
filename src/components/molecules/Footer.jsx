@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Section, Row, Col } from "layout";
 import { Link } from "react-router";
+import { useAppState } from "appState";
 
 import Icon from "icons";
 
@@ -9,6 +10,12 @@ import SocialData from "data/Social";
 import ContactData from "data/Contact";
 
 const Footer = () => {
+  const { setFooterReady } = useAppState();
+
+  useEffect(() => {
+    setFooterReady(true);
+  }, []);
+
   return (
     <footer>
       <Section>
@@ -39,7 +46,7 @@ const Footer = () => {
             <Row className="cards" nopadding>
               {CardsData.map((item) => (
                 <Link to={item.button.link} key={item.titleFooter}>
-                  <span className="title">{item.titleFooter}</span>
+                  <h2 className="title">{item.titleFooter}</h2>
                   <span className="details">{item.details}</span>
                   <div className="cta">
                     <span className="text">{item.button.text}</span>

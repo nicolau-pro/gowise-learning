@@ -6,8 +6,8 @@ export default function Card({ data }) {
   const { image, title, theme, details, button } = data;
 
   return (
-    <article
-      className="card"
+    <div
+      className="card-body"
       style={{ backgroundImage: `url(/media/${image})` }}
     >
       <div className="heading">
@@ -18,6 +18,6 @@ export default function Card({ data }) {
         <p className="details">{details}</p>
         <Button link={button.link} theme={button.theme} text={button.text} />
       </div>
-    </article>
+    </div>
   );
 }

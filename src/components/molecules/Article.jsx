@@ -6,7 +6,9 @@ export default function ArticleSection({ data }) {
 
   return (
     <Section key={title} className="article">
-      <article className={`content-side-${contentSide} theme-${theme}`}>
+      <div
+        className={`article-body content-side-${contentSide} theme-${theme}`}
+      >
         <Row nogap nopadding>
           <Col className="content-wrapper">
             <div className="content">
@@ -21,7 +23,7 @@ export default function ArticleSection({ data }) {
             <img src={`/media/${image}`} alt={imageAlt} />
           </Col>
         </Row>
-      </article>
+      </div>
     </Section>
   );
 }

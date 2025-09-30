@@ -5,7 +5,7 @@ export default function HeroQuote({ data }) {
   return (
     <Section className="hero-quote">
       <Row>
-        <article>
+        <div className="hero-quote-body">
           <div className="quotation-mark">
             <span>”</span>
           </div>
@@ -23,7 +23,7 @@ export default function HeroQuote({ data }) {
             <p className="name">{data.name}</p>
             <p className="title">{data.title}</p>
           </div>
-        </article>
+        </div>
       </Row>
     </Section>
   );

@@ -9,7 +9,7 @@ export default function Testimonial({ data, theme }) {
   return (
     <Section className={`testimonial theme-${theme}`}>
       <Row>
-        <article>
+        <div className="testimonial-body">
           <div className="quotation-mark">
             <span>”</span>
           </div>
@@ -26,7 +26,7 @@ export default function Testimonial({ data, theme }) {
             <p className="name">{name}</p>
             <p className="title">{title}</p>
           </div>
-        </article>
+        </div>
       </Row>
     </Section>
   );

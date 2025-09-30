@@ -1,7 +1,7 @@
 @use "colors";
 @use "variables" as vars;
 
-article.card {
+.card-body {
   border-radius: vars.$radius-large;
   height: 100%;
 

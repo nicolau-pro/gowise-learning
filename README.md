@@ -24,3 +24,7 @@
 
 - install `serve` (once) `npm install -g serve`
 - preview presite `serve .presite`
+
+  "presite": {
+  "wait": "#WELCOME"
+  }
