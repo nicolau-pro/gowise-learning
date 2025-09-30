@@ -5,6 +5,7 @@ export default function Button({
   link = "#",
   theme = "primary",
   text,
+  ariaLabel,
   className,
 }) {
   return (
@@ -12,6 +13,7 @@ export default function Button({
       href={link}
       role="button"
       className={JoinClasses([`theme-${theme}`, className])}
+      aria-label={ariaLabel || text}
     >
       <span>{text}</span>
     </a>

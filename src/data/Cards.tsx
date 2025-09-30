@@ -9,6 +9,7 @@ const data = [
     button: {
       text: "tell me more",
       link: "/parents",
+      ariaLabel: "learn more about GoWise for parents",
       theme: "secondary",
     },
   },
@@ -22,6 +23,7 @@ const data = [
     button: {
       text: "learn more",
       link: "/tutors",
+      ariaLabel: "learn more about GoWise for tutors",
       theme: "primary",
     },
   },
@@ -35,6 +37,7 @@ const data = [
     button: {
       text: "learn more",
       link: "/schools-and-local-authorities",
+      ariaLabel: "learn more about GoWise for schools and local authorities",
       theme: "tertiary",
     },
   },

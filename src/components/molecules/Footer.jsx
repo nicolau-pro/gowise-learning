@@ -45,7 +45,11 @@ const Footer = () => {
             </Row>
             <Row className="cards" nopadding>
               {CardsData.map((item) => (
-                <Link to={item.button.link} key={item.titleFooter}>
+                <Link
+                  to={item.button.link}
+                  key={item.titleFooter}
+                  aria-label={item.button.ariaLabel}
+                >
                   <h2 className="title">{item.titleFooter}</h2>
                   <span className="details">{item.details}</span>
                   <div className="cta">
@@ -66,7 +70,10 @@ const Footer = () => {
                 <ul className="social">
                   {SocialData.map((item) => (
                     <li key={item.network}>
-                      <Link to={item.link}>
+                      <Link
+                        to={item.link}
+                        aria-label={`Social link: GoWise ${item.network}`}
+                      >
                         <img
                           src={`/media/${item.icon}`}
                           alt={`${item.network} icon`}

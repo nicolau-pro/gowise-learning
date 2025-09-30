@@ -16,7 +16,12 @@ export default function Card({ data }) {
       </div>
       <div className="content">
         <p className="details">{details}</p>
-        <Button link={button.link} theme={button.theme} text={button.text} />
+        <Button
+          link={button.link}
+          theme={button.theme}
+          text={button.text}
+          ariaLabel={button.ariaLabel}
+        />
       </div>
     </div>
   );
