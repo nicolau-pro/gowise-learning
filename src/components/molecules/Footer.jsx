@@ -56,7 +56,7 @@ const Footer = () => {
                 </p>
               </Col>
               <Col>
-                <ul className="social" nopadding>
+                <ul className="social">
                   {SocialData.map((item) => (
                     <li key={item.network}>
                       <Link to={item.link}>

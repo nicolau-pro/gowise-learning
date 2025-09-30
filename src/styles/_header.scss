@@ -1,63 +1,48 @@
+@use "colors";
 @use "variables" as vars;
 
 header {
-  $size: vars.$menu-desktop-size;
+  $menu-height: vars.$menu-desktop-height;
+  $menu-color: colors.$primary;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  height: $size;
+  height: $menu-height;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  * {
-    color: black;
-  }
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
   nav {
     position: relative;
     flex: 1;
     height: 100%;
-    max-width: min(vars.$content-width, 100vw);
+    max-width: vars.$content-width;
     padding: 0 2em;
+    display: flex;
 
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      background-color: white;
-      width: 1000vw;
-      height: vars.$menu-desktop-size;
-    }
+    .logo {
+      width: 100%;
+      height: 100%;
+      display: flex;
 
-    &:before {
-      left: calc(-1000vw + 2em);
-    }
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: max-content;
 
-    &:after {
-      left: calc(vars.$menu-desktop-size + 2em);
-    }
-
-    @media (max-width: 767px) {
-      &:before {
-        content: none;
-      }
-
-      &:after {
-        left: vars.$menu-mobile-size;
-        height: vars.$menu-mobile-size;
+        img {
+          height: 60px;
+        }
       }
     }
 
     ul {
-      background-size: $size;
-      background-position: 100.1% 0;
-      background-repeat: no-repeat;
       height: 100%;
       display: flex;
       list-style: none;
@@ -68,24 +53,9 @@ header {
         margin: 0;
       }
 
-      .logo {
-        $blur: 6px;
-        backdrop-filter: blur($blur);
-        -webkit-backdrop-filter: blur($blur);
-
-        @media (max-width: 767px) {
-          backdrop-filter: blur(0.5 * $blur);
-          -webkit-backdrop-filter: blur(0.5 * $blur);
-        }
-      }
-
-      a,
-      .logo {
-        width: $size;
-        max-width: $size;
-      }
-
       a {
+        width: vars.$menu-desktop-block;
+        max-width: vars.$menu-desktop-block;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -93,10 +63,16 @@ header {
         align-items: center;
         display: flex;
         text-decoration: none;
-        font-size: 0.8em;
+        font-family: vars.$font-body;
+        font-size: 20px;
         font-weight: 300;
-        transition: background-color 0.1s ease-out, color 0.1s ease-out,
-          letter-spacing 0.5s ease-out, font-weight 0.5s ease-out;
+        background: transparent;
+
+        $shadow: 0;
+        box-shadow: inset 0 $shadow 0 $menu-color;
+
+        transition: box-shadow 0.1s ease-out, color 0.1s ease-out,
+          letter-spacing 0.1s ease-out;
 
         span {
           color: inherit;
@@ -105,19 +81,34 @@ header {
         &:hover,
         &:focus-visible,
         &.current {
-          background-color: black;
-          color: white;
-          font-weight: 400;
           letter-spacing: 0.02em;
+        }
+
+        &:hover,
+        &:focus-visible {
+          $shadow: -10px;
+          box-shadow: inset 0 $shadow 0 $menu-color;
+        }
+
+        &.current {
+          $shadow: -1 * $menu-height;
+          box-shadow: inset 0 $shadow 0 $menu-color;
+          color: white;
+          letter-spacing: 0.02em;
+        }
+
+        &:active {
+          color: $menu-color;
         }
       }
     }
   }
 
   @media (max-width: 767px) {
-    $size: vars.$menu-mobile-size;
+    $menu-height: vars.$menu-mobile-height;
+    $block-width: vars.$menu-mobile-height;
 
-    height: $size;
+    height: $menu-height;
 
     nav {
       height: 100%;
@@ -132,13 +123,13 @@ header {
           padding: 0;
 
           &:first-of-type {
-            max-width: $size;
+            max-width: $menu-height;
           }
         }
 
         .logo {
-          width: $size;
-          max-width: $size;
+          width: $menu-height;
+          max-width: $menu-height;
         }
 
         a {

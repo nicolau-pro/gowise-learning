@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useAppState } from "appState";
 import MetaTags from "metaTags";
+import Paths from "paths";
 
 import { Section, Row, Col } from "layout";
 import Button from "atoms/Button";
@@ -31,7 +32,7 @@ function Page() {
         section="GoWise Learning - Welcome!"
         description="We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically."
         image="/social/GoWise-Learning.jpg"
-        url="/"
+        url={Paths.HOME}
       />
 
       <main>
@@ -66,7 +67,7 @@ function Page() {
             <Col />
             <Col>
               <Button
-                link="/contact"
+                link={Paths.CONTACT}
                 theme="secondary"
                 text="Book a free consultation"
               />

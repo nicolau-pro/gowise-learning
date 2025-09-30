@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-import { rootPath } from "variables";
 import { Link } from "react-router";
 import { useAppState } from "appState";
 import Icon from "icons";
+import Paths from "paths";
 
 const Header = () => {
   const { setHeaderReady, CurrentPath } = useAppState();
 
   const Links = [
-    { path: "", name: "Home", icon: "home" },
-    { path: "contact", name: "Contact", icon: "account_circle" },
+    { path: Paths.PARENTS, name: "PARENTS", icon: "account_circle" },
+    { path: Paths.TUTORS, name: "TUTORS", icon: "account_circle" },
+    {
+      path: Paths.SCHOOLS_AND_LOCAL_AUTORITIES,
+      name: "SCHOOLS & LAs",
+      icon: "account_circle",
+    },
+    { path: Paths.ABOUT, name: "ABOUT US", icon: "account_circle" },
+    { path: Paths.CONTACT, name: "CONTACT", icon: "account_circle" },
   ];
 
   useEffect(() => {
@@ -19,19 +26,17 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul>
-          <li>
-            <img
-              alt="Nicolau.pro logo"
-              className="logo"
-              src="/nicolau-pro-logo.webp"
-            />
-          </li>
+        <div className="logo">
+          <Link to={Paths.HOME}>
+            <img alt="GoWise logo" src="/media/GoWise-logo.svg" />
+          </Link>
+        </div>
 
+        <ul>
           {Links.map((link) => (
             <li key={link.name}>
               <Link
-                to={`${rootPath}${link.path}`}
+                to={`${Paths.HOME}${link.path}`}
                 className={CurrentPath === link.path ? "current" : null}
                 aria-label={
                   CurrentPath === link.path
@@ -40,7 +45,7 @@ const Header = () => {
                 }
               >
                 <Icon className="desktop-hidden">{link.icon}</Icon>
-                <span>{link.name.toUpperCase()}</span>
+                <span>{link.name}</span>
               </Link>
             </li>
           ))}

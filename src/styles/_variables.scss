@@ -1,13 +1,17 @@
 $crosshatch-size: 5em;
-$menu-desktop-size: 90px;
-$menu-mobile-size: 60px;
+$menu-desktop-height: 80px;
+$menu-desktop-block: 180px;
+$menu-mobile-height: 60px;
 $content-width: 1400px;
+$footer-height: 560px;
 
 $gap-small: 20px;
 $gap-medium: 30px;
 $gap-normal: 40px;
 $gap-large: 80px;
 $gap-xl: 100px;
+
+$main-height-deficit: $menu-desktop-height + $footer-height + $gap-small;
 
 $radius-normal: 18px;
 $radius-large: 24px;
