@@ -11,7 +11,7 @@ export default function Hero({ data }) {
       <Row>
         <Col>
           <h1 className="hero">{data.h1.toUpperCase()}</h1>
-          <h2>{data.subtitle}sss</h2>
+          <h2>{data.subtitle}</h2>
           <h3>{data.h3}</h3>
           <Button
             className="cta"
