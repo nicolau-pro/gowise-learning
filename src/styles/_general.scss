@@ -16,3 +16,10 @@ img {
   width: 100%;
   height: auto;
 }
+
+.invisible-text {
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+  user-select: none;
+}

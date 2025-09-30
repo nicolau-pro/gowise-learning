@@ -21,6 +21,7 @@ export default function Card({ data }) {
           theme={button.theme}
           text={button.text}
           ariaLabel={button.ariaLabel}
+          ariaHidden={true}
         />
       </div>
     </div>

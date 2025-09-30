@@ -6,6 +6,7 @@ export default function Button({
   theme = "primary",
   text,
   ariaLabel,
+  ariaHidden,
   className,
 }) {
   return (
@@ -15,7 +16,8 @@ export default function Button({
       className={JoinClasses([`theme-${theme}`, className])}
       aria-label={ariaLabel || text}
     >
-      <span>{text}</span>
+      <span aria-hidden={ariaHidden}>{text}</span>
+      {ariaHidden && <span className="invisible-text">{ariaLabel}</span>}
     </a>
   );
 }
