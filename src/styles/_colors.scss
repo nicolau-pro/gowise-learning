@@ -15,3 +15,6 @@ $neutral: #080008;
 
 $error: #f78474;
 $warning: #f3d350;
+
+$text: color-mix(in srgb, $neutral 80%, white);
+$text-light: color-mix(in srgb, $neutral 60%, white);

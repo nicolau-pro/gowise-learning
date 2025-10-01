@@ -32,6 +32,6 @@ div.bullet {
   .text {
     margin-top: 1em;
     font-weight: 300;
-    color: color-mix(in srgb, colors.$neutral 80%, white);
+    color: colors.$text;
   }
 }

@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "variables" as vars;
+@use "colors";
 
 // @import url("https://use.typekit.net/wiq3geo.css");
 
@@ -62,6 +63,7 @@ h6 {
   $heading-font-size: 64px;
   font-weight: math.div($heading-font-weight, $coef);
   font-size: $heading-font-size * $coef;
+  color: colors.$text-light;
 
   @media (max-width: 767px) {
     font-size: $heading-font-size * $coef * 0.75;
