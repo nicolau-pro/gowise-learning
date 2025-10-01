@@ -12,7 +12,7 @@ $material-icons-sharp: url(https://fonts.gstatic.com/s/materialsymbolssharp/v281
   font-family: vars.$font-icons;
   font-style: normal;
   font-weight: 400;
-  src: $material-icons-sharp format("woff2");
+  src: $material-icons-rounded format("woff2");
 }
 
 .material-icons {
