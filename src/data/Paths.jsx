@@ -1,4 +1,5 @@
 const data = {
+  ROOT: "https://gowiselearining.co.uk",
   HOME: "/",
   PARENTS: "parents",
   TUTORS: "tutors",

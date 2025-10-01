@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useAppState } from "appState";
+import MetaTags from "metaTags";
+import Paths from "paths";
 
 import Row from "layout/Row";
 import Col from "layout/Col";
 import Section from "layout/Section";
-import MetaTags from "metaTags";
-import Paths from "paths";
 import Bullet from "components/Bullet";
 import Button from "atoms/Button";
 
@@ -27,7 +27,12 @@ function Page() {
 
   return (
     <>
-      <MetaTags section="Parents" description="Parents" url={Paths.PARENTS} />
+      <MetaTags
+        section="For Parents"
+        description="At GoWise Learning, we know how much you want the very best for your child. As parents, you carry both the joy and the responsibility of making sure your child feels safe, supported, and able to thrive. "
+        image="/social/GoWise-Learning.jpg"
+        url={`${Paths.ROOT}/${Paths.PARENTS}`}
+      />
 
       <main>
         <HeroSection data={WelcomeData} />

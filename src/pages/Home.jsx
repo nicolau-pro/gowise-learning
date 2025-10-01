@@ -33,10 +33,10 @@ function Page() {
   return (
     <>
       <MetaTags
-        section="GoWise Learning - Welcome!"
+        section="Welcome!"
         description="We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically."
         image="/social/GoWise-Learning.jpg"
-        url={Paths.HOME}
+        url={Paths.ROOT}
       />
 
       <main>
