@@ -4,20 +4,24 @@ import MetaTags from "metaTags";
 import Paths from "paths";
 
 import { Section, Row, Col } from "layout";
+import { JoinClasses } from "utils";
 import Button from "atoms/Button";
+import Icon from "icons";
 
 import HeroSection from "components/Hero";
 import HeroQuoteSection from "components/HeroQuote";
 import ArticleSection from "components/Article";
+import TestimonialSection from "components/Testimonial";
 import Card from "components/Card";
 import Step from "components/Step";
-import TestimonialSection from "components/Testimonial";
+// import Bullet from "components/Bullet";
 
 import WelcomeData from "data/Welcome";
 import ArticlesData from "data/Articles";
 import CardsData from "data/Cards";
 import StepsData from "data/Steps";
 import TestimonialsData from "data/Testimonials";
+import BulletsData from "data/Bullets";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -54,6 +58,26 @@ function Page() {
         ))}
 
         <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+
+        <Section className="gap-xl">
+          <Row>
+            <h2>When your child works with us, you can expect:</h2>
+          </Row>
+          <Row>
+            {BulletsData.map((item) => (
+              <Col key={item.number}>
+                <div className={JoinClasses(["bullet", `theme-secondary`])}>
+                  <div className="icon">
+                    <span>
+                      <Icon>{item.icon}</Icon>
+                    </span>
+                  </div>
+                  <p className="text">{item.text}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Section>
 
         <Section className="gap-xl">
           <Row>
