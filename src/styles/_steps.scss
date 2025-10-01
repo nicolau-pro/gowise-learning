@@ -33,10 +33,10 @@ article.step {
 
   .content {
     flex: 1;
-    $backroung-shade: color-mix(in srgb, colors.$primary_highlight 10%, white);
+    $backround-shade: color-mix(in srgb, colors.$primary_highlight 10%, white);
     position: relative;
     z-index: 0;
-    background: linear-gradient(to top, $backroung-shade, white 70%);
+    background: linear-gradient(to top, $backround-shade, white 70%);
     padding: vars.$gap-normal;
     color: colors.$primary;
     text-align: center;
@@ -53,7 +53,7 @@ article.step {
       background: linear-gradient(
         to bottom,
         colors.$primary_highlight 0%,
-        $backroung-shade 70%
+        $backround-shade 70%
       );
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);

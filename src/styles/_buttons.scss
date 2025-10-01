@@ -16,7 +16,6 @@ a[role="button"] {
   color: white;
   background-color: colors.$neutral;
   transition: filter 0.1s ease-out;
-  box-shadow: 0 5px 3px color-mix(in srgb, black 15%, transparent);
 
   &.theme-primary {
     background: linear-gradient(
