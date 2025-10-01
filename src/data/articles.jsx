@@ -1,6 +1,6 @@
 const data = [
   {
-    theme: "primary",
+    theme: "primary-light",
     contentSide: "left",
     image: "article1.jpg",
     imageAlt: "Hand-picked, quality tutors",

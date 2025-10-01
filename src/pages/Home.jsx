@@ -14,7 +14,7 @@ import ArticleSection from "components/Article";
 import TestimonialSection from "components/Testimonial";
 import Card from "components/Card";
 import Step from "components/Step";
-// import Bullet from "components/Bullet";
+import Bullet from "components/Bullet";
 
 import WelcomeData from "data/Welcome";
 import ArticlesData from "data/Articles";
@@ -65,15 +65,8 @@ function Page() {
           </Row>
           <Row>
             {BulletsData.map((item) => (
-              <Col key={item.number}>
-                <div className={JoinClasses(["bullet", `theme-secondary`])}>
-                  <div className="icon">
-                    <span>
-                      <Icon>{item.icon}</Icon>
-                    </span>
-                  </div>
-                  <p className="text">{item.text}</p>
-                </div>
+              <Col key={item.text}>
+                <Bullet data={item} theme="secondary" />
               </Col>
             ))}
           </Row>

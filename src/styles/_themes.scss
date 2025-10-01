@@ -2,10 +2,16 @@
 
 .theme- {
   &primary {
-    color: colors.$primary-highlight;
+    color: colors.$primary;
+  }
+  &primary-light {
+    color: colors.$primary_highlight;
   }
   &secondary {
     color: colors.$secondary;
+  }
+  &secondary-dark {
+    color: colors.$secondary_dark;
   }
   &tertiary {
     color: colors.$tertiary;

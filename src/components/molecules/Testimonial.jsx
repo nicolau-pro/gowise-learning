@@ -14,11 +14,13 @@ export default function Testimonial({ data, theme }) {
             <span>”</span>
           </div>
           <div className="content">
-            <div className="stars">
-              {Array.from({ length: stars }, (_, i) => (
-                <Icon key={i}>star</Icon>
-              ))}
-            </div>
+            {stars && (
+              <div className="stars">
+                {Array.from({ length: stars }, (_, i) => (
+                  <Icon key={i}>star</Icon>
+                ))}
+              </div>
+            )}
             <h2>{quote}</h2>
           </div>
           <div className="person">

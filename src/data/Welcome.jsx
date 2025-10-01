@@ -1,6 +1,8 @@
 const data = {
   strip: "hero-strip.jpg",
-  h1: "Welcome",
+  background: false,
+  theme: "primary",
+  h1: "WELCOME",
   subtitle: "To GoWise Learning",
   h3: "We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically.",
   button: {

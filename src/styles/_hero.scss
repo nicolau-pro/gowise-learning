@@ -5,7 +5,6 @@ section.hero {
   background-repeat: repeat-x;
   background-size: cover;
   background-position: 0 0;
-  animation: slide-bg 3600s linear infinite;
 
   .row {
     max-width: vars.$content-width + 2 * vars.$gap-xl;
@@ -16,11 +15,11 @@ section.hero {
     }
 
     background-image: linear-gradient(
-      to right,
-      color-mix(in srgb, colors.$primary 0%, transparent) 0%,
-      color-mix(in srgb, colors.$primary 95%, transparent) vars.$gap-xl,
-      color-mix(in srgb, colors.$primary 95%, transparent) 65%,
-      color-mix(in srgb, colors.$primary 0%, transparent) 100%
+      to bottom,
+      currentColor 2px,
+      color-mix(in srgb, currentColor 95%, transparent) vars.$gap-normal,
+      color-mix(in srgb, currentColor 80%, transparent) 75%,
+      color-mix(in srgb, currentColor 55%, transparent) 100%
     );
 
     .hero {
@@ -57,6 +56,33 @@ section.hero {
       padding-right: 3em;
       padding-left: 3em;
       box-shadow: 0 5px 3px color-mix(in srgb, black 50%, transparent);
+    }
+  }
+
+  &.sliding-strip {
+    animation: slide-bg 3600s linear infinite;
+    color: inherit;
+    max-width: unset;
+
+    .row {
+      background-color: transparent;
+      background-image: linear-gradient(
+        to right,
+        color-mix(in srgb, currentColor 0%, transparent) 0%,
+        color-mix(in srgb, currentColor 95%, transparent) vars.$gap-xl,
+        color-mix(in srgb, currentColor 95%, transparent) 65%,
+        color-mix(in srgb, currentColor 0%, transparent) 100%
+      );
+    }
+  }
+
+  &.no-strip {
+    max-width: vars.$content-width - 2 * vars.$gap-small;
+    border-radius: 0 0 vars.$radius-large vars.$radius-large;
+    overflow: hidden;
+
+    .row {
+      padding: vars.$gap-small vars.$gap-large vars.$gap-normal vars.$gap-large;
     }
   }
 }
