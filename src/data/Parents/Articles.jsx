@@ -6,7 +6,7 @@ const data = [
     imageAlt: "EHCP-Ready",
     title: "EHCP-Ready",
     paragraphs: [
-      "Every child is unique, especially when it comes to Special Educational Needs and Disabilities (SEND) and children with neurodiverse profiles.We take time to listen, understand, and create bespoke teaching strategies that match your child's strengths, interests, and areas of development. Our work goes beyond academics. We focus on the whole child, linking their wellbeing, confidence, and happiness with their progress in learning",
+      "Every child is unique, especially when it comes to Special Educational Needs and Disabilities (SEND) and children with neurodiverse profiles.We take time to listen, understand, and create bespoke teaching strategies that match your child's strengths, interests, and areas of development.Our work goes beyond academics. We focus on the whole child, linking their wellbeing, confidence, and happiness with their progress in learning",
     ],
   },
   {

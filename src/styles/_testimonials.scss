@@ -45,6 +45,7 @@ section.testimonial {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: vars.$gap-normal * 0.75 0 vars.$gap-normal 0;
 
       .stars {
@@ -71,6 +72,7 @@ section.testimonial {
       max-width: $portrait-size;
       margin-top: -$portrait-size * 0.5;
       width: $portrait-size;
+      padding-bottom: vars.$gap-normal;
 
       img {
         aspect-ratio: 1/1;
