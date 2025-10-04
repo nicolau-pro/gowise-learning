@@ -6,7 +6,7 @@ import { useAppState } from "appState";
 
 function Dashboard() {
   const { HeaderReady, OutletReady, FooterReady } = useAppState();
-  console.log(HeaderReady, OutletReady, FooterReady);
+  // console.log(HeaderReady, OutletReady, FooterReady);
 
   return (
     <>
