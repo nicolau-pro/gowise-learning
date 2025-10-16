@@ -152,22 +152,27 @@ function Page() {
                 protecting your personal information. At our core, we exist to
                 support learners, families and educational partners with trust,
                 integrity and excellence. Protecting your personal information
-                is a serious responsibility we carry with care. This Privacy
-                Policy explains:
-                <ul>
-                  <li>What information we collect, and why</li>
-                  <li>How we use, share, store, and secure it</li>
-                  <li>Your rights over your information</li>
-                  <li>How to contact us</li>
-                  <li>How we handle updates to this policy</li>
-                </ul>
+                is a serious responsibility we carry with care.
               </h3>
 
-              <h4>
+              <hr />
+
+              <p>
+                <strong>This Privacy Policy explains:</strong>
+              </p>
+              <ul>
+                <li>What information we collect, and why</li>
+                <li>How we use, share, store, and secure it</li>
+                <li>Your rights over your information</li>
+                <li>How to contact us</li>
+                <li>How we handle updates to this policy</li>
+              </ul>
+
+              <p>
                 By engaging with our website, registering for services or
                 providing us data, you consent to the practices described here
                 (unless otherwise required by law).
-              </h4>
+              </p>
             </Col>
           </Row>
           <Row>
