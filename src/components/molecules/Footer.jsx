@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { useAppState } from "appState";
 
 import Icon from "icons";
+import Paths from "paths";
 
 import CardsData from "data/Cards";
 import SocialData from "data/Social";
@@ -41,6 +42,9 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
+              </Col>
+              <Col>
+                <Link to={Paths.PRIVACY_POLICY}>Privacy Policy</Link>
               </Col>
             </Row>
             <Row className="cards" nopadding>

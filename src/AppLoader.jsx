@@ -6,6 +6,8 @@ import Tutors from "./pages/Tutors";
 import Schools from "./pages/Schools";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
 import Paths from "paths";
 
 import { useAppState } from "./AppStateContext";
@@ -38,6 +40,9 @@ function AppLoader() {
           </Route>
           <Route path={Paths.CONTACT}>
             <Route index element={<Contact />} />
+          </Route>
+          <Route path={Paths.PRIVACY_POLICY}>
+            <Route index element={<PrivacyPolicy />} />
           </Route>
         </Route>
       </Routes>

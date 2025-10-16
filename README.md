@@ -6,7 +6,6 @@
 
 ## Start backend and frontend
 
-- backend `node src/backend/index.cjs`
 - frontend `npm run dev`
 
 ## Simple Vite build and preview
