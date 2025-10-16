@@ -606,7 +606,7 @@ function Page() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="mb-12">
             <Col>
               <h3>Governing Law & Disclaimer</h3>
               <p>

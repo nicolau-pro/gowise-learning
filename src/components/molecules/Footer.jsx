@@ -23,7 +23,7 @@ const Footer = () => {
         <Row>
           <Col nogap>
             <Row className="top" nopadding nogap>
-              <Col nogap className="logo">
+              <Col className="logo">
                 <Link to="/">
                   <img
                     src={`/media/logo-monochrome.svg`}
@@ -31,7 +31,7 @@ const Footer = () => {
                   />
                 </Link>
               </Col>
-              <Col nogap>
+              <Col style={{ maxWidth: "300px" }}>
                 <ul className="contact">
                   {Object.entries(ContactData).map(([key, item]) => (
                     <li key={key}>
@@ -43,9 +43,21 @@ const Footer = () => {
                   ))}
                 </ul>
               </Col>
-              <Col nogap>
-                <Link to={Paths.PRIVACY_POLICY}>Privacy Policy</Link>
+              <Col style={{ paddingTop: "0.5em" }}>
+                <Link
+                  to={Paths.SAFEGUARDING}
+                  className="strong hidden-decoration fit-text"
+                >
+                  Safeguarding and Protection Policy
+                </Link>
+                <Link
+                  to={Paths.PRIVACY_POLICY}
+                  className="strong hidden-decoration fit-text"
+                >
+                  Privacy Policy
+                </Link>
               </Col>
+              <Col></Col>
             </Row>
             <Row className="cards" nopadding>
               {CardsData.map((item) => (
@@ -64,13 +76,13 @@ const Footer = () => {
               ))}
             </Row>
             <Row className="bottom" nopadding>
-              <Col nogap>
+              <Col>
                 <p className="copyright">
                   ©2025 Go Wise Learing / Anamaria Blanaru. All images and logos
                   are proprietary to their respective owners.
                 </p>
               </Col>
-              <Col nogap>
+              <Col>
                 <ul className="social">
                   {SocialData.map((item) => (
                     <li key={item.network}>

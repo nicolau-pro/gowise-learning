@@ -7,6 +7,7 @@ const data = {
   ABOUT: "about-us",
   CONTACT: "contact",
   PRIVACY_POLICY: "privacy-policy",
+  SAFEGUARDING: "safeguarding-and-protection-policy",
 };
 
 export default data;
