@@ -4,7 +4,7 @@
 
 - install `npm i`
 
-## Start backend and frontend
+## Start frontend
 
 - frontend `npm run dev`
 
