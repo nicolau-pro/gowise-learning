@@ -38,7 +38,7 @@ function Page() {
           </Row>
           <Row>
             <Col>
-              <h3>
+              <h2 className="h3">
                 At GoWise Learning, (trading name under Moms Academy Ltd) (“we”,
                 “us”, “our”), we take your privacy seriously. We collect and use
                 personal information only to deliver high-quality tutoring and
@@ -47,7 +47,7 @@ function Page() {
                 families and educational partners with trust, integrity and
                 excellence. Protecting your personal information is a serious
                 responsibility we carry with care.
-              </h3>
+              </h2>
             </Col>
           </Row>
         </Section>
@@ -136,11 +136,7 @@ function Page() {
           </Row>
         </Section>
 
-        <Section>
-          <Row>
-            <hr />
-          </Row>
-        </Section>
+        <hr />
 
         <Section>
           <Row>
@@ -214,17 +210,17 @@ function Page() {
                 or legal obligations we hold.
               </p>
               <h4>Below is an overview of categories of data and purposes:</h4>
-              <table border="1" cellspacing="0" cellpadding="8">
+              <table>
                 <thead>
                   <tr>
-                    <th>Group / Context</th>
-                    <th>Data Collected</th>
-                    <th>Purpose / Use</th>
+                    <th scope="col">Group / Context</th>
+                    <th scope="col">Data Collected</th>
+                    <th scope="col">Purpose / Use</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Students / Learners</td>
+                    <th scope="row">Students / Learners</th>
                     <td>
                       Name, date of birth, gender / pronouns, school/class,
                       contact info, address, SEN / disability / SEND
@@ -238,7 +234,7 @@ function Page() {
                     </td>
                   </tr>
                   <tr>
-                    <td>Parents / Carers / Guardians</td>
+                    <th scope="row">Parents / Carers / Guardians</th>
                     <td>
                       Name, contact (phone, email), postal address, emergency
                       contact details
@@ -248,7 +244,7 @@ function Page() {
                     </td>
                   </tr>
                   <tr>
-                    <td>Tutors / Staff</td>
+                    <th scope="row">Tutors / Staff</th>
                     <td>
                       Name, contact info, CV / qualifications, references,
                       background checks/DBS, employment history, bank / payroll
@@ -260,10 +256,10 @@ function Page() {
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <th scope="row">
                       Partner Organisations (schools, local authorities,
                       commissioners)
-                    </td>
+                    </th>
                     <td>
                       Name, role, contact details, contract / commissioning
                       data, reports / analytics
@@ -273,7 +269,7 @@ function Page() {
                     </td>
                   </tr>
                   <tr>
-                    <td>Website / Visitors</td>
+                    <th scope="row">Website / Visitors</th>
                     <td>
                       IP address, device/browser type, usage logs, cookies /
                       analytics data, interaction data

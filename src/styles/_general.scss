@@ -33,3 +33,43 @@ hr {
   height: 0;
   max-height: 1px;
 }
+
+table {
+  border: 1px solid currentColor;
+  border: none;
+  border-collapse: collapse;
+  outline: 1px solid color-mix(in srgb, colors.$primary 25%, white);
+  border-radius: 1em;
+  overflow: hidden;
+
+  td,
+  th {
+    padding: 1em;
+    text-align: left;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+
+  thead {
+    * {
+      color: colors.$primary;
+      background-color: color-mix(in srgb, currentColor 25%, white);
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+
+  tr {
+    &:nth-child(odd) {
+      background-color: color-mix(in srgb, colors.$neutral 4%, white);
+    }
+
+    &:nth-child(even) {
+      background-color: color-mix(in srgb, colors.$neutral 1%, white);
+    }
+
+    th {
+      font-weight: 500;
+    }
+  }
+}
