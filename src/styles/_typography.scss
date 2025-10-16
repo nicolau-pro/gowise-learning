@@ -115,10 +115,17 @@ h6,
   @include heading-font(0.18);
 }
 
-ul {
+ul,
+ol {
   // list-style: none;
   padding: 0 1em 1em 1em;
   margin: 0;
+
+  ul,
+  ol {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+  }
 
   li {
     margin-bottom: 0.5em;

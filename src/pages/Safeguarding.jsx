@@ -325,14 +325,97 @@ function Page() {
                   all times.
                 </li>
               </ul>
+            </Col>
+          </Row>
 
+          <Row>
+            <Col>
+              <h2>Reporting a Safeguarding Concern </h2>
+              <p className="large">
+                <strong>
+                  If at any point you are concerned about a child's or young
+                  person's safety or wellbeing, you must take immediate action.
+                  Safeguarding and protection is everyone's responsibility.
+                </strong>
+              </p>
               <p>
+                If you are a <strong>parent</strong>, <strong>carer</strong>,
+                <strong> tutor</strong> or <strong>learner </strong>
+                and you have a safeguarding concern:
+              </p>
+
+              <ol>
+                <li>
+                  <strong>Take Immediate Action if Needed</strong> - If a child
+                  or young person is at immediate risk of harm, call 999 without
+                  delay.
+                </li>
+                <li>
+                  <strong>Stay Calm & Listen</strong> - If the child or young
+                  person is NOT at immediate risk of harm and shares something
+                  with you, listen carefully without judgment and avoid making
+                  promises you cannot keep.
+                </li>
+                <li>
+                  <strong>Record the concern</strong> - Note exactly what you
+                  have seen, heard or been told, using the child's or young
+                  person's own words where possible. Do not add your
+                  interpretations or assumptions.
+                </li>
+                <li>
+                  <strong>Report Immediately</strong> - Do not wait. Contact our
+                  Safeguarding Team directly on our confidential Safeguarding
+                  Line: <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
+                </li>
+                <li>
+                  You'll be asked to complete a Safeguarding Concern Form on the
+                  same day with the date, time and details of the child or
+                  person involved.
+                </li>
+                <li>
+                  <strong>Follow Guidance from the DSL</strong> - The DSL will
+                  review the information, assess the level of concern and decide
+                  on the next steps.
+                </li>
+                <li>
+                  Continue to provide support/tutoring to the child or young
+                  person as appropriate and follow any instructions from the
+                  DSL.
+                </li>
+                <li>
+                  <strong>Maintain Confidentiality</strong> - Information about
+                  a safeguarding and protection concern must only be shared with
+                  the people who need to know to help keep the child or the
+                  young person safe. Do not discuss any details of the concern
+                  with anyone other than the DSL or relevant authorities.
+                </li>
+                <li>
+                  <strong>If You Are Not Satisfied with the Outcome</strong> -
+                  If you believe a safeguarding or protection concern has not
+                  been handled appropriately or you continue to have serious
+                  concerns about a child's or young person's safety:
+                  <ul>
+                    <li>
+                      For safeguarding concerns about vulnerable young people
+                      over the age of 18, you may contact Adult Care Advice and
+                      Contact on 0300 456 0111.
+                    </li>
+                    <li>
+                      Alternatively, you can contact the NSPCC Helpline on 0808
+                      800 5000 for confidential advice and support if you are
+                      concerned about a child.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+
+              <p className="large">
                 Safeguarding and protection is a shared responsibility.
                 Together, we can ensure that every child and young person feels
                 safe, supported and able to thrive.
               </p>
 
-              <p>
+              <p className="large">
                 We promise to take all concerns seriously, investigate
                 sensitively & confidentially and act in the child's or young
                 person's best interest.
