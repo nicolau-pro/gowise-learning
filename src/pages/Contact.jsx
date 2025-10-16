@@ -17,7 +17,12 @@ function Page() {
 
   return (
     <>
-      <MetaTags section="Contact" description="Contact" url={Paths.CONTACT} />
+      <MetaTags
+        section="Contact"
+        description="Contact"
+        url={Paths.CONTACT}
+        image="/social/GoWise-Learning.jpg"
+      />
 
       <main>
         <Section>
