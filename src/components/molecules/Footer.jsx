@@ -21,9 +21,9 @@ const Footer = () => {
     <footer>
       <Section>
         <Row>
-          <Col>
+          <Col nogap>
             <Row className="top" nopadding nogap>
-              <Col className="logo">
+              <Col nogap className="logo">
                 <Link to="/">
                   <img
                     src={`/media/logo-monochrome.svg`}
@@ -31,7 +31,7 @@ const Footer = () => {
                   />
                 </Link>
               </Col>
-              <Col>
+              <Col nogap>
                 <ul className="contact">
                   {Object.entries(ContactData).map(([key, item]) => (
                     <li key={key}>
@@ -43,7 +43,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </Col>
-              <Col>
+              <Col nogap>
                 <Link to={Paths.PRIVACY_POLICY}>Privacy Policy</Link>
               </Col>
             </Row>
@@ -64,13 +64,13 @@ const Footer = () => {
               ))}
             </Row>
             <Row className="bottom" nopadding>
-              <Col>
+              <Col nogap>
                 <p className="copyright">
                   ©2025 Go Wise Learing / Anamaria Blanaru. All images and logos
                   are proprietary to their respective owners.
                 </p>
               </Col>
-              <Col>
+              <Col nogap>
                 <ul className="social">
                   {SocialData.map((item) => (
                     <li key={item.network}>

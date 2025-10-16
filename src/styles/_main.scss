@@ -28,6 +28,10 @@ footer {
     align-items: center;
     width: 100%;
 
+    &.nogap {
+      gap: 0;
+    }
+
     &.gap-xl {
       margin-top: vars.$gap-xl;
     }
@@ -66,6 +70,17 @@ footer {
       display: flex;
       flex-direction: column;
       flex: 1;
+      gap: vars.$gap-xs;
+
+      &.nogap {
+        gap: 0;
+      }
+
+      @for $i from 2 through 10 {
+        &.gap-#{$i} {
+          gap: #{$i}em;
+        }
+      }
 
       @for $i from 2 through 10 {
         &.span-#{$i} {
