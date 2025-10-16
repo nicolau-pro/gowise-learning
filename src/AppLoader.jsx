@@ -7,6 +7,7 @@ import Schools from "./pages/Schools";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Safeguarding from "./pages/Safeguarding";
 
 import Paths from "paths";
 
@@ -43,6 +44,9 @@ function AppLoader() {
           </Route>
           <Route path={Paths.PRIVACY_POLICY}>
             <Route index element={<PrivacyPolicy />} />
+          </Route>
+          <Route path={Paths.SAFEGUARDING}>
+            <Route index element={<Safeguarding />} />
           </Route>
         </Route>
       </Routes>

@@ -22,6 +22,7 @@ section.testimonial {
   .testimonial-body {
     display: flex;
     position: relative;
+    width: 100%;
 
     > * {
       flex: 1;
@@ -68,11 +69,12 @@ section.testimonial {
     }
 
     .person {
+      position: relative;
       min-width: $portrait-size;
       max-width: $portrait-size;
       margin-top: -$portrait-size * 0.5;
       width: $portrait-size;
-      padding-bottom: vars.$gap-normal;
+      padding-bottom: vars.$gap-normal * 2.5;
 
       img {
         aspect-ratio: 1/1;
@@ -82,20 +84,20 @@ section.testimonial {
       }
 
       p {
-        margin-left: 50%;
+        position: absolute;
+        right: 0;
         color: colors.$text;
-        margin-right: -40px;
 
         &.name {
-          // text-transform: uppercase;
           font-weight: 600;
           font-size: 18px;
-          margin-top: 0.5em;
+          bottom: 3em;
         }
 
         &.title {
           font-weight: 200;
           font-size: 16px;
+          bottom: 2em;
         }
       }
     }

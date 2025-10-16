@@ -2,8 +2,7 @@ import Persons from "data/Persons";
 
 const data = [
   {
-    quote:
-      "When you join Go Wise Learning, you're not just taking on a job, you're joining a community.",
+    quote: "This is our commitment at GoWise Learning.",
     stars: false,
     person: Persons.AnamariaBlanaru,
   },

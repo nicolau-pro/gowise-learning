@@ -20,17 +20,20 @@ function Page() {
   return (
     <>
       <MetaTags
-        section="About Us"
-        description="About Us"
+        section="Privacy Policy"
+        description="At GoWise Learning we take your privacy seriously. We collect and use personal information only to deliver high-quality tutoring and educational support while protecting your rights and
+                confidentiality"
         url={Paths.PRIVACY_POLICY}
       />
 
       <main>
-        <Section>
+        <Section className="pt-4">
           <Row>
             <Col>
               <h1 className="hero">Privacy Policy</h1>
-              <h2>Last Updated: October 2025</h2>
+              <p>
+                <strong>Last Updated: October 2025</strong>
+              </p>
             </Col>
           </Row>
           <Row>

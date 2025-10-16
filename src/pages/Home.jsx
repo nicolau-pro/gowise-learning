@@ -4,9 +4,9 @@ import MetaTags from "metaTags";
 import Paths from "paths";
 
 import { Section, Row, Col } from "layout";
-import { JoinClasses } from "utils";
+// import { JoinClasses } from "utils";
 import Button from "atoms/Button";
-import Icon from "icons";
+// import Icon from "icons";
 
 import HeroSection from "components/Hero";
 import HeroQuoteSection from "components/HeroQuote";
