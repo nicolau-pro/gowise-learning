@@ -55,6 +55,13 @@ function Page() {
                 people safe, how we respond if there are concerns and the
                 standards we expect of everyone involved in our work.
               </p>
+              <p>
+                The term “child” refers to anyone under the age of 18, and the
+                term “young person” refers to individuals aged 18 to 25. At
+                GoWise Learning, safeguarding and protection is at the heart of
+                everything we do and underpins our approach to education,
+                wellbeing and professional conduct.
+              </p>
             </Col>
           </Row>
         </Section>
@@ -139,12 +146,158 @@ function Page() {
                   Keeping Children Safe in Education (September 2025) (statutory
                   for Alternative Provision Schools)
                 </li>
+                <li>The Education Act 2002</li>
               </ul>
               <p>
                 We also adhere to best practice in safer recruitment, staff
                 training, data protection and partnerships with schools, local
                 authorities and safeguarding agencies.
               </p>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <h3>Our Safeguarding Principles</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Principle</th>
+                    <th scope="col">What It Means at GoWise Learning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Child and Young Person-Centred Approach</th>
+                    <td>
+                      The needs, safety, and voice of each child or young person
+                      come first.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Early Intervention</th>
+                    <td>
+                      We identify concerns early and act promptly to prevent
+                      harm.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Accountability</th>
+                    <td>
+                      Everyone at GoWise Learning has a duty to safeguard.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Partnership</th>
+                    <td>
+                      We collaborate with parents, schools and local authorities
+                      to ensure a joined-up approach.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Transparency</th>
+                    <td>
+                      We communicate clearly and maintain open, honest
+                      relationships with families and professionals.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <h2>Recognising Abuse and Neglect</h2>
+              <p>
+                Abuse can take many forms. All tutors at GoWise Learning are
+                trained to recognise indicators of harm and to respond
+                appropriately.
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Type of Abuse</th>
+                    <th scope="col">Examples / Indicators</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Physical</th>
+                    <td>
+                      Unexplained injuries, bruises, or burns; fear of physical
+                      contact.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Emotional</th>
+                    <td>
+                      Withdrawal, anxiety or low self-esteem; extreme reactions
+                      to criticism.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sexual</th>
+                    <td>
+                      Inappropriate behaviour or language; knowledge beyond age
+                      expectations.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Neglect</th>
+                    <td>
+                      Poor hygiene, hunger, tiredness, lack of supervision or
+                      suitable care.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Online Abuse</th>
+                    <td>
+                      Cyberbullying, grooming or exposure to harmful content.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Peer-on-Peer Abuse</th>
+                    <td>
+                      Bullying, intimidation or sexual harassment between
+                      children or young people.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Exploitation</th>
+                    <td>
+                      County lines, modern slavery or radicalisation concerns.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The DSL is responsible for overseeing all safeguarding matters,
+                maintaining secure records, liaising with schools and local
+                authorities, and ensuring best practice is followed across
+                GoWise Learning.
+              </p>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <h2>Online and Remote Safeguarding</h2>
+              <p>
+                When providing online tuition, we maintain the same high
+                safeguarding standards as in-person teaching:
+              </p>
+              <ul>
+                <li>Use of approved, secure online platforms.</li>
+                <li>
+                  Immediate reporting of any online safeguarding concerns.
+                </li>
+                <li>No recording of sessions without written consent.</li>
+                <li>
+                  Tutors to remain professional and appropriately dressed.
+                </li>
+                <li>Parents encouraged to supervise or remain nearby.</li>
+              </ul>
             </Col>
           </Row>
 
@@ -172,42 +325,122 @@ function Page() {
                 </li>
               </ul>
 
-              <h3>2. Training & Awareness</h3>
+              <h3>
+                2. Safeguarding Training, Awareness and Ongoing Development
+              </h3>
+              <p>
+                At GoWise Learning, we see safeguarding training not as a
+                one-off requirement but as an ongoing part of professional
+                development, something that helps our team build knowledge,
+                confidence and consistency over time.
+              </p>
+              <p>
+                To make sure our standards stay high, staff and tutors have
+                their work reviewed at least once a year through staff
+                appraisals. This helps us check that our safeguarding policy and
+                procedures are being followed in our daily practice.
+              </p>
+              <p>
+                Our Designated Safeguarding Lead (DSL) completes advanced,
+                multi-agency safeguarding training at least every two years and
+                takes part in extra courses that relate directly to our
+                organisation's safeguarding requirements.
+              </p>
+              <p>
+                <strong>
+                  All our tutors receive practical safeguarding training to help
+                  them:
+                </strong>
+              </p>
               <ul>
+                <li>Recognise signs of abuse or neglect.</li>
                 <li>
-                  Everyone who works with children and young people will receive
-                  regular training in recognising abuse & neglect, handling
-                  disclosures and safeguarding best practice.
+                  Respond appropriately if a child or young person makes a
+                  disclosure.
                 </li>
-                <li>
-                  Special training is provided for supporting communication
-                  needs, SEND, SEMH etc., so that we recognise risks that might
-                  be specific to individual children and young people.
-                </li>
+                <li>Take steps to prevent harm.</li>
+                <li>Record concerns clearly and accurately.</li>
+                <li>Know who to contact if they need help or advice.</li>
+                <li>Share information safely and responsibly.</li>
               </ul>
+              <p>
+                As part of onboarding, every tutor must complete Safeguarding
+                Children Level 2 training, which is renewed every two years at a
+                minimum. This ensures that everyone at GoWise Learning fully
+                understands their role in keeping children and young people safe
+                and protected.
+              </p>
 
               <h3>3. Recognising & Responding to Concerns</h3>
+              <p>
+                All tutors at GoWise Learning play a vital role in safeguarding
+                children and young people. Every tutor must understand that no
+                single professional can see the whole picture of a child or
+                young person's life. Protecting them from harm depends on
+                everyone working together, sharing information, noticing signs
+                of concern and acting quickly when something doesn't feel right.
+              </p>
+
+              <p>
+                <strong>To do this effectively, all tutors should:</strong>
+              </p>
               <ul>
                 <li>
-                  Staff/tutors will know the signs of abuse or neglect. If they
-                  are worried about a child's or a young person's welfare, even
-                  if they are unsure, they must report it immediately by
-                  contacting our safeguarding team directly on our confidential
-                  Safeguarding Line:{" "}
-                  <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
+                  <strong>
+                    Be familiar with GoWise Learning's safeguarding systems
+                  </strong>
+                  , including how to record and report concerns and who to
+                  contact (Designated Safeguarding Lead or Deputy).
                 </li>
                 <li>
-                  GoWise Learning has a clear process for dealing with concerns
-                  or disclosures: listening and observing carefully, recording
-                  accurately, escalating to appropriate services.
+                  <strong>Receive safeguarding level 2 training</strong> as part
+                  of the recruitment process and receive regular updates
+                  throughout the year, so their knowledge stays current and
+                  relevant.
                 </li>
                 <li>
-                  If a child or a young person is in immediate danger, we will
-                  act without delay (calling emergency services if needed).
+                  <strong>Have access to and read</strong> the following key
+                  documents:
+                  <ul>
+                    <li>
+                      GoWise Learning's Safeguarding and Protection Policy for
+                      Children and Young People
+                    </li>
+                    <li>Staff Behaviour/Code of Conduct Policy</li>
+                    <li>Behaviour Policy for Children and Young People</li>
+                    <li>Keeping Children Safe in Education Document (KCSIE)</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Know how to recognise and respond</strong> if a child
+                  or young person discloses abuse or neglect, including how to
+                  listen, record and report appropriately.
+                </li>
+                <li>
+                  <strong>
+                    Be alert to indicators of abuse, neglect or exploitation
+                  </strong>
+                  , particularly where these may be less obvious due to a child
+                  or young person's additional needs or vulnerabilities.
                 </li>
               </ul>
 
-              <h3>4. Supporting Vulnerable Children and Young People</h3>
+              <h3>4. Working Together</h3>
+              <p>
+                All tutors must understand that safeguarding is everyone's
+                responsibility. It is not enough to notice concerns. Tutors must
+                record, report and share those concerns following GoWise
+                Learning's safeguarding procedures.
+              </p>
+              <p>
+                When in doubt, tutors should always speak to the Designated
+                Safeguarding Lead (DSL) for guidance. Acting promptly and
+                sharing information appropriately can make a significant
+                difference in ensuring that children and young people receive
+                the right help at the right time.
+              </p>
+
+              <h3>5. Supporting Vulnerable Children and Young People</h3>
               <ul>
                 <li>
                   Children and young people with SEND, SEMH, communication
@@ -223,7 +456,7 @@ function Page() {
                 </li>
               </ul>
 
-              <h3>5. Child and Young Person Participation & Voice</h3>
+              <h3>6. Child and Young Person Participation & Voice</h3>
               <ul>
                 <li>
                   We encourage children and young people to speak up about
@@ -257,7 +490,7 @@ function Page() {
                 </li>
               </ul>
 
-              <h3>6. Information Sharing & Working with Others</h3>
+              <h3>7. Information Sharing & Working with Others</h3>
               <ul>
                 <li>
                   GoWise Learning works in partnership with parents / guardians,
@@ -270,7 +503,7 @@ function Page() {
                 </li>
               </ul>
 
-              <h3>7. Monitoring & Governance</h3>
+              <h3>8. Monitoring & Governance</h3>
               <ul>
                 <li>
                   We regularly review our safeguarding and protection policies,
@@ -287,7 +520,7 @@ function Page() {
                 </li>
               </ul>
 
-              <h3>8. Review & Updates</h3>
+              <h3>9. Review & Updates</h3>
               <ul>
                 <li>
                   Our safeguarding and protection policy will be reviewed at
