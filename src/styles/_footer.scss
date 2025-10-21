@@ -80,6 +80,7 @@ footer {
 
   .row.cards {
     align-items: flex-start;
+    justify-content: flex-start;
     gap: $card-gap;
     margin-top: vars.$gap-large;
 

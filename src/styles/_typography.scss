@@ -92,27 +92,27 @@ h1,
 
 h2,
 .h2 {
-  @include heading-font(0.6);
+  @include heading-font(0.8);
 }
 
 h3,
 .h3 {
-  @include heading-font(0.4);
+  @include heading-font(0.6);
 }
 
 h4,
 .h4 {
-  @include heading-font(0.3);
+  @include heading-font(0.45);
 }
 
 h5,
 .h5 {
-  @include heading-font(0.23);
+  @include heading-font(0.33);
 }
 
 h6,
 .h6 {
-  @include heading-font(0.18);
+  @include heading-font(0.2);
 }
 
 ul,
@@ -170,8 +170,9 @@ span.p {
   }
 
   &.large {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 500;
+    line-height: 1.67em;
   }
 }
 

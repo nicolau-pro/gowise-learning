@@ -27,9 +27,12 @@ export default function ArticleSection({ data }) {
         <Row nogap nopadding>
           <Col className="content-wrapper">
             <div className="content">
-              <h2>{title}</h2>
-              {subtitle ? <h3>{subtitle}</h3> : null}
-              <hr />
+              {title ? <h3>{title}</h3> : null}
+
+              {subtitle ? <h4>{subtitle}</h4> : null}
+
+              {title || subtitle ? <hr /> : null}
+
               {paragraphs.map((paragraph, i) => (
                 <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
               ))}

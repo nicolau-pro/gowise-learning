@@ -42,9 +42,14 @@ footer {
       width: 100%;
       max-width: vars.$content-width;
       padding: vars.$gap-small;
+      justify-content: center;
 
       &.nogap {
         gap: 0;
+      }
+
+      &.tight {
+        margin-bottom: -1em;
       }
 
       &.nopadding {

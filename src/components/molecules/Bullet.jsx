@@ -12,7 +12,7 @@ export default function Bullet({ data, theme = "secondary" }) {
           <Icon>{icon}</Icon>
         </span>
       </div>
-      <p className="text">{text}</p>
+      <p className="text" dangerouslySetInnerHTML={{ __html: text }}></p>
     </div>
   );
 }

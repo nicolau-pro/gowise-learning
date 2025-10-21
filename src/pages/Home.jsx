@@ -15,6 +15,7 @@ import TestimonialSection from "components/Testimonial";
 import Card from "components/Card";
 import Step from "components/Step";
 import Bullet from "components/Bullet";
+import BulletsRow from "components/BulletsRow";
 
 import WelcomeData from "data/Home/Welcome";
 import ArticlesData from "data/Home/Articles";
@@ -54,7 +55,116 @@ function Page() {
           </Row>
         </Section>
 
+        <Section className="gap-xl">
+          <Row>
+            <h2>Our Trusted Team of SEN Tutors & Specialists</h2>
+          </Row>
+        </Section>
+
         <ArticleSection data={ArticlesData[0]} />
+
+        <Section className="gap-xl">
+          <Row>
+            <h2>How We Support Children with SEND and SEMH</h2>
+          </Row>
+        </Section>
+
+        <ArticleSection data={ArticlesData[1]} />
+
+        <Section>
+          <Row>
+            <Col>
+              <h3>Our holistic, child-centred approach</h3>
+              <p className="large">
+                To meet these needs, we use a blend of UK-recognised,
+                evidence-based approaches such as the SCERTS Model, PECS and
+                Makaton to support communication, alongside Social Stories, to
+                build understanding and social confidence. We also integrate
+                Play Therapy, the DIR/Floortime Model, the PACE Approach and
+                Positive Behaviour Support (PBS) to strengthen emotional
+                regulation, positive behaviour and resilience. This holistic,
+                child-centred approach ensures every learner feels valued,
+                understood and fully supported to achieve their potential - at
+                school, at home and in the wider community.
+              </p>
+              <p className="large">
+                At GoWise Learning, we combine the most trusted strategies and
+                therapies in the UK to create a holistic, child-centred
+                programme. Our goal is simple: help every child feel safe, learn
+                with joy and grow in confidence. Each approach aims to meet
+                individual needs while encouraging independence and supporting
+                learning, communication and emotional wellbeing:
+              </p>
+            </Col>
+          </Row>
+        </Section>
+
+        <Section>
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-primary">
+                Structured Learning & Independence:
+              </h4>
+            </Col>
+          </Row>
+          <BulletsRow data={{ bullets: BulletsData[1], theme: "primary" }} />
+
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-secondary">
+                Communication & Social Skills:
+              </h4>
+            </Col>
+          </Row>
+          <BulletsRow data={{ bullets: BulletsData[2], theme: "secondary" }} />
+
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-tertiary">
+                Play, Relationships & Emotional Growth:
+              </h4>
+            </Col>
+          </Row>
+          <BulletsRow data={{ bullets: BulletsData[3], theme: "tertiary" }} />
+
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-primary">
+                Emotional Regulation & Behaviour Support:
+              </h4>
+            </Col>
+          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData[4],
+              theme: "primary",
+            }}
+          />
+
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-secondary">Sensory & Wellbeing Support:</h4>
+            </Col>
+          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData[5],
+              theme: "secondary",
+            }}
+          />
+
+          <Row className="mt-3 tight">
+            <Col>
+              <h4 className="color-tertiary">Why Families Choose Us:</h4>
+            </Col>
+          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData[6],
+              theme: "tertiary",
+            }}
+          />
+        </Section>
 
         <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
 
@@ -62,13 +172,7 @@ function Page() {
           <Row>
             <h2>When your child works with us, you can expect:</h2>
           </Row>
-          <Row>
-            {BulletsData.map((item) => (
-              <Col key={item.text}>
-                <Bullet data={item} theme="secondary" />
-              </Col>
-            ))}
-          </Row>
+          <BulletsRow data={{ bullets: BulletsData[0], theme: "secondary" }} />
         </Section>
 
         <Section className="gap-xl">

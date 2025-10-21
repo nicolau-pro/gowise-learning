@@ -2,7 +2,7 @@
 @use "variables" as vars;
 
 section.article {
-  padding: vars.$gap-xl;
+  padding: vars.$gap-normal;
 
   .article-body {
     max-width: vars.$content-width - 2 * vars.$gap-small;
@@ -44,14 +44,14 @@ section.article {
           font-size: 21px;
         }
 
-        h2 {
+        h3 {
           font-size: 2em;
           font-weight: 600;
           line-height: 1.2em;
           color: currentColor;
         }
 
-        h3 {
+        h4 {
           padding-top: 0.5em;
           font-size: 1.2em;
           font-weight: 300;

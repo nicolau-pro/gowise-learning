@@ -18,3 +18,43 @@ $warning: #f3d350;
 
 $text: color-mix(in srgb, $neutral 80%, white);
 $text-light: color-mix(in srgb, $neutral 60%, white);
+
+.color-primary {
+  color: $primary;
+}
+.color-primary-highlight {
+  color: $primary_highlight;
+}
+.color-primary_glow {
+  color: $primary_glow;
+}
+.color-secondary-dark {
+  color: $secondary_dark;
+}
+.color-secondary {
+  color: $secondary;
+}
+.color-secondary-highlight {
+  color: $secondary_highlight;
+}
+.color-tertiary-dark {
+  color: $tertiary_dark;
+}
+.color-tertiary {
+  color: $tertiary;
+}
+.color-tertiary-highlight {
+  color: $tertiary_highlight;
+}
+.color-tertiary-glow {
+  color: $tertiary_glow;
+}
+.color-neutral {
+  color: $neutral;
+}
+.color-error {
+  color: $error;
+}
+.color-warning {
+  color: $warning;
+}
