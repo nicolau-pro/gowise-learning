@@ -81,12 +81,8 @@ const data = [
   ],
   [
     {
-      text: "We use proven, evidence-based approaches recognised across the UK.",
+      text: "We use proven, evidence-based approaches recognised across the UK. Every strategy is personalised to your child's needs, strengths and interests.",
       icon: "verified",
-    },
-    {
-      text: "Every strategy is personalised to your child's needs, strengths and interests.",
-      icon: "person",
     },
     {
       text: "We focus on the whole child - communication, emotions, relationships, independence and wellbeing.",

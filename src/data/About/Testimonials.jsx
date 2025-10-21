@@ -6,6 +6,7 @@ const data = [
       "It's about helping each learner grow - wisely, gently and in their own time.",
     stars: false,
     person: Persons.AnamariaBlanaru,
+    theme: "primary",
   },
 ];
 

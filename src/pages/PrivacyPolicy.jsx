@@ -28,7 +28,7 @@ function Page() {
       />
 
       <main>
-        <Section className="pt-4">
+        <Section className="gap-xl">
           <Row>
             <Col>
               <h1 className="hero">Privacy Policy</h1>

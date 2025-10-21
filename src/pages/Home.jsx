@@ -14,7 +14,6 @@ import ArticleSection from "components/Article";
 import TestimonialSection from "components/Testimonial";
 import Card from "components/Card";
 import Step from "components/Step";
-import Bullet from "components/Bullet";
 import BulletsRow from "components/BulletsRow";
 
 import WelcomeData from "data/Home/Welcome";
@@ -107,7 +106,9 @@ function Page() {
               </h4>
             </Col>
           </Row>
-          <BulletsRow data={{ bullets: BulletsData[1], theme: "primary" }} />
+          <BulletsRow
+            data={{ bullets: BulletsData[1], theme: "primary", max: 3 }}
+          />
 
           <Row className="mt-3 tight">
             <Col>
@@ -150,6 +151,7 @@ function Page() {
             data={{
               bullets: BulletsData[5],
               theme: "secondary",
+              max: 3,
             }}
           />
 
@@ -166,14 +168,83 @@ function Page() {
           />
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <TestimonialSection
+          className="mt-12"
+          data={TestimonialsData[0]}
+          theme={"tertiary"}
+        />
 
         <Section className="gap-xl">
           <Row>
-            <h2>When your child works with us, you can expect:</h2>
+            <h2>Parent Testimonials</h2>
           </Row>
-          <BulletsRow data={{ bullets: BulletsData[0], theme: "secondary" }} />
         </Section>
+
+        <ArticleSection data={ArticlesData[2]} />
+
+        <TestimonialSection
+          className="mt-5"
+          data={TestimonialsData[2]}
+          theme={"secondary"}
+        />
+
+        <TestimonialSection
+          className="mt-2"
+          data={TestimonialsData[3]}
+          theme={"secondary"}
+        />
+
+        <ArticleSection className="mt-6" data={ArticlesData[3]} />
+        <TestimonialSection
+          className="mt-0"
+          data={TestimonialsData[4]}
+          theme={"primary"}
+        />
+
+        <ArticleSection className="mt-6" data={ArticlesData[4]} />
+        <TestimonialSection
+          className="mt-0"
+          data={TestimonialsData[5]}
+          theme={"tertiary"}
+        />
+
+        <ArticleSection className="mt-6" data={ArticlesData[5]} />
+        <TestimonialSection
+          className="mt-0"
+          data={TestimonialsData[6]}
+          theme={"primary"}
+        />
+
+        <ArticleSection className="mt-6" data={ArticlesData[6]} />
+        <TestimonialSection
+          className="mt-0"
+          data={TestimonialsData[7]}
+          theme={"tertiary"}
+        />
+
+        {/* <Section className="gap-xl">
+          <Row>
+            <h2>Easy as 1-2-3</h2>
+          </Row>
+          <Row>
+            {StepsData.map((item) => (
+              <Col key={item.number}>
+                <Step data={item} />
+              </Col>
+            ))}
+          </Row>
+          <Row>
+            <Col />
+            <Col>
+              <Button
+                link={Paths.CONTACT}
+                theme="secondary"
+                text="Book a free consultation"
+              />
+            </Col>
+            <Col />
+          </Row>
+        </Section> */}
 
         <Section className="gap-xl">
           <Row>

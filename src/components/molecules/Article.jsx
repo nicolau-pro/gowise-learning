@@ -3,17 +3,9 @@ import { JoinClasses } from "utils";
 import { Section, Row, Col } from "layout";
 import Button from "atoms/Button";
 
-export default function ArticleSection({ data }) {
-  const {
-    title,
-    subtitle,
-    contentSide,
-    className,
-    theme,
-    paragraphs,
-    image,
-    imageAlt,
-  } = data;
+export default function ArticleSection({ data, className }) {
+  const { title, subtitle, contentSide, theme, paragraphs, image, imageAlt } =
+    data;
 
   return (
     <Section key={title} className="article">
@@ -29,7 +21,13 @@ export default function ArticleSection({ data }) {
             <div className="content">
               {title ? <h3>{title}</h3> : null}
 
-              {subtitle ? <h4>{subtitle}</h4> : null}
+              {subtitle ? (
+                title ? (
+                  <h4>{subtitle}</h4>
+                ) : (
+                  <h3 className="h4">{subtitle}</h3>
+                )
+              ) : null}
 
               {title || subtitle ? <hr /> : null}
 

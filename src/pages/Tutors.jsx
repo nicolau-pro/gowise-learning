@@ -6,7 +6,7 @@ import Paths from "paths";
 import Row from "layout/Row";
 import Col from "layout/Col";
 import Section from "layout/Section";
-import Bullet from "components/Bullet";
+import BulletsRow from "components/BulletsRow";
 import Button from "atoms/Button";
 
 import HeroSection from "components/Hero";
@@ -16,7 +16,6 @@ import TestimonialSection from "components/Testimonial";
 import WelcomeData from "data/Tutors/Welcome";
 import ArticlesData from "data/Tutors/Articles";
 import BulletsData from "data/Tutors/Bullets";
-import BulletsData2 from "data/Tutors/Bullets2";
 import TestimonialsData from "data/Tutors/Testimonials";
 
 function Page() {
@@ -40,48 +39,46 @@ function Page() {
 
         <ArticleSection data={ArticlesData[0]} />
 
-        <Section>
+        <Section className="gap-xl">
           <Row>
             <Col>
-              <h2>We welcome individuals who are:</h2>
+              <h3 className="color-secondary">
+                We welcome individuals who are:
+              </h3>
             </Col>
           </Row>
-          <Row>
-            {BulletsData.map((item) => (
-              <Col key={item.text}>
-                <Bullet data={item} theme="secondary" />
-              </Col>
-            ))}
-          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData[0],
+              theme: "secondary",
+            }}
+          />
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <TestimonialSection data={TestimonialsData[0]} />
 
-        <Section className="mt-4">
+        <Section className="gap-xl">
           <Row>
             <Col>
-              <h2>To make sure you feel fully supported, we provide:</h2>
+              <h3 className="color-primary-highlight">
+                To make sure you feel fully supported, we provide:
+              </h3>
             </Col>
           </Row>
-          <Row>
-            {BulletsData2.map((item) => (
-              <Col key={item.text}>
-                <Bullet data={item} theme="secondary" />
-              </Col>
-            ))}
-          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData[1],
+              theme: "primary-light",
+            }}
+          />
         </Section>
 
         <Section className="gap-xl">
           <Row>
-            <Col />
-            <Col className="text-centered span-2">
-              <h3>
-                Apply now to join our team of holistic tutors and SEN learning
-                support assistants:
-              </h3>
-            </Col>
-            <Col />
+            <h4 className="color-primary">
+              Apply now to join our team of holistic tutors and SEN learning
+              support assistants:
+            </h4>
           </Row>
           <Row>
             <Col />

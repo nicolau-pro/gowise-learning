@@ -29,7 +29,7 @@ function Page() {
       />
 
       <main>
-        <Section className="pt-4">
+        <Section className="gap-xl">
           <Row>
             <Col>
               <h1 className="hero">Safeguarding</h1>
@@ -657,7 +657,7 @@ function Page() {
           </Row>
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <TestimonialSection data={TestimonialsData[0]} />
       </main>
     </>
   );

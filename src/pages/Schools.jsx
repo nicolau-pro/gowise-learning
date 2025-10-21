@@ -44,30 +44,28 @@ function Page() {
         <Section>
           <Row>
             <Col>
-              <h2>By partnering with us, you gain:</h2>
+              <h3 className="color-tertiary">
+                By partnering with us, you gain:
+              </h3>
             </Col>
           </Row>
           <Row>
             {BulletsData.map((item) => (
               <Col key={item.text}>
-                <Bullet data={item} theme="secondary" />
+                <Bullet data={item} theme="tertiary" />
               </Col>
             ))}
           </Row>
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <TestimonialSection data={TestimonialsData[0]} />
 
         <Section className="gap-xl">
           <Row>
-            <Col />
-            <Col className="text-centered span-2">
-              <h3>
-                Get in touch to explore how we can support your school or local
-                authority - same form from the beginning:
-              </h3>
-            </Col>
-            <Col />
+            <h4 className="color-secondary">
+              Get in touch to explore how we can support your school or local
+              authority, same from the beginning:
+            </h4>
           </Row>
           <Row>
             <Col />

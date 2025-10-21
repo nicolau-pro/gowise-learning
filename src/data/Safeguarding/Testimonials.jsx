@@ -5,6 +5,7 @@ const data = [
     quote: "This is our commitment at GoWise Learning.",
     stars: false,
     person: Persons.AnamariaBlanaru,
+    theme: "tertiary",
   },
 ];
 

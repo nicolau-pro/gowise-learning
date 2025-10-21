@@ -1,6 +1,6 @@
 const data = [
   {
-    theme: "tertiary",
+    theme: "primary",
     contentSide: "left",
     image: "media/article1.jpg",
     imageAlt: "EHCP-Ready",

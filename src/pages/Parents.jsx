@@ -6,8 +6,8 @@ import Paths from "paths";
 import Row from "layout/Row";
 import Col from "layout/Col";
 import Section from "layout/Section";
-import Bullet from "components/Bullet";
 import Button from "atoms/Button";
+import BulletsRow from "components/BulletsRow";
 
 import HeroSection from "components/Hero";
 import ArticleSection from "components/Article";
@@ -39,32 +39,31 @@ function Page() {
 
         <ArticleSection data={ArticlesData[0]} />
 
-        <Section>
+        <Section className="gap-xl">
           <Row>
             <Col>
-              <h2>When your child works with us, you can expect:</h2>
+              <h3 className="color-primary-highlight">
+                When your child works with us, you can expect:
+              </h3>
             </Col>
           </Row>
-          <Row>
-            {BulletsData.map((item) => (
-              <Col key={item.text}>
-                <Bullet data={item} theme="secondary" />
-              </Col>
-            ))}
-          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData,
+              theme: "primary-light",
+            }}
+          />
         </Section>
 
-        <ArticleSection data={ArticlesData[1]} />
+        <ArticleSection className="mt-6" data={ArticlesData[1]} />
 
-        <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
+        <TestimonialSection data={TestimonialsData[0]} />
 
         <Section className="gap-xl">
           <Row>
-            <Col />
-            <Col className="text-centered span-2">
-              <h3>Get in touch to explore how we can support your child:</h3>
-            </Col>
-            <Col />
+            <h4 className="color-secondary">
+              Get in touch to explore how we can support your child:
+            </h4>
           </Row>
           <Row>
             <Col />
