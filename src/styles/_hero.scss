@@ -47,6 +47,11 @@ section.hero {
       max-width: 70%;
       font-weight: 300;
       margin-top: vars.$gap-normal;
+
+      strong {
+        font-weight: 700;
+        font-size: 1.1em;
+      }
     }
 
     .cta {
@@ -56,6 +61,25 @@ section.hero {
       padding-right: 3em;
       padding-left: 3em;
       box-shadow: 0 5px 3px color-mix(in srgb, black 50%, transparent);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 0.25em;
+
+      .cta {
+        margin-top: 0;
+        &:first-of-type {
+          border-top-right-radius: 14px;
+          border-bottom-right-radius: 14px;
+          padding-right: 2em;
+        }
+        &:last-of-type {
+          border-top-left-radius: 14px;
+          border-bottom-left-radius: 14px;
+          padding-left: 2em;
+        }
+      }
     }
   }
 
@@ -139,7 +163,7 @@ section.hero-quote {
       }
 
       .person {
-        min-width: $portrait-size;
+        min-width: $portrait-size * 0.8;
         letter-spacing: 0.06em;
 
         .name {
@@ -153,6 +177,7 @@ section.hero-quote {
           font-size: 16px;
           line-height: 24px;
           font-weight: 200;
+          max-width: 70%;
         }
       }
 

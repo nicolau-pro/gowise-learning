@@ -16,12 +16,12 @@ import Card from "components/Card";
 import Step from "components/Step";
 import Bullet from "components/Bullet";
 
-import WelcomeData from "data/Welcome";
-import ArticlesData from "data/Articles";
-import CardsData from "data/Cards";
-import StepsData from "data/Steps";
-import TestimonialsData from "data/Testimonials";
-import BulletsData from "data/Bullets";
+import WelcomeData from "data/Home/Welcome";
+import ArticlesData from "data/Home/Articles";
+import CardsData from "data/Home/Cards";
+import StepsData from "data/Home/Steps";
+import TestimonialsData from "data/Home/Testimonials";
+import BulletsData from "data/Home/Bullets";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -33,14 +33,15 @@ function Page() {
   return (
     <>
       <MetaTags
-        section="Welcome!"
-        description="We provide bespoke one-to-one tuition for children with SEND (special educational needs) and SEMH (social, emotional and mental health needs), from mild to profound learning difficulties, across the UK. Our holistic approach builds confidence, supports social and emotional growth, and helps children grow with confidence and thrive academically."
-        image="/social/GoWise-Learning.jpg"
+        section="GoWise Learning"
+        description="GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root."
         url={Paths.ROOT}
+        image="/social/GoWise-Learning.jpg"
       />
 
       <main>
         <HeroSection data={WelcomeData} />
+
         <HeroQuoteSection data={WelcomeData.person} />
 
         <Section className="gap-xl">
@@ -53,9 +54,7 @@ function Page() {
           </Row>
         </Section>
 
-        {ArticlesData.map((article) => (
-          <ArticleSection key={article.title} data={article} />
-        ))}
+        <ArticleSection data={ArticlesData[0]} />
 
         <TestimonialSection data={TestimonialsData[0]} theme={"tertiary"} />
 

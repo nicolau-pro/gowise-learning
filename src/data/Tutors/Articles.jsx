@@ -2,7 +2,7 @@ const data = [
   {
     theme: "primary-light",
     contentSide: "left",
-    image: "article3.jpg",
+    image: "media/article3.jpg",
     imageAlt: "About our team",
     title: "About our team",
     paragraphs: [

@@ -11,13 +11,10 @@ export default function HeroQuote({ data }) {
           </div>
           <h3 className="quote">
             {data.strong ? <strong>{data.strong} </strong> : null}
-            <span>{data.quote}</span>
+            <span dangerouslySetInnerHTML={{ __html: data.quote }}></span>
           </h3>
           <div className="portrait">
-            <img
-              src={`/media/${data.portrait}`}
-              alt={`${data.name}, ${data.title}`}
-            />
+            <img src={data.portrait} alt={`${data.name}, ${data.title}`} />
           </div>
           <div className="person">
             <p className="name">{data.name}</p>

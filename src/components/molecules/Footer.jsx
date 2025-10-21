@@ -6,7 +6,7 @@ import { useAppState } from "appState";
 import Icon from "icons";
 import Paths from "paths";
 
-import CardsData from "data/Cards";
+import CardsData from "data/Home/Cards";
 import SocialData from "data/Social";
 import ContactData from "data/Contact";
 

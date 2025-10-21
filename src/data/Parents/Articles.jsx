@@ -2,7 +2,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "article1.jpg",
+    image: "media/article1.jpg",
     imageAlt: "EHCP-Ready",
     title: "EHCP-Ready",
     paragraphs: [
@@ -12,7 +12,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "article2.jpg",
+    image: "media/article2.jpg",
     imageAlt: "Hand-picked, quality tutors",
     title: "Hand-picked, quality tutors",
     paragraphs: [

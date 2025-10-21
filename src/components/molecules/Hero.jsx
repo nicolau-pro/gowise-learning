@@ -18,13 +18,32 @@ export default function Hero({ data }) {
         <Col>
           <h1 className="hero">{data.h1}</h1>
           <h2>{data.subtitle}</h2>
-          <h3>{data.h3}</h3>
-          <Button
-            className="cta"
-            link={data.button.link}
-            theme={data.button.theme}
-            text={data.button.text}
-          />
+          <h3
+            className={data.button ? undefined : "mb-3"}
+            dangerouslySetInnerHTML={{ __html: data.h3 }}
+          ></h3>
+          {data.buttons ? (
+            <div className="hero-buttons">
+              {data.buttons.map((button) => (
+                <Button
+                  key={button.text}
+                  className="cta"
+                  link={button.link}
+                  theme={button.theme}
+                  text={button.text}
+                />
+              ))}
+            </div>
+          ) : null}
+
+          {data.button ? (
+            <Button
+              className="cta"
+              link={data.button.link}
+              theme={data.button.theme}
+              text={data.button.text}
+            />
+          ) : null}
         </Col>
       </Row>
     </Section>
