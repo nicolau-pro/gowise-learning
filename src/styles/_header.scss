@@ -35,9 +35,15 @@ header {
         display: flex;
         align-items: center;
         width: max-content;
+        opacity: 1;
+        transition: opacity 0.1s ease-out;
 
         img {
           height: 60px;
+        }
+
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
@@ -68,6 +74,7 @@ header {
         font-weight: 300;
         background: transparent;
 
+        letter-spacing: 0.02em;
         $shadow: 0;
         box-shadow: inset 0 $shadow 0 $menu-color;
 
@@ -81,12 +88,12 @@ header {
         &:hover,
         &:focus-visible,
         &.current {
-          letter-spacing: 0.02em;
+          letter-spacing: 0.03em;
         }
 
         &:hover,
         &:focus-visible {
-          $shadow: -10px;
+          $shadow: -12px;
           box-shadow: inset 0 $shadow 0 $menu-color;
         }
 
@@ -94,7 +101,8 @@ header {
           $shadow: -1 * $menu-height;
           box-shadow: inset 0 $shadow 0 $menu-color;
           color: white;
-          letter-spacing: 0.02em;
+          letter-spacing: 0.03em;
+          font-weight: 400;
         }
 
         &:active {

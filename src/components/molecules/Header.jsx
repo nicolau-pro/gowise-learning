@@ -28,7 +28,7 @@ const Header = () => {
       <nav>
         <div className="logo">
           <Link to={Paths.HOME}>
-            <img alt="GoWise logo" src="/media/GoWise-logo.svg" />
+            <img alt="GoWise logo" src="/media/GoWise-Learning-logo.svg" />
           </Link>
         </div>
 
