@@ -91,7 +91,7 @@ const Footer = () => {
                         aria-label={`Social link: GoWise ${item.network}`}
                       >
                         <img
-                          src={`/media/${item.icon}`}
+                          src={item.icon}
                           alt={`${item.network} icon`}
                           className="icon-link"
                         />

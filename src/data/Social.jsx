@@ -1,23 +1,18 @@
 const data = [
   {
+    network: "Facebook",
+    icon: "/media/social-facebook.svg",
+    link: "https://www.facebook.com/profile.php?id=61582691489833",
+  },
+  {
     network: "LinkedIn",
-    icon: "social-linkedin.svg",
-    link: "https://www.linkedin.com/in/radu-nicolau/",
-  },
-  {
-    network: "YouTube",
-    icon: "social-youtube.svg",
-    link: "https://www.youtube.com/@carwow",
-  },
-  {
-    network: "Twitter",
-    icon: "social-twitter-x.svg",
-    link: "https://x.com/carwowuk",
+    icon: "/media/social-linkedin.svg",
+    link: "https://www.linkedin.com/in/gowise-learning",
   },
   {
     network: "Instagram",
-    icon: "social-instagram.svg",
-    link: "https://www.instagram.com/carwow/",
+    icon: "/media/social-instagram.svg",
+    link: "https://www.instagram.com/gowise_learning",
   },
 ];
 
