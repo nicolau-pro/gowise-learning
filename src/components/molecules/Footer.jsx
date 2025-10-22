@@ -90,11 +90,7 @@ const Footer = () => {
                         to={item.link}
                         aria-label={`Social link: GoWise ${item.network}`}
                       >
-                        <img
-                          src={item.icon}
-                          alt={`${item.network} icon`}
-                          className="icon-link"
-                        />
+                        {item.icon}
                       </Link>
                     </li>
                   ))}

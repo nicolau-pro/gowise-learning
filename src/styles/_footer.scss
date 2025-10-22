@@ -150,9 +150,12 @@ footer {
       }
 
       .icon-link {
-        width: 32px;
-        height: 32px;
+        $icon-size: 32px;
+        width: $icon-size;
+        height: $icon-size;
+        margin-bottom: -$icon-size;
         display: block;
+        fill: currentColor;
       }
     }
   }
@@ -160,7 +163,6 @@ footer {
   a,
   .icon-link {
     color: currentColor;
-    fill: currentColor;
     filter: brightness(1);
     transition: filter 0.1s ease-out;
 
