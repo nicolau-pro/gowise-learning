@@ -18,6 +18,7 @@ export default function Card({ data }) {
         <p className="details">{details}</p>
         <Button
           link={button.link}
+          openInNewTab={button.openInNewTab}
           theme={button.theme}
           text={button.text}
           ariaLabel={button.ariaLabel}

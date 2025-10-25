@@ -6,8 +6,8 @@ const MetaData = {
 
 const Contact = {
   Phone: "+447466091575",
+  PhoneDisplay: "(+44) 7466 091 575",
   Email: "info@gowiselearning.co.uk",
-  LinkedIn: "gowise-learning",
 };
 
 const FooterProjectIds = [4, 6, 9, 10, 12, 14];

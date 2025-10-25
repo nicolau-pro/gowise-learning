@@ -11,6 +11,7 @@ const data = [
       </svg>
     ),
     link: "https://www.facebook.com/GoWiseLearning",
+    linkSuffix: "GoWiseLearning",
   },
   {
     network: "LinkedIn",
@@ -24,6 +25,7 @@ const data = [
       </svg>
     ),
     link: "https://www.linkedin.com/in/gowise-learning",
+    linkSuffix: "gowise-learning",
   },
   {
     network: "Instagram",
@@ -37,6 +39,7 @@ const data = [
       </svg>
     ),
     link: "https://www.instagram.com/gowise_learning",
+    linkSuffix: "gowise_learning",
   },
 ];
 
