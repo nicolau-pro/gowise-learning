@@ -10,8 +10,8 @@ const data = {
   SAFEGUARDING: "safeguarding-and-protection-policy",
   FORMS: {
     Parents: "https://form.jotform.com/252963757028063",
-    Tutors: "https://form.jotform.com/252963757028063",
-    Schools: "https://form.jotform.com/252963757028063",
+    Tutors: "https://form.jotform.com/252974916520362",
+    Schools: "https://form.jotform.com/252974758283372",
   },
 };
 
