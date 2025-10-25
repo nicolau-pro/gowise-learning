@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { useAppState } from "appState";
 import MetaTags from "metaTags";
 import Paths from "paths";
-import { Contact } from "variables";
 import { Link } from "react-router";
 import Icon from "icons";
 
 import { Section, Row, Col } from "layout";
 import TestimonialSection from "components/Testimonial";
-import Card from "components/Card";
+import ArticleSection from "components/Article";
 
-import CardsData from "data/Contact/Cards";
+import ArticlesData from "data/Contact/Articles";
 import TestimonialsData from "data/Contact/Testimonials";
 import SocialData from "data/Social";
+import ContactData from "data/Contact";
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -39,7 +39,9 @@ function Page() {
           </Row>
         </Section>
 
-        <Section>
+        <TestimonialSection data={TestimonialsData[0]} />
+
+        <Section className="mt-2">
           <Row>
             <Col>
               <h2 className="h3">Direct contact:</h2>
@@ -47,25 +49,11 @@ function Page() {
           </Row>
           <Row>
             <Col className="contact-links">
-              <Link to={`tel:${Contact.Phone}`}>
-                <Icon>phone</Icon>
-                <span className="text">
-                  <strong>Phone: </strong>
-                  <span>{Contact.PhoneDisplay}</span>
-                </span>
-              </Link>
-              <Link to={`mailto:${Contact.Email}`}>
-                <Icon>email</Icon>
-                <span className="text">
-                  <strong>Email: </strong>
-                  <span>{Contact.Email}</span>
-                </span>
-              </Link>
-              {SocialData.map((item) => (
+              {[...ContactData, ...SocialData].map((item) => (
                 <Link to={item.link} target="_blank" rel="noopener noreferrer">
                   <Icon>open_in_new</Icon>
                   <span className="text">
-                    <strong>{item.network}: </strong>
+                    <span className="channel">{item.network}: </span>
                     <span>{item.linkSuffix}</span>
                   </span>
                 </Link>
@@ -74,25 +62,19 @@ function Page() {
           </Row>
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} />
-
-        <Section className="mt-3">
+        <Section className="gap-xl">
           <Row>
             <Col>
-              <h2 className="h3">Fill the forms:</h2>
+              <h2 className="h3">Register through our forms:</h2>
             </Col>
           </Row>
         </Section>
 
-        <Section className="mb-6">
-          <Row>
-            {CardsData.map((item) => (
-              <Col key={item.title}>
-                <Card data={item} />
-              </Col>
-            ))}
-          </Row>
-        </Section>
+        <ArticleSection data={ArticlesData[0]} />
+
+        <ArticleSection data={ArticlesData[1]} />
+
+        <ArticleSection data={ArticlesData[2]} />
       </main>
     </>
   );

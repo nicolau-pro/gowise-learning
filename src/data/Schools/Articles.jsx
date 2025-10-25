@@ -2,7 +2,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "left",
-    image: "media/article1.jpg",
+    image: "/media/article1.jpg",
     imageAlt: "About our team",
     title: "Our approach",
     paragraphs: [
@@ -13,7 +13,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "media/article2.jpg",
+    image: "/media/article2.jpg",
     imageAlt: "About our team",
     title: "EHCP",
     paragraphs: [

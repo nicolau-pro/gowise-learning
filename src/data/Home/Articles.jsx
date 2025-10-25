@@ -2,7 +2,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "left",
-    image: "media/article2.jpg",
+    image: "/media/article2.jpg",
     imageAlt: "Our Trusted Team of SEN Tutors & Specialists",
     title: "Our Team",
     subtitle: "Where expertise meets empathy to bring out every child's best.",
@@ -19,7 +19,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "right",
-    image: "media/article1.jpg",
+    image: "/media/article1.jpg",
     imageAlt: "How We Support Children with SEND and SEMH",
     title: "Our support",
     paragraphs: [
@@ -29,7 +29,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "left",
-    image: "media/family1.jpg",
+    image: "/media/family1.jpg",
     imageAlt: "Parent Testimonials",
     subtitle:
       "At GoWise Learning, our work is built on connection, trust and compassion.",
@@ -41,7 +41,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "media/a-boy-wearing-eyeglasses-in-the-classroom.jpg",
+    image: "/media/a-boy-wearing-eyeglasses-in-the-classroom.jpg",
     imageAlt: "Progress with Social Skills and School Integration",
     title: "Progress with Social Skills and School Integration",
     subtitle:
@@ -55,7 +55,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "media/photo-of-woman-teaching-his-son-while-smiling.jpg",
+    image: "/media/photo-of-woman-teaching-his-son-while-smiling.jpg",
     imageAlt: "Exceptional Individualised Tutoring and Communication",
     title: "Exceptional Individualised Tutoring and Communication",
     paragraphs: [
@@ -66,7 +66,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "media/a-woman-teaching-a-boy-the-art-of-painting.jpg",
+    image: "/media/a-woman-teaching-a-boy-the-art-of-painting.jpg",
     imageAlt: "Overcoming Anxiety and Enjoying Learning",
     title: "Overcoming Anxiety and Enjoying Learning",
     paragraphs: [
@@ -77,7 +77,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "media/girl-raising-hand-inside-the-classroom.jpg",
+    image: "/media/girl-raising-hand-inside-the-classroom.jpg",
     imageAlt: "Improved Concentration and Engagement",
     title: "Improved Concentration and Engagement",
     paragraphs: [
