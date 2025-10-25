@@ -21,6 +21,7 @@ function Page() {
     setOutletReady(true);
   }, []);
 
+  console.log(ContactData);
   return (
     <>
       <MetaTags
@@ -49,7 +50,29 @@ function Page() {
           </Row>
           <Row>
             <Col className="contact-links">
-              {[...ContactData, ...SocialData].map((item) => (
+              <Link
+                to={ContactData.Phone.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon>{ContactData.Phone.icon}</Icon>
+                <span className="text">
+                  <span className="channel">Phone: </span>
+                  <span>{ContactData.Phone.text}</span>
+                </span>
+              </Link>
+              <Link
+                to={ContactData.Email.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon>{ContactData.Email.icon}</Icon>
+                <span className="text">
+                  <span className="channel">Email: </span>
+                  <span>{ContactData.Email.text}</span>
+                </span>
+              </Link>
+              {SocialData.map((item) => (
                 <Link to={item.link} target="_blank" rel="noopener noreferrer">
                   <Icon>open_in_new</Icon>
                   <span className="text">

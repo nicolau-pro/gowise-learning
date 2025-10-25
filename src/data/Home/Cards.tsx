@@ -7,7 +7,7 @@ const data = [
     image: "card1.jpg",
     theme: "light",
     button: {
-      text: "tell me more",
+      text: "Tell me more",
       link: "/parents",
       ariaLabel: "learn more about GoWise for parents",
       theme: "secondary",
@@ -21,7 +21,7 @@ const data = [
     image: "card2.jpg",
     theme: "dark",
     button: {
-      text: "learn more",
+      text: "Learn more",
       link: "/tutors",
       ariaLabel: "learn more about GoWise for tutors",
       theme: "primary",
@@ -35,7 +35,7 @@ const data = [
     image: "card3.jpg",
     theme: "light",
     button: {
-      text: "learn more",
+      text: "Learn more",
       link: "/schools-and-local-authorities",
       ariaLabel: "learn more about GoWise for schools and local authorities",
       theme: "tertiary",

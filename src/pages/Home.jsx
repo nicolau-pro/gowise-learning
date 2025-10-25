@@ -222,30 +222,6 @@ function Page() {
           theme={"tertiary"}
         />
 
-        {/* <Section className="gap-xl">
-          <Row>
-            <h2>Easy as 1-2-3</h2>
-          </Row>
-          <Row>
-            {StepsData.map((item) => (
-              <Col key={item.number}>
-                <Step data={item} />
-              </Col>
-            ))}
-          </Row>
-          <Row>
-            <Col />
-            <Col>
-              <Button
-                link={Paths.CONTACT}
-                theme="secondary"
-                text="Book a free consultation"
-              />
-            </Col>
-            <Col />
-          </Row>
-        </Section> */}
-
         <Section className="gap-xl">
           <Row>
             <h2>Easy as 1-2-3</h2>
@@ -263,7 +239,7 @@ function Page() {
               <Button
                 link={Paths.CONTACT}
                 theme="secondary"
-                text="Book a free consultation"
+                text="Book a FREE CONSULTATION"
               />
             </Col>
             <Col />

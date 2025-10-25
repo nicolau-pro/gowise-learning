@@ -8,7 +8,7 @@ const data = {
   button: {
     link: "/contact",
     theme: "secondary",
-    text: "Book a free consultation",
+    text: "Book a FREE CONSULTATION",
   },
 };
 

@@ -8,7 +8,7 @@ const data = {
   button: {
     link: "/contact",
     theme: "primary",
-    text: "Join our team",
+    text: "Apply to JOIN OUR TEAM",
   },
 };
 

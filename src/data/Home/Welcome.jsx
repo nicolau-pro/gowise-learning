@@ -11,12 +11,12 @@ const data = {
     {
       link: "/contact",
       theme: "secondary",
-      text: "Book a free consultation",
+      text: "Book a FREE CONSULTATION",
     },
     {
       link: "/contact",
       theme: "tertiary",
-      text: "Apply to join our team",
+      text: "Apply to JOIN OUR TEAM",
     },
   ],
 

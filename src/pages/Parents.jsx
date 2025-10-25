@@ -71,7 +71,7 @@ function Page() {
               <Button
                 link={Paths.CONTACT}
                 theme="secondary"
-                text="Book a free consultation"
+                text="Book a FREE CONSULTATION"
               />
             </Col>
             <Col />
