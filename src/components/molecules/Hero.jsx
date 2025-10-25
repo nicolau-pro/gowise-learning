@@ -42,6 +42,7 @@ export default function Hero({ data }) {
             <Button
               className="cta"
               link={data.button.link}
+              openInNewTab={data.button.openInNewTab}
               theme={data.button.theme}
               text={data.button.text}
             />
