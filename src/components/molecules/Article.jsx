@@ -40,6 +40,7 @@ export default function ArticleSection({ data, className }) {
                   <Button
                     className="mt-1"
                     link={data.cta.link}
+                    openInNewTab={data.cta.openInNewTab}
                     theme={data.cta.theme}
                     text={data.cta.text}
                   />

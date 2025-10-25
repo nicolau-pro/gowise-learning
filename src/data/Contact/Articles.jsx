@@ -14,6 +14,7 @@ const data = [
     ],
     cta: {
       link: Paths.FORMS.Parents,
+      openInNewTab: true,
       theme: "primary",
       text: "Discover How We Support You",
     },
@@ -30,7 +31,8 @@ const data = [
       "If you believe in helping every child flourish and want to grow within a supportive and forward-thinking network, we'd love to welcome you on board.",
     ],
     cta: {
-      link: Paths.FORMS.Parents,
+      link: Paths.FORMS.Tutors,
+      openInNewTab: true,
       theme: "secondary",
       text: "Join Our Team",
     },
@@ -47,7 +49,8 @@ const data = [
       "Our experienced tutors and specialists collaborate with your team to ensure consistent progress, wellbeing and measurable outcomes, so every learner receives the care and attention they deserve.",
     ],
     cta: {
-      link: Paths.FORMS.Parents,
+      link: Paths.FORMS.Schools,
+      openInNewTab: true,
       theme: "tertiary",
       text: "Let's build brighter futures together",
     },
