@@ -1,3 +1,5 @@
+import Paths from "paths";
+
 const data = {
   strip: false,
   background: "hero-strip.jpg",
@@ -6,7 +8,7 @@ const data = {
   subtitle: "Join Our Team",
   h3: "At GoWise Learning, we know that the right tutor or learning support assistant can change a child's life. That's why we are always looking for qualified tutors and SEN learning support assistants who share our passion for making a real difference.",
   button: {
-    link: "/contact",
+    link: Paths.FORMS.Tutors,
     theme: "primary",
     text: "Apply to JOIN OUR TEAM",
   },

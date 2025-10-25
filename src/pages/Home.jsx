@@ -237,7 +237,7 @@ function Page() {
             <Col />
             <Col>
               <Button
-                link={Paths.CONTACT}
+                link={Paths.FORMS.Parents}
                 theme="secondary"
                 text="Book a FREE CONSULTATION"
               />

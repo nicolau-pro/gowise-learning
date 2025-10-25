@@ -8,7 +8,7 @@ const data = {
   CONTACT: "contact",
   PRIVACY_POLICY: "privacy-policy",
   SAFEGUARDING: "safeguarding-and-protection-policy",
-  FORM: {
+  FORMS: {
     Parents: "https://form.jotform.com/252963757028063",
     Tutors: "https://form.jotform.com/252963757028063",
     Schools: "https://form.jotform.com/252963757028063",

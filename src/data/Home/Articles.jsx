@@ -1,3 +1,5 @@
+import Paths from "paths";
+
 const data = [
   {
     theme: "primary",
@@ -11,9 +13,9 @@ const data = [
       "Each GoWise Learning tutor works closely with our dedicated team of SEN specialists, who provide continuous guidance, training and the latest child-centred strategies and therapies used across the UK. This partnership ensures that every tutoring session is tailored to the child's individual needs, promoting confidence, independence and long-term growth. At GoWise Learning, we go beyond tutoring, we nurture potential, celebrate progress and create a safe, supportive space where every child can shine. ",
     ],
     cta: {
-      link: "/contact",
+      link: Paths.FORMS.Tutors,
       theme: "secondary",
-      text: "Join our team",
+      text: "Apply to JOIN OUR TEAM",
     },
   },
   {

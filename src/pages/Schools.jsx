@@ -71,7 +71,7 @@ function Page() {
             <Col />
             <Col className="text-centered">
               <Button
-                link={Paths.CONTACT}
+                link={Paths.FORMS.Schools}
                 theme="secondary"
                 text="Get in touch"
               />

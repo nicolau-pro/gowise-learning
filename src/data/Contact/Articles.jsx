@@ -13,7 +13,7 @@ const data = [
       "At GoWise Learning, we believe every child deserves the right support to reach their full potential, whether they need help catching up, stretching further or managing additional learning challenges.",
     ],
     cta: {
-      link: Paths.FORM.Parents,
+      link: Paths.FORMS.Parents,
       theme: "primary",
       text: "Discover How We Support You",
     },
@@ -30,7 +30,7 @@ const data = [
       "If you believe in helping every child flourish and want to grow within a supportive and forward-thinking network, we'd love to welcome you on board.",
     ],
     cta: {
-      link: Paths.FORM.Parents,
+      link: Paths.FORMS.Parents,
       theme: "secondary",
       text: "Join Our Team",
     },
@@ -47,7 +47,7 @@ const data = [
       "Our experienced tutors and specialists collaborate with your team to ensure consistent progress, wellbeing and measurable outcomes, so every learner receives the care and attention they deserve.",
     ],
     cta: {
-      link: Paths.FORM.Parents,
+      link: Paths.FORMS.Parents,
       theme: "tertiary",
       text: "Let's build brighter futures together",
     },
