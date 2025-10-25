@@ -4,8 +4,6 @@ const MetaData = {
   fb_app_id: "61582691489833",
 };
 
-const FooterProjectIds = [4, 6, 9, 10, 12, 14];
-
 const breadcrumbs = "▸";
 
-export { MetaData, Contact, FooterProjectIds, breadcrumbs };
+export { MetaData, breadcrumbs };

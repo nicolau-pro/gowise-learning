@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router";
-import { Contact } from "variables";
+import ContactData from "data/Contact";
 
 import Row from "layout/Row";
 import Col from "layout/Col";
@@ -598,7 +598,10 @@ function Page() {
                 <li>
                   <strong>Report Immediately</strong> - Do not wait. Contact our
                   Safeguarding Team directly on our confidential Safeguarding
-                  Line: <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
+                  Line:{" "}
+                  <Link to={ContactData.Phone.link}>
+                    {ContactData.Phone.text}
+                  </Link>
                 </li>
                 <li>
                   You'll be asked to complete a Safeguarding Concern Form on the

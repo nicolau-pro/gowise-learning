@@ -44,7 +44,7 @@ function Page() {
         <Section className="mt-2">
           <Row>
             <Col>
-              <h2 className="h3">Direct contact:</h2>
+              <h2 className="h3">Direct contact channels:</h2>
             </Col>
           </Row>
           <Row>

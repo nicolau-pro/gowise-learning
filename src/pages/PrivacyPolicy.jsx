@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router";
-import { Contact } from "variables";
+import ContactData from "data/Contact";
 
 import Row from "layout/Row";
 import Col from "layout/Col";
@@ -131,8 +131,8 @@ function Page() {
                 </li>
               </ul>
               <h4>To exercise your rights, please contact us at:</h4>
-              <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
-              <Link to={`mailto:${Contact.Email}`}>{Contact.Email}</Link>
+              <Link to={ContactData.Phone.link}>{ContactData.Phone.text}</Link>
+              <Link to={ContactData.Email.link}>{ContactData.Email.text}</Link>
             </Col>
           </Row>
         </Section>
@@ -191,11 +191,15 @@ function Page() {
                 <li>Main Contact / Data Protection Lead: Anamaria Blanaru</li>
                 <li>
                   Email:{" "}
-                  <Link to={`mailto:${Contact.Email}`}>{Contact.Email}</Link>
+                  <Link to={ContactData.Email.link}>
+                    {ContactData.Email.text}
+                  </Link>
                 </li>
                 <li>
                   Telephone:{" "}
-                  <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
+                  <Link to={ContactData.Phone.link}>
+                    {ContactData.Phone.text}
+                  </Link>
                 </li>
               </ul>
               <p>
@@ -578,11 +582,15 @@ function Page() {
               </p>
               <p>
                 Email:{" "}
-                <Link to={`mailto:${Contact.Email}`}>{Contact.Email}</Link>
+                <Link to={ContactData.Email.link}>
+                  {ContactData.Email.text}
+                </Link>
               </p>
               <p>
                 Telephone:{" "}
-                <Link to={`tel:${Contact.Phone}`}>{Contact.Phone}</Link>
+                <Link to={ContactData.Phone.link}>
+                  {ContactData.Phone.text}
+                </Link>
               </p>
 
               <hr />
