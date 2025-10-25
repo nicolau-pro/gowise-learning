@@ -11,11 +11,13 @@ const data = {
   buttons: [
     {
       link: Paths.FORMS.Parents,
+      openInNewTab: true,
       theme: "secondary",
       text: "Book a FREE CONSULTATION",
     },
     {
       link: Paths.FORMS.Tutors,
+      openInNewTab: true,
       theme: "tertiary",
       text: "Apply to JOIN OUR TEAM",
     },

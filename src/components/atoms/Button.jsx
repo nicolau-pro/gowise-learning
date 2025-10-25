@@ -3,7 +3,7 @@ import { JoinClasses } from "utils";
 
 export default function Button({
   link = "#",
-  openInNewTab = false,
+  openInNewTab,
   theme = "primary",
   text,
   ariaLabel,
@@ -19,7 +19,9 @@ export default function Button({
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
     >
-      <span aria-hidden={ariaHidden}>{text}</span>
+      <span aria-hidden={ariaHidden}>
+        {openInNewTab ? "_blank" : "_self"} {text}
+      </span>
       {ariaHidden && <span className="invisible-text">{ariaLabel}</span>}
     </a>
   );

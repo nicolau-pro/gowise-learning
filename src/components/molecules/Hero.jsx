@@ -4,6 +4,7 @@ import Button from "atoms/Button";
 import { JoinClasses } from "utils";
 
 export default function Hero({ data }) {
+  console.log(data);
   return (
     <Section
       className={JoinClasses([
@@ -29,6 +30,7 @@ export default function Hero({ data }) {
                   key={button.text}
                   className="cta"
                   link={button.link}
+                  openInNewTab={button.openInNewTab}
                   theme={button.theme}
                   text={button.text}
                 />

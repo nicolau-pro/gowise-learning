@@ -85,6 +85,7 @@ function Page() {
             <Col className="text-centered">
               <Button
                 link={Paths.FORMS.Tutors}
+                openInNewTab
                 theme="primary"
                 text="JOIN OUR TEAM"
               />

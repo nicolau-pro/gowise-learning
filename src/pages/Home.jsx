@@ -238,6 +238,7 @@ function Page() {
             <Col>
               <Button
                 link={Paths.FORMS.Parents}
+                openInNewTab
                 theme="secondary"
                 text="Book a FREE CONSULTATION"
               />

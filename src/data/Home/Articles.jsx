@@ -14,6 +14,7 @@ const data = [
     ],
     cta: {
       link: Paths.FORMS.Tutors,
+      openInNewTab: true,
       theme: "secondary",
       text: "Apply to JOIN OUR TEAM",
     },
