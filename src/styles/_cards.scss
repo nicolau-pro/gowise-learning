@@ -22,7 +22,8 @@
     justify-items: center;
     align-content: center;
     margin: 2px;
-    border-radius: vars.$radius-large vars.$radius-large 0 0;
+    $heading-radius: vars.$radius-large - 2px;
+    border-radius: $heading-radius $heading-radius 0 0;
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(2px);
