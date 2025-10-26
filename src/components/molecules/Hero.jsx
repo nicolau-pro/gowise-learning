@@ -49,13 +49,15 @@ export default function Hero({ data }) {
           ) : null}
 
           {data.button ? (
-            <Button
-              className="cta"
-              link={data.button.link}
-              openInNewTab={data.button.openInNewTab}
-              theme={data.button.theme}
-              text={data.button.text}
-            />
+            <div className="hero-one-button">
+              <Button
+                className="cta"
+                link={data.button.link}
+                openInNewTab={data.button.openInNewTab}
+                theme={data.button.theme}
+                text={data.button.text}
+              />
+            </div>
           ) : null}
         </Col>
       </Row>

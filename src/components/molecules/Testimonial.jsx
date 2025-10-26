@@ -28,7 +28,8 @@ export default function Testimonial({ className, data }) {
               <>
                 <h2 className="wide">{quote}</h2>
                 <p className="no-portrait">
-                  <strong>{name}</strong>, {title ? title : null}
+                  <strong>{name}</strong>
+                  {title ? `, ${title}` : null}
                 </p>
               </>
             ) : (
