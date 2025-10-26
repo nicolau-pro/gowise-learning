@@ -37,6 +37,10 @@ section.hero {
       line-height: 1em;
       margin-top: 0.2em;
       margin-bottom: -0.2em;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
     }
 
     h3 {
@@ -49,6 +53,7 @@ section.hero {
       max-width: 70%;
 
       @media (max-width: 768px) {
+        font-size: 21px;
         max-width: initial;
       }
       strong {
