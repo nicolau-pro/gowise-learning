@@ -20,15 +20,15 @@ const data = [
   [
     {
       text: "<strong>TEACCH Approach</strong> - clear routines, visual supports, and structured teaching to build independence and reduce anxiety.",
-      icon: "supervisor_account",
+      icon: "school",
     },
     {
       text: "<strong>Montessori Inspired Activities</strong> - hands-on, sensory learning that promotes focus, calm, and practical life skills.",
       icon: "date_range",
     },
     {
-      text: "<strong>School</strong> - bla.",
-      icon: "school",
+      text: "<strong>Emotional Regulation & Expression</strong> - Helping children recognise, manage and express their emotions effectively to build self-awareness, resilience and confidence in social interactions.",
+      icon: "favorite",
     },
   ],
   [
@@ -38,7 +38,7 @@ const data = [
     },
     {
       text: "<strong>SCERTS Model</strong> - building real-life communication, emotional regulation, and supportive relationships.",
-      icon: "diversity_3",
+      icon: "diversity_2",
     },
     {
       text: "<strong>Social Stories</strong> - simple, personalised stories to help children understand social situations.",
@@ -80,7 +80,7 @@ const data = [
     },
     {
       text: "<strong>Attachment Aware & Trauma Informed Practice</strong> - consistent, nurturing care that supports children who've had difficult early experiences.",
-      icon: "favorite",
+      icon: "diversity_1",
     },
     {
       text: "<strong>Soothing Environment & Balanced Routines</strong> - Through gentle routines and sensory-friendly adjustments, we promote balance, comfort and a genuine sense of wellbeing in every learning moment.",
@@ -94,11 +94,11 @@ const data = [
     },
     {
       text: "We focus on the whole child - communication, emotions, relationships, independence and wellbeing.",
-      icon: "group",
+      icon: "supervisor_account",
     },
     {
       text: "Our team works closely with families and local authorities to ensure consistent, long-lasting progress.",
-      icon: "people",
+      icon: "analytics",
     },
   ],
 ];
