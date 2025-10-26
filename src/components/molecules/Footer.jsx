@@ -80,7 +80,7 @@ const Footer = () => {
             <Row className="bottom" nopadding>
               <Col>
                 <p className="copyright">
-                  ©2025 Go Wise Learing / Anamaria Blanaru. All images and logos
+                  ©2025 GoWise Learing / Anamaria Blanaru. All images and logos
                   are proprietary to their respective owners.
                 </p>
               </Col>
