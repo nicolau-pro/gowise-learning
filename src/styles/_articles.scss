@@ -3,6 +3,9 @@
 
 section.article {
   padding: vars.$gap-normal;
+  @media (max-width: 768px) {
+    padding: vars.$gap-normal 0;
+  }
 
   .article-body {
     max-width: vars.$content-width - 2 * vars.$gap-small;
@@ -10,38 +13,55 @@ section.article {
     > .row {
       $border-radius: vars.$radius-large;
       background-color: color-mix(in srgb, currentColor 5%, transparent);
-      border-radius: $border-radius;
       overflow: hidden;
       position: relative;
       z-index: 0;
+      border-radius: $border-radius;
+      @media (max-width: 768px) {
+        border-radius: 0;
+      }
 
-      &:before {
-        $border-width: 2px;
-        content: "";
-        position: absolute;
-        inset: 0 auto 0 0;
-        border-radius: $border-radius + $border-width;
-        padding: $border-width;
-        background: linear-gradient(
-          to top right,
-          color-mix(in srgb, currentColor 50%, transparent) 10%,
-          transparent 40%
-        );
-        aspect-ratio: 1/1;
-        height: calc(100% - 2 * $border-width);
-        width: 50%;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none;
-        z-index: -1;
+      @media (min-width: 769px) {
+        &:before {
+          $border-width: 2px;
+          content: "";
+          position: absolute;
+          inset: 0 auto 0 0;
+          border-radius: $border-radius + $border-width;
+          padding: $border-width;
+          background: linear-gradient(
+            to top right,
+            color-mix(in srgb, currentColor 50%, transparent) 10%,
+            transparent 40%
+          );
+          aspect-ratio: 1/1;
+          height: calc(100% - 2 * $border-width);
+          width: 50%;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+          z-index: -1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 3em;
+          background-color: color-mix(in srgb, currentColor 5%, transparent);
+        }
       }
 
       .content-wrapper {
         .content {
+          font-size: 18px;
           padding: vars.$gap-large;
-          font-size: 21px;
+          @media (max-width: 768px) {
+            padding: vars.$gap-normal;
+          }
         }
 
         h3 {
@@ -56,7 +76,7 @@ section.article {
           padding-top: 0.5em;
           font-size: 1.2em;
           font-weight: 300;
-          line-height: 1.2em;
+          line-height: 1.33em;
           color: currentColor;
         }
 
@@ -101,11 +121,13 @@ section.article {
 
     &.content-side-right {
       > .row {
-        flex-direction: row-reverse;
+        @media (min-width: 769px) {
+          flex-direction: row-reverse;
 
-        &:before {
-          inset: 0 0 0 auto;
-          transform: scaleX(-1);
+          &:before {
+            inset: 0 0 0 auto;
+            transform: scaleX(-1);
+          }
         }
       }
     }
