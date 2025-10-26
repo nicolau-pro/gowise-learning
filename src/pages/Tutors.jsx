@@ -40,9 +40,9 @@ function Page() {
         <ArticleSection data={ArticlesData[0]} />
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <Col>
-              <h3 className="color-secondary">
+              <h3 className="color-secondary mobile-centered">
                 We welcome individuals who are:
               </h3>
             </Col>
@@ -58,9 +58,9 @@ function Page() {
         <TestimonialSection data={TestimonialsData[0]} />
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <Col>
-              <h3 className="color-primary-highlight">
+              <h3 className="color-primary-highlight mobile-centered">
                 To make sure you feel fully supported, we provide:
               </h3>
             </Col>
@@ -74,8 +74,8 @@ function Page() {
         </Section>
 
         <Section className="gap-xl">
-          <Row>
-            <h4 className="color-primary">
+          <Row className="tight-mobile">
+            <h4 className="color-primary mobile-centered">
               Apply now to join our team of holistic tutors and SEN learning
               support assistants:
             </h4>

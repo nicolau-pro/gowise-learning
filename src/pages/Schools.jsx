@@ -8,6 +8,7 @@ import Col from "layout/Col";
 import Section from "layout/Section";
 import Bullet from "components/Bullet";
 import Button from "atoms/Button";
+import BulletsRow from "../components/molecules/BulletsRow";
 
 import HeroSection from "components/Hero";
 import ArticleSection from "components/Article";
@@ -42,20 +43,19 @@ function Page() {
         <ArticleSection data={ArticlesData[1]} />
 
         <Section>
-          <Row>
+          <Row className="tight-mobile">
             <Col>
-              <h3 className="color-tertiary">
+              <h3 className="color-tertiary mobile-centered">
                 By partnering with us, you gain:
               </h3>
             </Col>
           </Row>
-          <Row>
-            {BulletsData.map((item) => (
-              <Col key={item.text}>
-                <Bullet data={item} theme="tertiary" />
-              </Col>
-            ))}
-          </Row>
+          <BulletsRow
+            data={{
+              bullets: BulletsData,
+              theme: "tertiary",
+            }}
+          />
         </Section>
 
         <TestimonialSection data={TestimonialsData[0]} />
