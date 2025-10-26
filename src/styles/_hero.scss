@@ -2,6 +2,8 @@
 @use "variables" as vars;
 
 section.hero {
+  background-position: center !important;
+
   @media (max-width: 768px) {
     border-radius: 0 !important;
   }
