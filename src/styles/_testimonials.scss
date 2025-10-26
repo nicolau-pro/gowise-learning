@@ -23,7 +23,7 @@ section.testimonial {
     display: flex;
     position: relative;
     width: 100%;
-    @media (max-width: 768px) {
+    @media (max-width: vars.$mobile-break-max) {
       flex-direction: column;
     }
 
@@ -68,7 +68,7 @@ section.testimonial {
         text-align: center;
         max-width: 80%;
         margin-top: 0.25em;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           font-size: 30px;
           line-height: 1.2em;
           margin-top: 1.25em;
@@ -96,7 +96,7 @@ section.testimonial {
       width: $portrait-size;
       padding-bottom: vars.$gap-normal * 2.5;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         position: absolute;
         right: 0;
       }
@@ -108,7 +108,7 @@ section.testimonial {
         border-radius: 50%;
         box-shadow: 0 6px 30px color-mix(in srgb, currentColor 20%, transparent);
         margin-left: $portrait-size * 0.2;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           scale: 0.67;
         }
       }
@@ -123,7 +123,7 @@ section.testimonial {
           font-weight: 600;
           font-size: 18px;
           bottom: 3em;
-          @media (max-width: 768px) {
+          @media (max-width: vars.$mobile-break-max) {
             bottom: 6em;
           }
         }
@@ -132,7 +132,7 @@ section.testimonial {
           font-weight: 200;
           font-size: 16px;
           bottom: 2em;
-          @media (max-width: 768px) {
+          @media (max-width: vars.$mobile-break-max) {
             bottom: 5em;
           }
         }

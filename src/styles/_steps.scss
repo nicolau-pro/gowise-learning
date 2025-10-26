@@ -30,7 +30,7 @@ article.step {
       colors.$primary_highlight 70%
     );
 
-    @media (max-width: 768px) {
+    @media (max-width: vars.$mobile-break-max) {
       scale: 0.8;
     }
   }

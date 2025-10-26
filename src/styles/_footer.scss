@@ -26,7 +26,7 @@ footer {
       margin: 20px auto;
       height: 100%;
 
-      @media (min-width: 769px) {
+      @media (min-width: vars.$mobile-break-min) {
         background-image: url("/media/logo-icon-transparent.svg");
       }
     }
@@ -58,7 +58,7 @@ footer {
       height: vars.$gap-large;
       max-width: 270px;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         margin-top: vars.$gap-normal;
       }
 
@@ -154,7 +154,7 @@ footer {
       list-style: none;
       justify-content: flex-end;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         justify-content: flex-start;
       }
 

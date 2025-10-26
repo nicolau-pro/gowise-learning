@@ -1,4 +1,5 @@
 @use "colors";
+@use "variables" as vars;
 
 html,
 body {
@@ -46,7 +47,7 @@ table {
   flex-direction: column;
   width: fit-content;
   max-width: calc(100vw - 40px);
-  @media (max-width: 768px) {
+  @media (max-width: vars.$mobile-break-max) {
     max-width: calc(100vw - 80px);
   }
 

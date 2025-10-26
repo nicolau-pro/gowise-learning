@@ -38,7 +38,7 @@
       height: 39px;
       line-height: 1em;
       font-weight: 500;
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         font-size: 24px;
       }
     }
@@ -83,7 +83,7 @@
       margin-bottom: 1em;
       text-align: center;
       font-size: 22px;
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         font-size: 18px;
       }
     }

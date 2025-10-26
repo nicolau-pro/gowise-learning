@@ -4,7 +4,7 @@
 section.hero {
   background-position: center !important;
 
-  @media (max-width: 768px) {
+  @media (max-width: vars.$mobile-break-max) {
     border-radius: 0 !important;
   }
 
@@ -40,7 +40,7 @@ section.hero {
       margin-top: 0.2em;
       margin-bottom: -0.2em;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         font-size: 36px;
       }
     }
@@ -54,7 +54,7 @@ section.hero {
       margin-top: vars.$gap-normal;
       max-width: 70%;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         font-size: 19px;
         max-width: initial;
         margin-top: vars.$gap-small;
@@ -62,10 +62,10 @@ section.hero {
 
       span {
         font-weight: 700;
-        font-size: 1.4em;
-        @media (max-width: 768px) {
+        display: block;
+        @media (max-width: vars.$mobile-break-max) {
+          font-size: 1.4em;
           color: colors.$warning;
-          display: block;
           margin-bottom: 0.5em;
         }
       }
@@ -79,7 +79,7 @@ section.hero {
       padding-left: 3em;
       box-shadow: 0 5px 3px color-mix(in srgb, black 50%, transparent);
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         margin-top: -30px !important;
         max-width: unset;
         span {
@@ -95,12 +95,12 @@ section.hero {
       display: flex;
       gap: 0.25em;
 
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         flex-direction: column;
         gap: 1em;
       }
 
-      @media (min-width: 769px) {
+      @media (min-width: vars.$mobile-break-min) {
         .cta {
           margin-top: 0;
           &:first-of-type {
@@ -117,7 +117,7 @@ section.hero {
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: vars.$mobile-break-max) {
       padding: vars.$gap-small vars.$gap-normal !important;
     }
   }
@@ -141,7 +141,7 @@ section.hero {
       background-color: color-mix(in srgb, currentColor 70%, transparent);
       background-image: none;
       z-index: 1;
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         background-color: transparent;
         background-image: linear-gradient(
           to bottom,
@@ -163,7 +163,7 @@ section.hero {
       inset: 0;
       background-color: colors.$primary_glow;
 
-      @media (min-width: 769px) {
+      @media (min-width: vars.$mobile-break-min) {
         background: url("/media/hero-strip.webp") repeat-x;
         background-size: auto 100%;
         animation: slide-bg-transform 3000s linear infinite;
@@ -223,7 +223,7 @@ section.hero-quote {
       display: flex;
       color: white;
       padding: vars.$gap-medium 0;
-      @media (max-width: 768px) {
+      @media (max-width: vars.$mobile-break-max) {
         flex-direction: column;
       }
 
@@ -236,7 +236,7 @@ section.hero-quote {
         margin-left: -1em;
         letter-spacing: 0.015em;
         color: white;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           margin-left: 0;
           margin-top: 3em;
           margin-bottom: 1em;
@@ -256,7 +256,7 @@ section.hero-quote {
         max-width: $portrait-size * 0.5;
         user-select: none;
         opacity: 0.1;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           line-height: 0.6em;
         }
 
@@ -268,7 +268,7 @@ section.hero-quote {
       .person {
         min-width: $portrait-size * 0.8;
         letter-spacing: 0.06em;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           position: absolute;
           top: 140px;
           right: 0;
@@ -279,7 +279,7 @@ section.hero-quote {
           line-height: 36px;
           font-weight: 700;
           text-transform: uppercase;
-          @media (max-width: 768px) {
+          @media (max-width: vars.$mobile-break-max) {
             font-size: 16px;
             text-align: right;
           }
@@ -287,16 +287,17 @@ section.hero-quote {
 
         .title {
           font-size: 16px;
-          line-height: 10px;
+          line-height: 22px;
           font-weight: 200;
           max-width: 70%;
-          @media (max-width: 768px) {
+          @media (max-width: vars.$mobile-break-max) {
             position: absolute;
             right: 0;
             font-size: 14px;
             text-align: right;
             max-width: unset;
             width: 130%;
+            line-height: 10px;
           }
         }
       }
@@ -306,7 +307,7 @@ section.hero-quote {
         max-width: $portrait-size;
         width: $portrait-size;
         margin: -$portrait-size * 0.5 - vars.$gap-medium vars.$gap-normal;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$mobile-break-max) {
           position: absolute;
           margin: 0;
           right: -40px;
