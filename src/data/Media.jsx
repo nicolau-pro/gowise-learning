@@ -3,6 +3,10 @@ const data = {
     src: "/media/anamaria-blanaru.webp",
     alt: "GoWise Learning CEO & Founder",
   },
+  anamariaBlanaruSmall: {
+    src: "/media/anamaria-blanaru-300.webp",
+    alt: "GoWise Learning CEO & Founder",
+  },
   motherTeachingDaughterAtHomeLearning: {
     src: "/media/mother-teaching-daughter-at-home-learning.webp",
     alt: "Mother teaching her daughter at home to support early learning and development",
