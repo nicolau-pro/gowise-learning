@@ -44,6 +44,8 @@ const Header = () => {
             <img
               alt="GoWise Learning logo"
               src="/media/gowise-learning-logo.webp"
+              width="242"
+              height="60"
             />
           </Link>
         </div>

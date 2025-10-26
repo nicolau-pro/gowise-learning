@@ -29,7 +29,12 @@ export default function Hero({ data }) {
           </h1>
 
           <h2 className="hero-logo desktop-hidden">
-            <img alt="GoWise Learning" src="/media/logo-monochrome.svg" />
+            <img
+              alt="GoWise Learning"
+              src="/media/logo-monochrome.svg"
+              width="280"
+              height="93"
+            />
           </h2>
           <h2 className="mobile-hidden">{data.subtitle}</h2>
           <h3
