@@ -306,7 +306,8 @@ section.hero-quote {
         min-width: $portrait-size;
         max-width: $portrait-size;
         width: $portrait-size;
-        margin: -$portrait-size * 0.5 - vars.$gap-medium vars.$gap-normal;
+        margin: $portrait-size * -0.25 - vars.$gap-medium vars.$gap-normal;
+        scale: 0.9;
         @media (max-width: vars.$mobile-break-max) {
           position: absolute;
           margin: 0;
