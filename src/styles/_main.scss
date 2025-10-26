@@ -36,6 +36,12 @@ footer {
       margin-top: vars.$gap-xl;
     }
 
+    &.gap-xl-desktop {
+      @media (min-width: 769px) {
+        margin-top: vars.$gap-xl;
+      }
+    }
+
     div.row {
       display: flex;
       gap: vars.$gap-normal;
@@ -114,7 +120,7 @@ footer {
 
   .mobile-centered {
     text-align: center;
-    max-width: 90%;
+    max-width: 92%;
     align-self: center;
   }
 

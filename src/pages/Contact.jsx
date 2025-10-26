@@ -32,7 +32,10 @@ function Page() {
       />
 
       <main>
-        <Section className="gap-xl" style={{ marginBottom: "-6em" }}>
+        <Section
+          className="gap-xl-desktop mt-2"
+          style={{ marginBottom: "-6em" }}
+        >
           <Row>
             <Col>
               <h1 className="hero color-primary-highlight">Contact Us</h1>
@@ -40,16 +43,7 @@ function Page() {
           </Row>
         </Section>
 
-        <TestimonialSection data={TestimonialsData[0]} />
-
-        <Section className="mt-2">
-          <Row>
-            <Col>
-              <h2 className="color-primary-highlight">
-                Direct contact channels:
-              </h2>
-            </Col>
-          </Row>
+        <Section className="gap-xl">
           <Row>
             <Col className="contact-links">
               <Link
@@ -85,15 +79,12 @@ function Page() {
               ))}
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <hr />
-            </Col>
-          </Row>
         </Section>
 
+        <TestimonialSection data={TestimonialsData[0]} />
+
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <Col>
               <h2>Register through our forms:</h2>
             </Col>

@@ -80,7 +80,7 @@ function Page() {
               support assistants:
             </h4>
           </Row>
-          <Row>
+          <Row nogap>
             <Col />
             <Col className="text-centered">
               <Button

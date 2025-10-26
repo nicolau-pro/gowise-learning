@@ -57,10 +57,11 @@ section.article {
 
       .content-wrapper {
         .content {
-          font-size: 18px;
+          font-size: 21px;
           padding: vars.$gap-large;
           @media (max-width: 768px) {
             padding: vars.$gap-normal;
+            font-size: 18px;
           }
         }
 

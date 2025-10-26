@@ -61,13 +61,13 @@ function Page() {
         <TestimonialSection data={TestimonialsData[0]} />
 
         <Section className="gap-xl">
-          <Row>
-            <h4 className="color-secondary">
+          <Row className="tight-mobile">
+            <h4 className="color-secondary mobile-centered">
               Get in touch to explore how we can support your school or local
               authority, same from the beginning:
             </h4>
           </Row>
-          <Row>
+          <Row nogap>
             <Col />
             <Col className="text-centered">
               <Button

@@ -40,9 +40,9 @@ function Page() {
         <ArticleSection data={ArticlesData[0]} />
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <Col>
-              <h3 className="color-primary-highlight">
+              <h3 className="color-primary-highlight mobile-centered">
                 When your child works with us, you can expect:
               </h3>
             </Col>
@@ -60,12 +60,12 @@ function Page() {
         <TestimonialSection data={TestimonialsData[0]} />
 
         <Section className="gap-xl">
-          <Row>
-            <h4 className="color-secondary">
+          <Row className="tight-mobile">
+            <h4 className="color-secondary mobile-centered">
               Get in touch to explore how we can support your child:
             </h4>
           </Row>
-          <Row>
+          <Row nogap>
             <Col />
             <Col className="text-centered">
               <Button
