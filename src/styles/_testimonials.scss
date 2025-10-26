@@ -21,6 +21,9 @@ section.testimonial {
 
   .testimonial-body {
     display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
     position: relative;
     width: 100%;
 
@@ -58,13 +61,19 @@ section.testimonial {
         font-family: vars.$font-body;
         font-weight: 200;
         font-size: 36px;
-        line-height: 40px;
+        line-height: 1.1em;
         letter-spacing: 0.02em;
         font-style: italic;
         color: colors.$text;
         text-align: center;
         max-width: 80%;
         margin-top: 0.25em;
+        @media (max-width: 768px) {
+          font-size: 30px;
+          line-height: 1.2em;
+          margin-top: 1.25em;
+          margin-bottom: 0.25em;
+        }
 
         &.wide {
           max-width: 94%;
@@ -86,28 +95,45 @@ section.testimonial {
       width: $portrait-size;
       padding-bottom: vars.$gap-normal * 2.5;
 
+      @media (max-width: 768px) {
+        position: absolute;
+        right: 0;
+      }
+
       img {
+        position: relative;
         aspect-ratio: 1/1;
         width: $portrait-size;
         border-radius: 50%;
         box-shadow: 0 6px 30px color-mix(in srgb, currentColor 20%, transparent);
+        @media (max-width: 768px) {
+          scale: 0.67;
+        }
+        margin-left: $portrait-size * 0.2;
       }
 
       p {
         position: absolute;
         right: 0;
         color: colors.$text;
+        white-space: nowrap;
 
         &.name {
           font-weight: 600;
           font-size: 18px;
           bottom: 3em;
+          @media (max-width: 768px) {
+            bottom: 6em;
+          }
         }
 
         &.title {
           font-weight: 200;
           font-size: 16px;
           bottom: 2em;
+          @media (max-width: 768px) {
+            bottom: 5em;
+          }
         }
       }
     }
