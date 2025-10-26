@@ -27,7 +27,7 @@ const data = {
   person: {
     ...Persons.AnamariaBlanaru,
     quote:
-      "Together for every child's success - to be used somewhere to show connection, collaboration and commitment between professionals.<br />We collaborate with parents, local authorities, schools and professionals to help every child thrive academically, socially and emotionally.",
+      "Together for every child's success - to be used somewhere to show connection, collaboration and commitment between professionals. We&nbsp;collaborate with parents, local authorities, schools and professionals to help every child thrive academically, socially and emotionally.",
   },
 };
 

@@ -119,6 +119,10 @@ header {
             font-weight: 600;
             font-size: 13px;
           }
+
+          @media (max-width: 399px) {
+            font-size: 12px;
+          }
         }
 
         &:hover,

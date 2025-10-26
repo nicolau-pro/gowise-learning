@@ -55,7 +55,7 @@ function Page() {
         </Section>
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <h2>Our Trusted Team of SEN Tutors & Specialists</h2>
           </Row>
         </Section>
@@ -63,7 +63,7 @@ function Page() {
         <ArticleSection data={ArticlesData[0]} />
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile">
             <h2>How We Support Children with SEND and SEMH</h2>
           </Row>
         </Section>

@@ -89,9 +89,10 @@
     }
 
     a[role="button"] {
-      width: fit-content;
+      width: 100%;
       margin: auto;
-      padding: 30px;
+      padding: 0px;
+      font-family: vars.$font-body;
     }
   }
 }

@@ -216,9 +216,13 @@ section.hero-quote {
     padding-bottom: 0;
 
     .hero-quote-body {
+      position: relative;
       display: flex;
       color: white;
       padding: vars.$gap-medium 0;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .quote {
         font-family: vars.$font-body;
@@ -229,6 +233,11 @@ section.hero-quote {
         margin-left: -1em;
         letter-spacing: 0.015em;
         color: white;
+        @media (max-width: 768px) {
+          margin-left: 0;
+          margin-top: 3em;
+          margin-bottom: 1em;
+        }
 
         strong {
           font-weight: 300;
@@ -244,6 +253,9 @@ section.hero-quote {
         max-width: $portrait-size * 0.5;
         user-select: none;
         opacity: 0.1;
+        @media (max-width: 768px) {
+          line-height: 0.6em;
+        }
 
         span {
           margin-left: -0.05em;
@@ -253,19 +265,36 @@ section.hero-quote {
       .person {
         min-width: $portrait-size * 0.8;
         letter-spacing: 0.06em;
+        @media (max-width: 768px) {
+          position: absolute;
+          top: 140px;
+          right: 0;
+        }
 
         .name {
           font-size: 18px;
           line-height: 36px;
           font-weight: 700;
           text-transform: uppercase;
+          @media (max-width: 768px) {
+            font-size: 16px;
+            text-align: right;
+          }
         }
 
         .title {
           font-size: 16px;
-          line-height: 24px;
+          line-height: 10px;
           font-weight: 200;
           max-width: 70%;
+          @media (max-width: 768px) {
+            position: absolute;
+            right: 0;
+            font-size: 14px;
+            text-align: right;
+            max-width: unset;
+            width: 130%;
+          }
         }
       }
 
@@ -274,6 +303,13 @@ section.hero-quote {
         max-width: $portrait-size;
         width: $portrait-size;
         margin: -$portrait-size * 0.5 - vars.$gap-medium vars.$gap-normal;
+        @media (max-width: 768px) {
+          position: absolute;
+          margin: 0;
+          right: -40px;
+          top: -60px;
+          scale: 0.67;
+        }
 
         img {
           aspect-ratio: 1/1;
