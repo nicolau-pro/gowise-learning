@@ -3,7 +3,7 @@ import React from "react";
 import Button from "atoms/Button";
 
 export default function Card({ data }) {
-  const { image, title, theme, details, button } = data;
+  const { image, title, subtitle, theme, details, button } = data;
 
   return (
     <div
@@ -12,6 +12,7 @@ export default function Card({ data }) {
     >
       <div className="heading">
         <h2 className={`theme-${theme}`}>{title}</h2>
+        <h3 className={`theme-${theme}`}>{subtitle}</h3>
         <hr />
       </div>
       <div className="content">

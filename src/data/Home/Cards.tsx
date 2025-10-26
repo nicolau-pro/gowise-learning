@@ -1,6 +1,7 @@
 const data = [
   {
-    title: "I'm a parent",
+    title: "Parents,",
+    subtitle: "Guardians and Carers",
     titleFooter: "For Parents",
     details:
       "We offer 1-1 tutoring for students needing extra support with 11+, entrance exams, GCSEs, A levels, and also private home schooling.",
@@ -14,7 +15,8 @@ const data = [
     },
   },
   {
-    title: "I'm a tutor",
+    title: "Tutors,",
+    subtitle: "SEN Learning Support Assistants",
     titleFooter: "For Tutors",
     details:
       "Join our amazing tutors and make a profound impact on young people's lives, fostering their growth and learning.",
@@ -28,7 +30,8 @@ const data = [
     },
   },
   {
-    title: "Schools and LAs",
+    title: "Schools,",
+    subtitle: "Local Authorities",
     titleFooter: "Schools & Local Authorities",
     details:
       "We can partner with you, to help place tutors for students across the UK with alternative provision placements.",

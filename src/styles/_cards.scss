@@ -11,27 +11,46 @@
   overflow: hidden;
 
   .heading {
-    height: 60px;
-    background-color: color-mix(in srgb, white 20%, transparent);
+    height: 100px;
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, white 40%, transparent),
+      color-mix(in srgb, white 90%, transparent)
+    );
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-content: center;
+    margin: 2px;
+    border-radius: vars.$radius-large vars.$radius-large 0 0;
 
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(2px);
 
     h2 {
-      text-align: center;
-      height: 100%;
-      font-family: vars.$font-headings-compact;
       font-size: 40px;
+      height: 60px;
+    }
+
+    h3 {
+      font-size: 30px;
+      height: 39px;
+      line-height: 1em;
+      font-weight: 500;
+    }
+
+    h2,
+    h3 {
+      font-family: vars.$font-headings-compact;
+      text-align: center;
+      color: black;
+      text-shadow: 0 0 0.25em white;
     }
 
     hr {
       width: 100%;
       border: none;
-      height: 2px;
+      height: 12px;
       background: linear-gradient(
         to right,
         transparent 0%,
