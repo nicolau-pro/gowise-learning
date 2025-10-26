@@ -100,11 +100,15 @@ header {
           letter-spacing 0.1s ease-out;
 
         span {
-          color: inherit;
+          color: color-mix(in srgb, colors.$neutral 80%, white);
+
+          &:first-of-type {
+            color: colors.$primary_highlight;
+          }
 
           @media (max-width: 768px) {
             font-family: vars.$font-headings-compact;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.02em;
             font-size: 14px;
           }
         }
@@ -127,6 +131,14 @@ header {
           color: white;
           letter-spacing: 0.03em;
           font-weight: 400;
+
+          span {
+            color: white;
+
+            &:first-of-type {
+              color: color-mix(in srgb, colors.$primary_highlight 40%, white);
+            }
+          }
         }
 
         &:active {
@@ -167,7 +179,7 @@ header {
         a {
           width: 100%;
           font-size: 0.6em;
-          font-weight: 400;
+          font-weight: 700;
 
           &:hover,
           &:focus-visible,
