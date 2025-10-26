@@ -41,8 +41,12 @@ footer {
       gap: vars.$gap-normal;
       width: 100%;
       max-width: vars.$content-width;
-      padding: vars.$gap-small;
       justify-content: center;
+      padding: vars.$gap-small;
+
+      @media (max-width: 768px) {
+        padding: vars.$gap-normal;
+      }
 
       &.nogap {
         gap: 0;

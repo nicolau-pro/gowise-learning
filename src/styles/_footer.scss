@@ -4,6 +4,7 @@
 footer {
   position: relative;
   margin-top: vars.$gap-xl;
+  height: max-content;
 
   background-image: linear-gradient(
     to bottom,
@@ -17,18 +18,23 @@ footer {
 
   > section {
     > .row {
-      background-image: url("/media/logo-icon-transparent.svg");
+      background-image: none;
       background-size: contain;
       background-position: right;
       background-repeat: no-repeat;
       min-height: 480px;
       margin: 20px auto;
       height: 100%;
+
+      @media (min-width: 769px) {
+        background-image: url("/media/logo-icon-transparent.svg");
+      }
     }
   }
 
   .row.top {
     margin-top: vars.$gap-small;
+
     .logo {
       max-width: $card-width + $card-gap;
       display: flex;
@@ -51,6 +57,10 @@ footer {
       justify-content: center;
       height: vars.$gap-large;
       max-width: 270px;
+
+      @media (max-width: 768px) {
+        margin-top: vars.$gap-normal;
+      }
 
       li {
         margin: 0;
@@ -137,12 +147,16 @@ footer {
     .social {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
       align-items: flex-start;
       gap: 1em;
       padding: 0;
       margin: 0;
       list-style: none;
+      justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
 
       li {
         display: flex;
