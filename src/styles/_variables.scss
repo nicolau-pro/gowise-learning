@@ -24,4 +24,4 @@ $font-headings-compact: "optima-nova-lt-pro-cond", sans-serif;
 $font-icons: "Material Icons";
 
 $mobile-break-max: 1024px;
-$mobile-break-min: 1025px;
+$mobile-break-min: $mobile-break-max + 1px;
