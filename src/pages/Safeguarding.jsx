@@ -203,6 +203,9 @@ function Page() {
                   </tr>
                 </tbody>
               </table>
+              <p className="small desktop-hidden">
+                * Table scrolls horizontally
+              </p>
             </Col>
           </Row>
 
@@ -271,6 +274,9 @@ function Page() {
                   </tr>
                 </tbody>
               </table>
+              <p className="small desktop-hidden">
+                * Table scrolls horizontally
+              </p>
               <p>
                 The DSL is responsible for overseeing all safeguarding matters,
                 maintaining secure records, liaising with schools and local

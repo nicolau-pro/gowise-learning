@@ -41,6 +41,11 @@ table {
   outline: 1px solid color-mix(in srgb, colors.$primary 25%, white);
   border-radius: 1em;
   overflow: hidden;
+  overflow-x: auto;
+  display: block;
+  flex-direction: column;
+  max-width: calc(100vw - 40px);
+  width: fit-content;
 
   td,
   th {
@@ -48,6 +53,7 @@ table {
     text-align: left;
     font-weight: 300;
     font-size: 0.9em;
+    min-width: 240px;
   }
 
   thead {

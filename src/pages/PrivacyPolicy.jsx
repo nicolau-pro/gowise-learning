@@ -291,6 +291,9 @@ function Page() {
                   </tr>
                 </tbody>
               </table>
+              <p className="small desktop-hidden">
+                * Table scrolls horizontally
+              </p>
             </Col>
           </Row>
           <Row>
