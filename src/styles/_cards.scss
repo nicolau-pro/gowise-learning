@@ -37,6 +37,9 @@
       height: 39px;
       line-height: 1em;
       font-weight: 500;
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
     }
 
     h2,
@@ -74,9 +77,12 @@
 
     .details {
       font-size: 22px;
-      line-height: 36px;
+      line-height: 1.67em;
       margin-bottom: 1em;
       text-align: center;
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     backdrop-filter: blur(4px);
