@@ -71,14 +71,6 @@ const data = {
     src: "/media/wooden-counting-toys.webp",
     alt: "Close-up of natural wooden counting toys with stackable rings and numbers used for early learning activities.",
   },
-  childHoldingNumberCards: {
-    src: "/media/child-holding-number-cards.webp",
-    alt: "Smiling child holding up a row of colorful number cards in a classroom setting for a counting activity.",
-  },
-  teacherHelpingTeenStudent: {
-    src: "/media/teacher-helping-teen-student.webp",
-    alt: "Teacher guiding a teenage student with her schoolwork, pointing at notes during a study session.",
-  },
   confidentTeacherWithStudents: {
     src: "/media/confident-teacher-with-students.webp",
     alt: "Confident teacher standing with arms crossed in front of a group of students collaborating in a classroom setting.",
