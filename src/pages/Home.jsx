@@ -99,9 +99,9 @@ function Page() {
         </Section>
 
         <Section>
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-primary">
+              <h4 className="color-primary mobile-centered">
                 Structured Learning & Independence:
               </h4>
             </Col>
@@ -110,27 +110,27 @@ function Page() {
             data={{ bullets: BulletsData[1], theme: "primary", max: 3 }}
           />
 
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-secondary">
+              <h4 className="color-secondary mobile-centered">
                 Communication & Social Skills:
               </h4>
             </Col>
           </Row>
           <BulletsRow data={{ bullets: BulletsData[2], theme: "secondary" }} />
 
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-tertiary">
+              <h4 className="color-tertiary mobile-centered">
                 Play, Relationships & Emotional Growth:
               </h4>
             </Col>
           </Row>
           <BulletsRow data={{ bullets: BulletsData[3], theme: "tertiary" }} />
 
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-primary">
+              <h4 className="color-primary mobile-centered">
                 Emotional Regulation & Behaviour Support:
               </h4>
             </Col>
@@ -142,9 +142,11 @@ function Page() {
             }}
           />
 
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-secondary">Sensory & Wellbeing Support:</h4>
+              <h4 className="color-secondary mobile-centered">
+                Sensory & Wellbeing Support:
+              </h4>
             </Col>
           </Row>
           <BulletsRow
@@ -155,9 +157,11 @@ function Page() {
             }}
           />
 
-          <Row className="mt-3 tight">
+          <Row className="mt-3 tight tight-mobile">
             <Col>
-              <h4 className="color-tertiary">Why Families Choose Us:</h4>
+              <h4 className="color-tertiary mobile-centered">
+                Why Families Choose Us:
+              </h4>
             </Col>
           </Row>
           <BulletsRow
