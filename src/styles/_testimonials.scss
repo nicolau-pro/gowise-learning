@@ -21,11 +21,11 @@ section.testimonial {
 
   .testimonial-body {
     display: flex;
+    position: relative;
+    width: 100%;
     @media (max-width: 768px) {
       flex-direction: column;
     }
-    position: relative;
-    width: 100%;
 
     > * {
       flex: 1;
@@ -106,10 +106,10 @@ section.testimonial {
         width: $portrait-size;
         border-radius: 50%;
         box-shadow: 0 6px 30px color-mix(in srgb, currentColor 20%, transparent);
+        margin-left: $portrait-size * 0.2;
         @media (max-width: 768px) {
           scale: 0.67;
         }
-        margin-left: $portrait-size * 0.2;
       }
 
       p {

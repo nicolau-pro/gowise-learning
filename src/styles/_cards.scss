@@ -74,19 +74,18 @@
     margin-top: 330px;
     border-radius: vars.$radius-large - 0.75 * vars.$gap-small;
     padding: vars.$gap-small vars.$gap-small * 1.5;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
     .details {
-      font-size: 22px;
       line-height: 1.67em;
       margin-bottom: 1em;
       text-align: center;
+      font-size: 22px;
       @media (max-width: 768px) {
         font-size: 18px;
       }
     }
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 
     a[role="button"] {
       width: fit-content;
