@@ -1,8 +1,10 @@
+import Media from "media";
+
 const data = {
   AnamariaBlanaru: {
     name: "Anamaria Blanaru",
-    title: "GoWise Learning CEO & Founder",
-    portrait: "/media/anamaria-blanaru.jpg",
+    title: Media.anamariaBlanaru.alt,
+    portrait: Media.anamariaBlanaru.src,
   },
 };
 

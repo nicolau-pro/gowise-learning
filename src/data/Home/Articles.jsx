@@ -1,11 +1,11 @@
 import Paths from "paths";
+import Media from "media";
 
 const data = [
   {
     theme: "primary",
     contentSide: "left",
-    image: "/media/article2.jpg",
-    imageAlt: "Our Trusted Team of SEN Tutors & Specialists",
+    image: Media.learningTogetherSupportSession,
     title: "Our Team",
     subtitle: "Where expertise meets empathy to bring out every child's best.",
     paragraphs: [
@@ -22,8 +22,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "right",
-    image: "/media/article1.jpg",
-    imageAlt: "How We Support Children with SEND and SEMH",
+    image: Media.learningSupportInteraction,
     title: "Our support",
     paragraphs: [
       "We work with children aged 0-25 with Special Educational Needs and Disabilities (SEND) and Social, Emotional and Mental Health (SEMH) needs, who experience a wide range of challenges, including Autism Spectrum Disorder (ASD), Attention Deficit Hyperactivity Disorder (ADHD), Pathological Demand Avoidance (PDA), Obsessive-Compulsive Disorder (OCD), Attention Deficit Disorder (ADD), as well as difficulties related to anxiety, communication, learning and sensory processing. Each child's journey is unique and at GoWise Learning, we take time to understand their individual strengths, triggers and emotional world to create a safe, structured environment where they can grow and thrive.",
@@ -32,8 +31,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "left",
-    image: "/media/family1.jpg",
-    imageAlt: "Parent Testimonials",
+    image: Media.happyFamilyPlayingOutdoors,
     subtitle:
       "At GoWise Learning, our work is built on connection, trust and compassion.",
     paragraphs: [
@@ -44,8 +42,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "/media/a-boy-wearing-eyeglasses-in-the-classroom.jpg",
-    imageAlt: "Progress with Social Skills and School Integration",
+    image: Media.thoughtfulStudentInClassroom,
     title: "Progress with Social Skills and School Integration",
     subtitle:
       "I never imagined we would see such positive changes in such a short time  (7 months)",
@@ -58,8 +55,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "/media/photo-of-woman-teaching-his-son-while-smiling.jpg",
-    imageAlt: "Exceptional Individualised Tutoring and Communication",
+    image: Media.motherHelpingChildOnComputer,
     title: "Exceptional Individualised Tutoring and Communication",
     paragraphs: [
       "From the very beginning, the communication was clear, honest and consistent.I always knew exactly how my son was progressing each week. For the first time, I felt truly involved in his learning journey and could see how much care and thought went into every session.The lessons were tailored perfectly to my son's needs, concentration and interests, which made such a difference.",
@@ -69,8 +65,7 @@ const data = [
   {
     theme: "primary",
     contentSide: "right",
-    image: "/media/a-woman-teaching-a-boy-the-art-of-painting.jpg",
-    imageAlt: "Overcoming Anxiety and Enjoying Learning",
+    image: Media.teacherHelpingChildPainting,
     title: "Overcoming Anxiety and Enjoying Learning",
     paragraphs: [
       "I am beyond happy with the progress my son has made through his one-to-one sessions. At first, he was extremely anxious, finding it hard to cope with new people and environments. But right from the start, everything was handled with so much patience, care and understanding. Before sessions began, we received a personalised social story that explained who his tutor was, what would happen and what to expect during the lessons. We went through it several times together and it made such a difference.When he finally met his tutor, he was calm, smiling and instantly comfortable.",
@@ -80,8 +75,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "/media/girl-raising-hand-inside-the-classroom.jpg",
-    imageAlt: "Improved Concentration and Engagement",
+    image: Media.girlRaisingHandInClass,
     title: "Improved Concentration and Engagement",
     paragraphs: [
       "My daughter used to have such a short attention span and struggled with following routines or doing any activity. Now she gets excited to see what's planned each day and loves helping get the activities ready. She enjoys exploring them one by one while the tutor explains everything.",

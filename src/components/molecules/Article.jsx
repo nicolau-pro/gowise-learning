@@ -49,7 +49,7 @@ export default function ArticleSection({ data, className }) {
             </div>
           </Col>
           <Col className="image-wrapper">
-            <img src={image} alt={imageAlt} />
+            <img src={image.src} alt={image.alt} />
           </Col>
         </Row>
       </div>

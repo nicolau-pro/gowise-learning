@@ -1,11 +1,11 @@
 import Paths from "paths";
+import Media from "media";
 
 const data = [
   {
     theme: "primary",
     contentSide: "left",
-    image: "/media/card1-wide.jpg",
-    imageAlt: "Empowering Every Child to Learn and Thrive",
+    image: Media.motherTeachingDaughterAtHomeLearning,
     title: "For Parents",
     subtitle: "Empowering Every Child to Learn and Thrive",
     paragraphs: [
@@ -22,8 +22,7 @@ const data = [
   {
     theme: "secondary",
     contentSide: "left",
-    image: "/media/card2-wide.jpg",
-    imageAlt: "Join a Vision That Makes a Difference",
+    image: Media.teacherExplainingScienceToStudents,
     title: "For Tutors",
     subtitle: "Join a Vision That Makes a Difference",
     paragraphs: [
@@ -40,8 +39,7 @@ const data = [
   {
     theme: "tertiary",
     contentSide: "left",
-    image: "/media/card3-wide.jpg",
-    imageAlt: "Trusted Partnerships for SEND, SEMH & EHCP Support",
+    image: Media.teacherExplainingMathInClassroom,
     title: "For Schools & Local Authorities",
     subtitle: "Trusted Partnerships for SEND, SEMH & EHCP Support",
     paragraphs: [

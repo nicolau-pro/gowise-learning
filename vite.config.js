@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       data: path.resolve(__dirname, "src/data"),
+      media: path.resolve(__dirname, "src/data/Media.jsx"),
       paths: path.resolve(__dirname, "src/data/Paths.jsx"),
       utils: path.resolve(__dirname, "src/data/utils"),
       variables: path.resolve(__dirname, "src/data/variables.jsx"),
