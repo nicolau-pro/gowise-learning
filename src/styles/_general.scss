@@ -44,8 +44,11 @@ table {
   overflow-x: auto;
   display: block;
   flex-direction: column;
-  max-width: calc(100vw - 40px);
   width: fit-content;
+  max-width: calc(100vw - 40px);
+  @media (max-width: 768px) {
+    max-width: calc(100vw - 80px);
+  }
 
   td,
   th {
