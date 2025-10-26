@@ -5,7 +5,9 @@ function Icon({ children, className = "" }) {
     <span
       aria-hidden="true"
       className={
-        className ? ["material-icons", className].join(" ") : "material-icons"
+        className
+          ? ["material-symbols-sharp", className].join(" ")
+          : "material-symbols-sharp"
       }
     >
       {children}

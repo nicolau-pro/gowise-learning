@@ -28,6 +28,8 @@ const Footer = () => {
                   <img
                     src={`/media/logo-monochrome.svg`}
                     alt={`GoWise Learning`}
+                    width="241"
+                    height="80"
                   />
                 </Link>
               </Col>
@@ -70,7 +72,7 @@ const Footer = () => {
                   <span className="details">{item.details}</span>
                   <div className="cta">
                     <span className="text">{item.button.text}</span>
-                    <Icon className="icon">chevron_right</Icon>
+                    <Icon className="icon">chevron_forward</Icon>
                   </div>
                 </Link>
               ))}

@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build-presite": "vite build && presite ./dist && python src/post.py",
+    "build-presite": "rimraf dist .presite && vite build && presite ./dist && node remove-js-presite.js",
     "build": "vite build",
     "presite": "presite ./dist",
     "post-process": "python src/post.py",
