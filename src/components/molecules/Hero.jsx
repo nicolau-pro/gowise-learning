@@ -21,12 +21,18 @@ export default function Hero({ data }) {
     >
       <Row className={`theme-${data.theme}`}>
         <Col>
-          <h1 className="hero">{data.h1}</h1>
-          <h2>{data.subtitle}</h2>
+          <h1 className="hero">{data.h1Mobile || data.h1}</h1>
+          {data.subtitleHideMobile ? (
+            <h2 className="hero-logo">
+              <img alt="GoWise Learning" src="/media/logo-monochrome.svg" />
+            </h2>
+          ) : (
+            <h2>{data.subtitle}</h2>
+          )}
           <h3
             className={data.button ? undefined : "mb-3"}
             dangerouslySetInnerHTML={{ __html: data.h3 }}
-          ></h3>
+          />
           {data.buttons ? (
             <div className="hero-buttons">
               {data.buttons.map((button) => (
