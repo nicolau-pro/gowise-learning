@@ -12,7 +12,7 @@ export default function Hero({ data }) {
         data.strip ? "sliding-strip" : "no-strip",
       ])}
       style={{
-        backgroundImage: `url(/media/${data.strip || data.background})`,
+        backgroundImage: `url(${data.strip || data.background.src})`,
       }}
     >
       <Row className={`theme-${data.theme}`}>

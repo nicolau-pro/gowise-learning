@@ -2,7 +2,7 @@ import Persons from "data/Persons";
 import Paths from "paths";
 
 const data = {
-  strip: "hero-strip.jpg",
+  strip: "/media/hero-strip.jpg",
   background: false,
   theme: "primary",
   h1: "WELCOME",

@@ -1,6 +1,8 @@
+import Media from "media";
+
 const data = {
   strip: false,
-  background: "hero-strip.jpg",
+  background: Media.confidentTeacherWithStudents,
   theme: "primary",
   h1: "About Us",
   subtitle: "What Makes GoWise Learning Different",

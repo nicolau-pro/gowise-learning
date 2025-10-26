@@ -1,8 +1,9 @@
 import Paths from "paths";
+import Media from "media";
 
 const data = {
   strip: false,
-  background: "hero-strip.jpg",
+  background: Media.motherTeachingDaughterAtHomeLearning,
   theme: "primary",
   h1: "For Parents",
   subtitle: "You have our support!",

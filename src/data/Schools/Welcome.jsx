@@ -1,8 +1,9 @@
 import Paths from "paths";
+import Media from "media";
 
 const data = {
   strip: false,
-  background: "hero-strip.jpg",
+  background: Media.woodenCountingToys,
   theme: "tertiary-dark",
   h1: "Partnerships",
   subtitle: "With Schools and Local Authorities",

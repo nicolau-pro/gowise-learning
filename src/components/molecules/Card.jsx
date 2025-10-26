@@ -6,10 +6,7 @@ export default function Card({ data }) {
   const { image, title, subtitle, theme, details, button } = data;
 
   return (
-    <div
-      className="card-body"
-      style={{ backgroundImage: `url(/media/${image})` }}
-    >
+    <div className="card-body" style={{ backgroundImage: `url(${image.src})` }}>
       <div className="heading">
         <h2 className={`theme-${theme}`}>{title}</h2>
         <h3 className={`theme-${theme}`}>{subtitle}</h3>
