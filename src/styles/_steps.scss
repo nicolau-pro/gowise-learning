@@ -3,6 +3,9 @@
 
 article.step {
   $number-size: 120px;
+  @media (max-width: 768px) {
+    $number-size: 100px;
+  }
   flex: 1;
   position: relative;
   display: flex;
@@ -21,7 +24,7 @@ article.step {
     justify-content: center;
     color: white;
     font-family: vars.$font-headings;
-    font-size: 72px;
+    font-size: $number-size * 0.6;
     font-weight: 800;
     box-shadow: inset 0 0 20px colors.$primary;
     background: linear-gradient(
