@@ -26,6 +26,10 @@ const data = [
       text: "<strong>Montessori Inspired Activities</strong> - hands-on, sensory learning that promotes focus, calm, and practical life skills.",
       icon: "date_range",
     },
+    {
+      text: "<strong>School</strong> - bla.",
+      icon: "school",
+    },
   ],
   [
     {
@@ -77,6 +81,10 @@ const data = [
     {
       text: "<strong>Attachment Aware & Trauma Informed Practice</strong> - consistent, nurturing care that supports children who've had difficult early experiences.",
       icon: "favorite",
+    },
+    {
+      text: "<strong>Soothing Environment & Balanced Routines</strong> - Through gentle routines and sensory-friendly adjustments, we promote balance, comfort and a genuine sense of wellbeing in every learning moment.",
+      icon: "diversity_3",
     },
   ],
   [

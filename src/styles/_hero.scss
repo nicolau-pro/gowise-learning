@@ -2,10 +2,6 @@
 @use "variables" as vars;
 
 section.hero {
-  background-repeat: repeat-x;
-  background-size: cover;
-  background-position: 0 0;
-
   .row {
     max-width: vars.$content-width + 2 * vars.$gap-xl;
     justify-content: center;
@@ -84,9 +80,11 @@ section.hero {
   }
 
   &.sliding-strip {
-    animation: slide-bg 3600s linear infinite;
+    position: relative;
     color: inherit;
     max-width: unset;
+    background: transparent;
+    background-color: transparent;
 
     .row {
       background-color: transparent;
@@ -97,10 +95,29 @@ section.hero {
         color-mix(in srgb, currentColor 95%, transparent) 65%,
         color-mix(in srgb, currentColor 0%, transparent) 100%
       );
+      z-index: 1;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 10000%;
+      height: 100%;
+      // z-index: -1;
+
+      inset: 0;
+      background: url("/media/hero-strip.jpg") repeat-x;
+      background-size: auto 100%;
+      animation: slide-bg-transform 3000s linear infinite;
+      will-change: transform;
     }
   }
 
   &.no-strip {
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 0 0;
     max-width: vars.$content-width - 2 * vars.$gap-small;
     border-radius: 0 0 vars.$radius-large vars.$radius-large;
     overflow: hidden;
@@ -111,10 +128,20 @@ section.hero {
   }
 }
 
+@keyframes slide-bg-transform {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-90%);
+  }
+}
+
 section.hero-quote {
   $portrait-size: 240px;
   $background-light: colors.$primary_highlight;
   $background-dark: colors.$primary;
+  z-index: 1;
 
   background: linear-gradient(
     to right,
