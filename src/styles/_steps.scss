@@ -3,9 +3,6 @@
 
 article.step {
   $number-size: 120px;
-  @media (max-width: 768px) {
-    $number-size: 100px;
-  }
   flex: 1;
   position: relative;
   display: flex;
@@ -32,6 +29,10 @@ article.step {
       colors.$primary 0%,
       colors.$primary_highlight 70%
     );
+
+    @media (max-width: 768px) {
+      scale: 0.8;
+    }
   }
 
   .content {
