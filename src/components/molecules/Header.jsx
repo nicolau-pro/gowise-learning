@@ -8,15 +8,28 @@ const Header = () => {
   const { setHeaderReady, CurrentPath } = useAppState();
 
   const Links = [
-    { path: Paths.PARENTS, name: "PARENTS", icon: "account_circle" },
-    { path: Paths.TUTORS, name: "TUTORS", icon: "account_circle" },
+    {
+      path: Paths.PARENTS,
+      name: <span>PARENTS</span>,
+      icon: "supervisor_account",
+    },
+    {
+      path: Paths.TUTORS,
+      name: <span>TUTORS</span>,
+      icon: "interactive_space",
+    },
     {
       path: Paths.SCHOOLS_AND_LOCAL_AUTORITIES,
-      name: "SCHOOLS & LAs",
-      icon: "account_circle",
+      name: (
+        <>
+          <span>SCHOOLS</span>
+          <span className="mobile-hidden">& Local Authorities</span>
+        </>
+      ),
+      icon: "school",
     },
-    { path: Paths.ABOUT, name: "ABOUT US", icon: "account_circle" },
-    { path: Paths.CONTACT, name: "CONTACT", icon: "account_circle" },
+    { path: Paths.ABOUT, name: <span>ABOUT US</span>, icon: "diversity_1" },
+    { path: Paths.CONTACT, name: <span>CONTACT</span>, icon: "emoji_people" },
   ];
 
   useEffect(() => {
@@ -48,7 +61,7 @@ const Header = () => {
                 }
               >
                 <Icon className="desktop-hidden">{link.icon}</Icon>
-                <span>{link.name}</span>
+                {link.name}
               </Link>
             </li>
           ))}
