@@ -9,7 +9,9 @@ const data = {
   h1Mobile: "Welcome to",
   subtitle: "To GoWise Learning",
   subtitleHideMobile: true,
-  h3: "<span>Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs</span>GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root.",
+  h3: `<span>Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs</span>
+  <img class="hero-small-image" src="/media/creative-learning-with-tutor-and-child.webp" />
+  GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root.`,
   buttons: [
     {
       link: Paths.FORMS.Parents,

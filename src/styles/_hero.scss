@@ -64,7 +64,7 @@ section.hero {
         font-weight: 700;
         display: block;
         @media (max-width: vars.$mobile-break-max) {
-          font-size: 1.4em;
+          font-size: 1.2em;
           color: colors.$warning;
           margin-bottom: 0.5em;
         }
@@ -87,6 +87,7 @@ section.hero {
         }
       }
     }
+
     .hero-one-button {
       margin-top: 3em;
     }
@@ -197,6 +198,11 @@ section.hero {
   filter: brightness(1.75);
   width: 280px;
   margin-bottom: -3em;
+}
+
+.hero-small-image {
+  border-radius: 0.5em;
+  margin: 0.5em 0;
 }
 
 section.hero-quote {
