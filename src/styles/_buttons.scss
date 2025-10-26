@@ -17,12 +17,6 @@ a[role="button"] {
   background-color: colors.$neutral;
   transition: filter 0.1s ease-out;
 
-  @media (max-width: 768px) {
-    padding: 0;
-    font-family: vars.$font-headings-compact;
-    font-size: 22px;
-  }
-
   &.theme-primary {
     background: linear-gradient(
       to bottom,
@@ -53,5 +47,11 @@ a[role="button"] {
   &:hover,
   &:focus-visible {
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    font-family: vars.$font-headings-compact;
+    font-size: 22px;
   }
 }

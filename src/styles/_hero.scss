@@ -9,9 +9,6 @@ section.hero {
   .row {
     max-width: vars.$content-width + 2 * vars.$gap-xl;
     justify-content: center;
-    @media (max-width: 768px) {
-      padding: vars.$gap-small vars.$gap-normal !important;
-    }
 
     .col {
       max-width: vars.$content-width - 2 * vars.$gap-small;
@@ -67,10 +64,9 @@ section.hero {
       padding-right: 3em;
       padding-left: 3em;
       box-shadow: 0 5px 3px color-mix(in srgb, black 50%, transparent);
-      @media (max-width: 768px) {
-        padding-right: auto;
-        padding-left: auto;
 
+      @media (max-width: 768px) {
+        max-width: unset;
         span {
           white-space: nowrap;
         }
@@ -80,6 +76,10 @@ section.hero {
     .hero-buttons {
       display: flex;
       gap: 0.25em;
+
+      @media (max-width: 768px) {
+        // width: 100% !important;
+      }
 
       .cta {
         margin-top: 0;
@@ -94,6 +94,10 @@ section.hero {
           padding-left: 2em;
         }
       }
+    }
+
+    @media (max-width: 768px) {
+      padding: vars.$gap-small vars.$gap-normal !important;
     }
   }
 
