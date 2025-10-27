@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 section.testimonial {
   $portrait-size: 240px;
@@ -7,11 +7,7 @@ section.testimonial {
   $background-light: color-mix(in srgb, currentColor 8%, white);
   $background-dark: color-mix(in srgb, currentColor 12%, white);
 
-  background: linear-gradient(
-    to right,
-    $background-light 50%,
-    $background-dark 50%
-  );
+  background: linear-gradient(to right, $background-light 50%, $background-dark 50%);
 
   .row {
     background: linear-gradient(to right, $background-light, $background-dark);

@@ -1,7 +1,7 @@
 const Line = (props) => {
-  const { className = "", children, ...rest } = props;
+  const { className = '', children, ...rest } = props;
   return (
-    <div className={["line", className].join(" ")} {...rest}>
+    <div className={['line', className].join(' ')} {...rest}>
       {children}
     </div>
   );

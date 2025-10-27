@@ -1,4 +1,4 @@
-@use "variables" as vars;
+@use 'variables' as vars;
 
 @mixin fixed-background($color-light, $color-dark) {
   background-size: 100vw 100vh;
@@ -35,12 +35,8 @@
   background-image: crosshatch-gradient($color);
 }
 
-@mixin crosshatch-transparent-gradient(
-  $color-light,
-  $color-dark,
-  $size: vars.$crosshatch-size
-) {
-  content: "";
+@mixin crosshatch-transparent-gradient($color-light, $color-dark, $size: vars.$crosshatch-size) {
+  content: '';
   position: absolute;
   top: -$size;
   left: 0;

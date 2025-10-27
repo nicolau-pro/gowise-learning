@@ -1,12 +1,12 @@
-import React from "react";
-import Icon from "icons";
-import { JoinClasses } from "utils";
+import React from 'react';
+import Icon from 'icons';
+import { JoinClasses } from 'utils';
 
-export default function Bullet({ data, theme = "secondary" }) {
+export default function Bullet({ data, theme = 'secondary' }) {
   const { icon, text } = data;
 
   return (
-    <div className={JoinClasses(["bullet", `theme-${theme}`])}>
+    <div className={JoinClasses(['bullet', `theme-${theme}`])}>
       <div className="icon">
         <span>
           <Icon>{icon}</Icon>

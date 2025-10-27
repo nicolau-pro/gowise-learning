@@ -1,8 +1,8 @@
-const Sequelize = require("sequelize");
-const sequelize = require("../db.cjs");
+const Sequelize = require('sequelize');
+const sequelize = require('../db.cjs');
 
 const Tech = sequelize.define(
-  "Tech",
+  'Tech',
   {
     id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
 
@@ -10,20 +10,20 @@ const Tech = sequelize.define(
       type: Sequelize.STRING,
       allowNull: false,
       unique: true,
-      comment: "Name of the technology/tool",
+      comment: 'Name of the technology/tool',
     },
 
     icon: {
       type: Sequelize.STRING,
       allowNull: false,
-      comment: "Icon identifier (e.g. material icon name)",
+      comment: 'Icon identifier (e.g. material icon name)',
     },
 
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
   },
   {
-    tableName: "tech",
+    tableName: 'tech',
     timestamps: true,
   }
 );

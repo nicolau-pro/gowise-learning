@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 article.step {
   $number-size: 120px;
@@ -24,11 +24,7 @@ article.step {
     font-size: $number-size * 0.6;
     font-weight: 800;
     box-shadow: inset 0 0 20px colors.$primary;
-    background: linear-gradient(
-      to top,
-      colors.$primary 0%,
-      colors.$primary_highlight 70%
-    );
+    background: linear-gradient(to top, colors.$primary 0%, colors.$primary_highlight 70%);
 
     @media (max-width: vars.$mobile-break-max) {
       scale: 0.8;
@@ -49,17 +45,14 @@ article.step {
 
     // gradient border
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
       border-radius: inherit;
       padding: 2px;
-      background: linear-gradient(
-        to bottom,
-        colors.$primary_highlight 0%,
-        $backround-shade 70%
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      background: linear-gradient(to bottom, colors.$primary_highlight 0%, $backround-shade 70%);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;

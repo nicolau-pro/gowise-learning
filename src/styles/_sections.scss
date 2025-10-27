@@ -1,11 +1,11 @@
-@use "mixins" as mixins;
-@use "variables" as vars;
+@use 'mixins' as mixins;
+@use 'variables' as vars;
 
 section {
   &.contact {
     background-position: center;
     background-size: cover;
-    background-image: url("/social/contact.jpg");
+    background-image: url('/social/contact.jpg');
 
     .crosshatch {
       @include mixins.crosshatch(black);
@@ -31,7 +31,7 @@ section {
       background-position: right bottom;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url("/portraits/radu-nicolau.webp");
+      background-image: url('/portraits/radu-nicolau.webp');
       margin-bottom: -1 * vars.$crosshatch-size;
       mix-blend-mode: multiply;
     }

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 const AppStateContext = createContext();
 
@@ -19,11 +19,7 @@ export const AppStateProvider = ({ children }) => {
     setCurrentPath,
   };
 
-  return (
-    <AppStateContext.Provider value={value}>
-      {children}
-    </AppStateContext.Provider>
-  );
+  return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;
 };
 
 export const useAppState = () => useContext(AppStateContext);

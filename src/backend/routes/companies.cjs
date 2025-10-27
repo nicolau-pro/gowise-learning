@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Company = require("../models/company.cjs");
+const Company = require('../models/company.cjs');
 
 // GET all companies
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const companies = await Company.findAll();
     res.json(companies);
@@ -13,18 +13,18 @@ router.get("/", async (req, res) => {
 });
 
 // GET company by ID
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const company = await Company.findByPk(req.params.id);
     if (company) res.json(company);
-    else res.status(404).json({ error: "Company not found" });
+    else res.status(404).json({ error: 'Company not found' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // POST create new company
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { name, theme, description, details, meta } = req.body;
     const newCompany = await Company.create({
@@ -41,10 +41,10 @@ router.post("/", async (req, res) => {
 });
 
 // PUT update company by ID
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const company = await Company.findByPk(req.params.id);
-    if (!company) return res.status(404).json({ error: "Company not found" });
+    if (!company) return res.status(404).json({ error: 'Company not found' });
 
     const { name, theme, description, details, meta } = req.body;
     await company.update({ name, theme, description, details, meta });
@@ -55,10 +55,10 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE company by ID
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const company = await Company.findByPk(req.params.id);
-    if (!company) return res.status(404).json({ error: "Company not found" });
+    if (!company) return res.status(404).json({ error: 'Company not found' });
 
     await company.destroy();
     res.status(204).send();

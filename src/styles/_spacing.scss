@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 @mixin padding-classes {
   @for $i from 0 through 12 {

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { Section, Row, Col } from "layout";
-import { Link } from "react-router";
-import { useAppState } from "appState";
+import React, { useEffect } from 'react';
+import { Section, Row, Col } from 'layout';
+import { Link } from 'react-router';
+import { useAppState } from 'appState';
 
-import Icon from "icons";
-import Paths from "paths";
+import Icon from 'icons';
+import Paths from 'paths';
 
-import CardsData from "data/Home/Cards";
-import SocialData from "data/Social";
-import ContactData from "data/Contact";
+import CardsData from 'data/Home/Cards';
+import SocialData from 'data/Social';
+import ContactData from 'data/Contact';
 
 const Footer = () => {
   const { setFooterReady } = useAppState();
@@ -33,7 +33,7 @@ const Footer = () => {
                   />
                 </Link>
               </Col>
-              <Col style={{ maxWidth: "300px" }}>
+              <Col style={{ maxWidth: '300px' }}>
                 <ul className="contact">
                   {Object.entries(ContactData).map(([key, item]) => (
                     <li key={key}>
@@ -45,17 +45,11 @@ const Footer = () => {
                   ))}
                 </ul>
               </Col>
-              <Col style={{ paddingTop: "0.5em" }}>
-                <Link
-                  to={Paths.SAFEGUARDING}
-                  className="strong hidden-decoration fit-text"
-                >
+              <Col style={{ paddingTop: '0.5em' }}>
+                <Link to={Paths.SAFEGUARDING} className="strong hidden-decoration fit-text">
                   Safeguarding and Protection Policy
                 </Link>
-                <Link
-                  to={Paths.PRIVACY_POLICY}
-                  className="strong hidden-decoration fit-text"
-                >
+                <Link to={Paths.PRIVACY_POLICY} className="strong hidden-decoration fit-text">
                   Privacy Policy
                 </Link>
               </Col>
@@ -80,18 +74,15 @@ const Footer = () => {
             <Row className="bottom" nopadding>
               <Col>
                 <p className="copyright">
-                  ©2025 GoWise Learing / Anamaria Blanaru. All images and logos
-                  are proprietary to their respective owners.
+                  ©2025 GoWise Learing / Anamaria Blanaru. All images and logos are proprietary to
+                  their respective owners.
                 </p>
               </Col>
               <Col>
                 <ul className="social">
                   {SocialData.map((item) => (
                     <li key={item.network}>
-                      <Link
-                        to={item.link}
-                        aria-label={`Social link: GoWise ${item.network}`}
-                      >
+                      <Link to={item.link} aria-label={`Social link: GoWise ${item.network}`}>
                         {item.icon}
                       </Link>
                     </li>

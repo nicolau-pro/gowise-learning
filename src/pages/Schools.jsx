@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
-import { useAppState } from "appState";
-import MetaTags from "metaTags";
-import Paths from "paths";
+import React, { useEffect } from 'react';
+import { useAppState } from 'appState';
+import MetaTags from 'metaTags';
+import Paths from 'paths';
 
-import Row from "layout/Row";
-import Col from "layout/Col";
-import Section from "layout/Section";
-import Bullet from "components/Bullet";
-import Button from "atoms/Button";
-import BulletsRow from "../components/molecules/BulletsRow";
+import Row from 'layout/Row';
+import Col from 'layout/Col';
+import Section from 'layout/Section';
+import Bullet from 'components/Bullet';
+import Button from 'atoms/Button';
+import BulletsRow from '../components/molecules/BulletsRow';
 
-import HeroSection from "components/Hero";
-import ArticleSection from "components/Article";
-import TestimonialSection from "components/Testimonial";
+import HeroSection from 'components/Hero';
+import ArticleSection from 'components/Article';
+import TestimonialSection from 'components/Testimonial';
 
-import WelcomeData from "data/Schools/Welcome";
-import ArticlesData from "data/Schools/Articles";
-import BulletsData from "data/Schools/Bullets";
-import TestimonialsData from "data/Schools/Testimonials";
+import WelcomeData from 'data/Schools/Welcome';
+import ArticlesData from 'data/Schools/Articles';
+import BulletsData from 'data/Schools/Bullets';
+import TestimonialsData from 'data/Schools/Testimonials';
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -45,15 +45,13 @@ function Page() {
         <Section>
           <Row className="tight-mobile">
             <Col>
-              <h3 className="color-tertiary mobile-centered">
-                By partnering with us, you gain:
-              </h3>
+              <h3 className="color-tertiary mobile-centered">By partnering with us, you gain:</h3>
             </Col>
           </Row>
           <BulletsRow
             data={{
               bullets: BulletsData,
-              theme: "tertiary",
+              theme: 'tertiary',
             }}
           />
         </Section>
@@ -63,8 +61,8 @@ function Page() {
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <h4 className="color-secondary mobile-centered">
-              Get in touch to explore how we can support your school or local
-              authority, same from the beginning:
+              Get in touch to explore how we can support your school or local authority, same from
+              the beginning:
             </h4>
           </Row>
           <Row nogap>

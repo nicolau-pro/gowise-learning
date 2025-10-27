@@ -1,16 +1,13 @@
-import React from "react";
-import { Section, Row, Col } from "layout";
-import Button from "atoms/Button";
-import { JoinClasses } from "utils";
+import React from 'react';
+import { Section, Row, Col } from 'layout';
+import Button from 'atoms/Button';
+import { JoinClasses } from 'utils';
 
 export default function Hero({ data }) {
   console.log(data);
   return (
     <Section
-      className={JoinClasses([
-        "hero",
-        data.strip ? "sliding-strip" : "no-strip",
-      ])}
+      className={JoinClasses(['hero', data.strip ? 'sliding-strip' : 'no-strip'])}
       style={
         data.strip
           ? undefined
@@ -21,27 +18,22 @@ export default function Hero({ data }) {
     >
       <Row className={`theme-${data.theme}`}>
         <Col>
-          {data.h1Mobile ? (
-            <h1 className="hero desktop-hidden">{data.h1Mobile}</h1>
-          ) : (
-            <h1 className="hero">{data.h1}</h1>
-          )}
+          {data.h1Mobile ? <h1 className="hero desktop-hidden">{data.h1Mobile}</h1> : null}
+
+          <h1 className={JoinClasses(['hero', data.h1Mobile ? 'mobile-hidden' : undefined])}>
+            {data.h1}
+          </h1>
 
           {data.h1Mobile ? (
             <h2 className="hero-logo desktop-hidden">
-              <img
-                alt="GoWise Learning"
-                src="/media/logo-monochrome.svg"
-                width="280"
-                height="93"
-              />
+              <img alt="GoWise Learning" src="/media/logo-monochrome.svg" width="280" height="93" />
             </h2>
-          ) : (
-            <h2>{data.subtitle}</h2>
-          )}
+          ) : null}
+
+          <h2 className="mobile-hidden">{data.subtitle}</h2>
 
           <h3
-            className={data.button ? undefined : "mb-3"}
+            className={data.button ? undefined : 'mb-3'}
             dangerouslySetInnerHTML={{ __html: data.h3 }}
           />
           {data.buttons ? (

@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { useAppState } from "appState";
-import MetaTags from "metaTags";
-import Paths from "paths";
+import React, { useEffect } from 'react';
+import { useAppState } from 'appState';
+import MetaTags from 'metaTags';
+import Paths from 'paths';
 
-import Row from "layout/Row";
-import Col from "layout/Col";
-import Section from "layout/Section";
-import BulletsRow from "components/BulletsRow";
-import Button from "atoms/Button";
+import Row from 'layout/Row';
+import Col from 'layout/Col';
+import Section from 'layout/Section';
+import BulletsRow from 'components/BulletsRow';
+import Button from 'atoms/Button';
 
-import HeroSection from "components/Hero";
-import ArticleSection from "components/Article";
-import TestimonialSection from "components/Testimonial";
+import HeroSection from 'components/Hero';
+import ArticleSection from 'components/Article';
+import TestimonialSection from 'components/Testimonial';
 
-import WelcomeData from "data/Tutors/Welcome";
-import ArticlesData from "data/Tutors/Articles";
-import BulletsData from "data/Tutors/Bullets";
-import TestimonialsData from "data/Tutors/Testimonials";
+import WelcomeData from 'data/Tutors/Welcome';
+import ArticlesData from 'data/Tutors/Articles';
+import BulletsData from 'data/Tutors/Bullets';
+import TestimonialsData from 'data/Tutors/Testimonials';
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -42,15 +42,13 @@ function Page() {
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <Col>
-              <h3 className="color-secondary mobile-centered">
-                We welcome individuals who are:
-              </h3>
+              <h3 className="color-secondary mobile-centered">We welcome individuals who are:</h3>
             </Col>
           </Row>
           <BulletsRow
             data={{
               bullets: BulletsData[0],
-              theme: "secondary",
+              theme: 'secondary',
             }}
           />
         </Section>
@@ -68,7 +66,7 @@ function Page() {
           <BulletsRow
             data={{
               bullets: BulletsData[1],
-              theme: "primary-light",
+              theme: 'primary-light',
             }}
           />
         </Section>
@@ -76,19 +74,13 @@ function Page() {
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <h4 className="color-primary mobile-centered">
-              Apply now to join our team of holistic tutors and SEN learning
-              support assistants:
+              Apply now to join our team of holistic tutors and SEN learning support assistants:
             </h4>
           </Row>
           <Row nogap>
             <Col />
             <Col className="text-centered">
-              <Button
-                link={Paths.FORMS.Tutors}
-                openInNewTab
-                theme="primary"
-                text="JOIN OUR TEAM"
-              />
+              <Button link={Paths.FORMS.Tutors} openInNewTab theme="primary" text="JOIN OUR TEAM" />
             </Col>
             <Col />
           </Row>

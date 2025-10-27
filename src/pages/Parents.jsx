@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { useAppState } from "appState";
-import MetaTags from "metaTags";
-import Paths from "paths";
+import React, { useEffect } from 'react';
+import { useAppState } from 'appState';
+import MetaTags from 'metaTags';
+import Paths from 'paths';
 
-import Row from "layout/Row";
-import Col from "layout/Col";
-import Section from "layout/Section";
-import Button from "atoms/Button";
-import BulletsRow from "components/BulletsRow";
+import Row from 'layout/Row';
+import Col from 'layout/Col';
+import Section from 'layout/Section';
+import Button from 'atoms/Button';
+import BulletsRow from 'components/BulletsRow';
 
-import HeroSection from "components/Hero";
-import ArticleSection from "components/Article";
-import TestimonialSection from "components/Testimonial";
+import HeroSection from 'components/Hero';
+import ArticleSection from 'components/Article';
+import TestimonialSection from 'components/Testimonial';
 
-import WelcomeData from "data/Parents/Welcome";
-import ArticlesData from "data/Parents/Articles";
-import BulletsData from "data/Parents/Bullets";
-import TestimonialsData from "data/Parents/Testimonials";
+import WelcomeData from 'data/Parents/Welcome';
+import ArticlesData from 'data/Parents/Articles';
+import BulletsData from 'data/Parents/Bullets';
+import TestimonialsData from 'data/Parents/Testimonials';
 
 function Page() {
   const { setOutletReady } = useAppState();
@@ -50,7 +50,7 @@ function Page() {
           <BulletsRow
             data={{
               bullets: BulletsData,
-              theme: "primary-light",
+              theme: 'primary-light',
             }}
           />
         </Section>

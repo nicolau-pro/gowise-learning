@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 section.article {
   padding: vars.$gap-normal;
@@ -24,7 +24,7 @@ section.article {
       @media (min-width: vars.$mobile-break-min) {
         &:before {
           $border-width: 2px;
-          content: "";
+          content: '';
           position: absolute;
           inset: 0 auto 0 0;
           border-radius: $border-radius + $border-width;
@@ -37,7 +37,8 @@ section.article {
           aspect-ratio: 1/1;
           height: calc(100% - 2 * $border-width);
           width: 50%;
-          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -48,7 +49,7 @@ section.article {
 
       @media (max-width: vars.$mobile-break-max) {
         &:after {
-          content: "";
+          content: '';
           width: 100%;
           height: 3em;
           background-color: color-mix(in srgb, currentColor 5%, transparent);

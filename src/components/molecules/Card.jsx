@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Button from "atoms/Button";
+import Button from 'atoms/Button';
 
 export default function Card({ data }) {
   const { image, title, subtitle, theme, details, button } = data;

@@ -1,24 +1,24 @@
-import { BrowserRouter, Routes, Route } from "react-router";
-import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
-import Parents from "./pages/Parents";
-import Tutors from "./pages/Tutors";
-import Schools from "./pages/Schools";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Safeguarding from "./pages/Safeguarding";
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import Parents from './pages/Parents';
+import Tutors from './pages/Tutors';
+import Schools from './pages/Schools';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Safeguarding from './pages/Safeguarding';
 
-import Paths from "paths";
+import Paths from 'paths';
 
-import { useAppState } from "./AppStateContext";
-import { RouteChangeListener } from "./RouteChangeListener";
+import { useAppState } from './AppStateContext';
+import { RouteChangeListener } from './RouteChangeListener';
 
 function AppLoader() {
   const { setCurrentPath } = useAppState();
 
   const handlePathChange = (path) => {
-    setCurrentPath(path.split("/")[1]);
+    setCurrentPath(path.split('/')[1]);
   };
 
   return (

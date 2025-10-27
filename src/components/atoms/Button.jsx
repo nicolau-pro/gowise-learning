@@ -1,10 +1,10 @@
-import React from "react";
-import { JoinClasses } from "utils";
+import React from 'react';
+import { JoinClasses } from 'utils';
 
 export default function Button({
-  link = "#",
+  link = '#',
   openInNewTab,
-  theme = "primary",
+  theme = 'primary',
   text,
   ariaLabel,
   ariaHidden,
@@ -16,8 +16,8 @@ export default function Button({
       role="button"
       className={JoinClasses([`theme-${theme}`, className])}
       aria-label={ariaLabel || text}
-      target={openInNewTab ? "_blank" : undefined}
-      rel={openInNewTab ? "noopener noreferrer" : undefined}
+      target={openInNewTab ? '_blank' : undefined}
+      rel={openInNewTab ? 'noopener noreferrer' : undefined}
     >
       <span aria-hidden={ariaHidden}>{text}</span>
       {ariaHidden && <span className="invisible-text">{ariaLabel}</span>}

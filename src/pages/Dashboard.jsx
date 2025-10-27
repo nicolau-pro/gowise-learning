@@ -1,8 +1,8 @@
-import React from "react";
-import { Outlet } from "react-router";
-import Header from "components/Header";
-import Footer from "components/Footer";
-import { useAppState } from "appState";
+import React from 'react';
+import { Outlet } from 'react-router';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import { useAppState } from 'appState';
 
 function Dashboard() {
   const { HeaderReady, OutletReady, FooterReady } = useAppState();
