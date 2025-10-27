@@ -6,7 +6,7 @@ const data = [
     subtitle: "Guardians and Carers",
     titleFooter: "For Parents",
     details:
-      "We offer 1-1 tutoring for students needing extra support with 11+, entrance exams, GCSEs, A levels, and also private home schooling.",
+      "Tell us about your child's needs and our friendly team will create an individualised learning plan designed around your child's unique strengths and goals.",
     image: Media.motherTeachingDaughterAtHomeLearning,
     theme: "light",
     button: {
@@ -21,7 +21,7 @@ const data = [
     subtitle: "SEN Learning Support Assistants",
     titleFooter: "For Tutors",
     details:
-      "Join our amazing tutors and make a profound impact on young people's lives, fostering their growth and learning.",
+      "If you believe in helping every child flourish and want to grow within a supportive and forward-thinking network, we'd love to welcome you on board.",
     image: Media.teacherExplainingScienceToStudents,
     theme: "dark",
     button: {
@@ -36,7 +36,7 @@ const data = [
     subtitle: "Local Authorities",
     titleFooter: "Schools & Local Authorities",
     details:
-      "We can partner with you, to help place tutors for students across the UK with alternative provision placements.",
+      "We work closely with schools and local authorities to deliver targeted, high-quality support for children with SEND, SEMH needs and those with EHCPs.",
     image: Media.teacherExplainingMathInClassroom,
     theme: "light",
     button: {
