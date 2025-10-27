@@ -38,9 +38,6 @@ function Page() {
               <h1 className="hero color-primary-highlight">Contact Us</h1>
             </Col>
           </Row>
-        </Section>
-
-        <Section className="gap-xl">
           <Row>
             <Col className="contact-links">
               <Link to={ContactData.Phone.link} target="_blank" rel="noopener noreferrer">
