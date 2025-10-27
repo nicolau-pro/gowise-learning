@@ -3,7 +3,7 @@ import Media from 'media';
 
 const data = {
   strip: false,
-  background: Media.motherTeachingDaughterAtHomeLearning,
+  background: Media.tutorTeachingDaughterAtHomeLearning,
   theme: 'primary',
   h1: 'For Parents',
   subtitle: 'You have our support!',

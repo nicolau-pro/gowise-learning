@@ -7,9 +7,9 @@ const data = {
     src: '/media/anamaria-blanaru-300.webp',
     alt: 'GoWise Learning CEO & Founder',
   },
-  motherTeachingDaughterAtHomeLearning: {
-    src: '/media/mother-teaching-daughter-at-home-learning.webp',
-    alt: 'Mother teaching her daughter at home to support early learning and development',
+  tutorTeachingDaughterAtHomeLearning: {
+    src: '/media/tutor-teaching-child-at-home-learning.webp',
+    alt: 'Tutor teaching a child at home to support early learning and development',
   },
   teacherExplainingScienceToStudents: {
     src: '/media/teacher-explaining-science-to-students.webp',
@@ -35,9 +35,9 @@ const data = {
     src: '/media/thoughtful-student-in-classroom.webp',
     alt: 'Thoughtful student sitting at a desk in a classroom, looking away while holding a pencil and notebook.',
   },
-  motherHelpingChildOnComputer: {
-    src: '/media/mother-helping-child-on-computer.webp',
-    alt: 'Mother helping her son use a computer at home, providing learning support and guidance.',
+  tutorHelpingChildOnComputer: {
+    src: '/media/tutor-helping-child-on-computer.webp',
+    alt: 'Tutor helping a child use a computer at home, providing learning support and guidance.',
   },
   teacherHelpingChildPainting: {
     src: '/media/teacher-helping-child-painting.webp',

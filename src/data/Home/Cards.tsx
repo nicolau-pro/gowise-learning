@@ -7,7 +7,7 @@ const data = [
     titleFooter: 'For Parents',
     details:
       "Tell us about your child's needs and our friendly team will create an individualised learning plan designed around your child's unique strengths and goals.",
-    image: Media.motherTeachingDaughterAtHomeLearning,
+    image: Media.tutorTeachingDaughterAtHomeLearning,
     theme: 'light',
     button: {
       text: 'TELL ME MORE',

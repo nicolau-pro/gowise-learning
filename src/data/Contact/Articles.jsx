@@ -5,7 +5,7 @@ const data = [
   {
     theme: 'primary',
     contentSide: 'left',
-    image: Media.motherTeachingDaughterAtHomeLearning,
+    image: Media.tutorTeachingDaughterAtHomeLearning,
     title: 'For Parents',
     subtitle: 'Empowering Every Child to Learn and Thrive',
     paragraphs: [

@@ -54,7 +54,7 @@ const data = [
   {
     theme: 'tertiary',
     contentSide: 'left',
-    image: Media.motherHelpingChildOnComputer,
+    image: Media.tutorHelpingChildOnComputer,
     title: 'Exceptional Individualised Tutoring and Communication',
     paragraphs: [
       "From the very beginning, the communication was clear, honest and consistent.I always knew exactly how my son was progressing each week. For the first time, I felt truly involved in his learning journey and could see how much care and thought went into every session.The lessons were tailored perfectly to my son's needs, concentration and interests, which made such a difference.",
