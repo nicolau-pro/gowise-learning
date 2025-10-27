@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 footer {
   position: relative;
@@ -27,7 +27,7 @@ footer {
       height: 100%;
 
       @media (min-width: vars.$mobile-break-min) {
-        background-image: url("/media/logo-icon-transparent.svg");
+        background-image: url('/media/logo-icon-transparent.svg');
       }
     }
   }

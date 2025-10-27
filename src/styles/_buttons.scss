@@ -1,7 +1,7 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
-a[role="button"] {
+a[role='button'] {
   display: flex;
   justify-content: center;
   align-items: center;

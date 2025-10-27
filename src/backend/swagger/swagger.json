@@ -69,14 +69,7 @@
       },
       "Job": {
         "type": "object",
-        "required": [
-          "companyId",
-          "title",
-          "dateFrom",
-          "description",
-          "bulletpoints",
-          "tech"
-        ],
+        "required": ["companyId", "title", "dateFrom", "description", "bulletpoints", "tech"],
         "properties": {
           "id": {
             "type": "integer",
@@ -312,14 +305,7 @@
       },
       "Project": {
         "type": "object",
-        "required": [
-          "client",
-          "name",
-          "year",
-          "companyId",
-          "paragraphs",
-          "metaDescription"
-        ],
+        "required": ["client", "name", "year", "companyId", "paragraphs", "metaDescription"],
         "properties": {
           "id": {
             "type": "integer",

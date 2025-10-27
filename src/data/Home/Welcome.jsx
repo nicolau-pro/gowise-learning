@@ -1,13 +1,13 @@
-import Persons from "data/Persons";
-import Paths from "paths";
+import Persons from 'data/Persons';
+import Paths from 'paths';
 
 const data = {
-  strip: "/media/hero-strip.jpg",
+  strip: '/media/hero-strip.jpg',
   background: false,
-  theme: "primary",
-  h1: "WELCOME",
-  h1Mobile: "Welcome to",
-  subtitle: "To GoWise Learning",
+  theme: 'primary',
+  h1: 'WELCOME',
+  h1Mobile: 'Welcome to',
+  subtitle: 'To GoWise Learning',
   subtitleHideMobile: true,
   h3: `<span>Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs</span>
   <img class="hero-small-image desktop-hidden" src="/media/creative-learning-with-tutor-and-child.webp" alt="creative learning with tutor and child" />
@@ -15,14 +15,14 @@ const data = {
   button: {
     link: Paths.CONTACT_FORMS,
     openInNewTab: true,
-    theme: "secondary",
-    text: "Book a FREE CONSULTATION",
+    theme: 'secondary',
+    text: 'Book a FREE CONSULTATION',
   },
 
   person: {
     ...Persons.AnamariaBlanaru,
     quote:
-      "We collaborate with parents, local authorities, schools and professionals to help every child thrive academically, socially and emotionally.",
+      'We collaborate with parents, local authorities, schools and professionals to help every child thrive academically, socially and emotionally.',
   },
 };
 

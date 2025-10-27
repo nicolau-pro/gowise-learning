@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 .card-body {
   border-radius: vars.$radius-large;
@@ -55,22 +55,13 @@
       width: 100%;
       border: none;
       height: 12px;
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        white 50%,
-        transparent 100%
-      );
+      background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
       margin: 0;
     }
   }
 
   .content {
-    background: linear-gradient(
-      to top,
-      white 0%,
-      color-mix(in srgb, white 80%, transparent) 40%
-    );
+    background: linear-gradient(to top, white 0%, color-mix(in srgb, white 80%, transparent) 40%);
     margin: vars.$gap-small;
     margin-top: 330px;
     border-radius: vars.$radius-large - 0.75 * vars.$gap-small;
@@ -88,7 +79,7 @@
       }
     }
 
-    a[role="button"] {
+    a[role='button'] {
       width: 100%;
       margin: auto;
       padding: 0px;

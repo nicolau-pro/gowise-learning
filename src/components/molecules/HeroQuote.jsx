@@ -1,5 +1,5 @@
-import React from "react";
-import { Section, Row } from "layout";
+import React from 'react';
+import { Section, Row } from 'layout';
 
 export default function HeroQuote({ data }) {
   return (

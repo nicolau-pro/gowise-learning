@@ -17,11 +17,11 @@ $main-height-deficit: $menu-desktop-height + $footer-height + $gap-small;
 $radius-normal: 18px;
 $radius-large: 24px;
 
-$font-body: "basic-sans", sans-serif;
-$font-hero: "almaq-refined", sans-serif;
-$font-headings: "optima-nova-lt-pro", sans-serif;
-$font-headings-compact: "optima-nova-lt-pro-cond", sans-serif;
-$font-icons: "Material Icons";
+$font-body: 'basic-sans', sans-serif;
+$font-hero: 'almaq-refined', sans-serif;
+$font-headings: 'optima-nova-lt-pro', sans-serif;
+$font-headings-compact: 'optima-nova-lt-pro-cond', sans-serif;
+$font-icons: 'Material Icons';
 
 $mobile-break-max: 1024px;
 $mobile-break-min: $mobile-break-max + 1px;

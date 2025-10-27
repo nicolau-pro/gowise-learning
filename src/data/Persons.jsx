@@ -1,8 +1,8 @@
-import Media from "media";
+import Media from 'media';
 
 const data = {
   AnamariaBlanaru: {
-    name: "Anamaria Blanaru",
+    name: 'Anamaria Blanaru',
     title: Media.anamariaBlanaruSmall.alt,
     portrait: Media.anamariaBlanaruSmall.src,
   },

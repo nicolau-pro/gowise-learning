@@ -1,8 +1,8 @@
-const Sequelize = require("sequelize");
-const sequelize = require("../db.cjs");
+const Sequelize = require('sequelize');
+const sequelize = require('../db.cjs');
 
 const Company = sequelize.define(
-  "Company",
+  'Company',
   {
     id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
     name: { type: Sequelize.STRING, allowNull: false },
@@ -14,7 +14,7 @@ const Company = sequelize.define(
     updatedAt: Sequelize.DATE,
   },
   {
-    tableName: "companies",
+    tableName: 'companies',
     timestamps: true,
   }
 );

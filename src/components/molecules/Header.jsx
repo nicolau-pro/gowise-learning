@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router";
-import { useAppState } from "appState";
-import Icon from "icons";
-import Paths from "paths";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router';
+import { useAppState } from 'appState';
+import Icon from 'icons';
+import Paths from 'paths';
 
 const Header = () => {
   const { setHeaderReady, CurrentPath } = useAppState();
@@ -11,12 +11,12 @@ const Header = () => {
     {
       path: Paths.PARENTS,
       name: <span>PARENTS</span>,
-      icon: "supervisor_account",
+      icon: 'supervisor_account',
     },
     {
       path: Paths.TUTORS,
       name: <span>TUTORS</span>,
-      icon: "interactive_space",
+      icon: 'interactive_space',
     },
     {
       path: Paths.SCHOOLS_AND_LOCAL_AUTORITIES,
@@ -26,10 +26,10 @@ const Header = () => {
           <span className="mobile-hidden">& Local Authorities</span>
         </>
       ),
-      icon: "school",
+      icon: 'school',
     },
-    { path: Paths.ABOUT, name: <span>ABOUT US</span>, icon: "diversity_1" },
-    { path: Paths.CONTACT, name: <span>CONTACT</span>, icon: "emoji_people" },
+    { path: Paths.ABOUT, name: <span>ABOUT US</span>, icon: 'diversity_1' },
+    { path: Paths.CONTACT, name: <span>CONTACT</span>, icon: 'emoji_people' },
   ];
 
   useEffect(() => {
@@ -55,12 +55,8 @@ const Header = () => {
             <li key={link.name}>
               <Link
                 to={`${Paths.HOME}${link.path}`}
-                className={CurrentPath === link.path ? "current" : null}
-                aria-label={
-                  CurrentPath === link.path
-                    ? `${link.name}, current section`
-                    : null
-                }
+                className={CurrentPath === link.path ? 'current' : null}
+                aria-label={CurrentPath === link.path ? `${link.name}, current section` : null}
               >
                 <Icon className="desktop-hidden">{link.icon}</Icon>
                 {link.name}

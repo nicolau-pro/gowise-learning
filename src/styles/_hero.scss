@@ -1,5 +1,5 @@
-@use "colors";
-@use "variables" as vars;
+@use 'colors';
+@use 'variables' as vars;
 
 section.hero {
   background-position: center !important;
@@ -153,7 +153,7 @@ section.hero {
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       width: 10000%;
@@ -163,7 +163,7 @@ section.hero {
       background-color: colors.$primary_glow;
 
       @media (min-width: vars.$mobile-break-min) {
-        background: url("/media/hero-strip.webp") repeat-x;
+        background: url('/media/hero-strip.webp') repeat-x;
         background-size: auto 100%;
         animation: slide-bg-transform 3000s linear infinite;
         will-change: transform;
@@ -211,11 +211,7 @@ section.hero-quote {
   $background-dark: colors.$primary;
   z-index: 1;
 
-  background: linear-gradient(
-    to right,
-    $background-light 50%,
-    $background-dark 50%
-  );
+  background: linear-gradient(to right, $background-light 50%, $background-dark 50%);
 
   .row {
     background: linear-gradient(to right, $background-light, $background-dark);

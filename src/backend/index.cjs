@@ -1,14 +1,14 @@
-require("dotenv").config();
+require('dotenv').config();
 
-const express = require("express");
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger/swagger.json");
-const { Sequelize } = require("sequelize");
+const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger/swagger.json');
+const { Sequelize } = require('sequelize');
 
 const app = express();
 app.use(express.json());
 
-const cors = require("cors");
+const cors = require('cors');
 app.use(cors()); // Allow requests from any origin
 // app.use(
 //   cors({
@@ -17,52 +17,47 @@ app.use(cors()); // Allow requests from any origin
 // );
 
 // Sequelize setup
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: "mysql",
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false, // Use `false` only for self-signed certs
-      },
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  dialect: 'mysql',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // Use `false` only for self-signed certs
     },
-    logging: false,
-  }
-);
+  },
+  logging: false,
+});
 
 // Swagger route
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Routes
-const companyRoutes = require("./routes/companies.cjs");
-app.use("/companies", companyRoutes);
+const companyRoutes = require('./routes/companies.cjs');
+app.use('/companies', companyRoutes);
 
-const jobRoutes = require("./routes/jobs.cjs");
-app.use("/jobs", jobRoutes);
+const jobRoutes = require('./routes/jobs.cjs');
+app.use('/jobs', jobRoutes);
 
-const techRoutes = require("./routes/tech.cjs");
-app.use("/tech", techRoutes);
+const techRoutes = require('./routes/tech.cjs');
+app.use('/tech', techRoutes);
 
-const testimonialRoutes = require("./routes/testimonials.cjs");
-app.use("/testimonials", testimonialRoutes);
+const testimonialRoutes = require('./routes/testimonials.cjs');
+app.use('/testimonials', testimonialRoutes);
 
-const arardRoutes = require("./routes/awards.cjs");
-app.use("/awards", arardRoutes);
+const arardRoutes = require('./routes/awards.cjs');
+app.use('/awards', arardRoutes);
 
-const projectRoutes = require("./routes/projects.cjs");
-app.use("/projects", projectRoutes);
+const projectRoutes = require('./routes/projects.cjs');
+app.use('/projects', projectRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
 sequelize
   .authenticate()
   .then(() => {
-    console.log("Database connected.");
+    console.log('Database connected.');
 
     // Drop testimonials table
     // await sequelize.query("DROP TABLE IF EXISTS testimonials");
@@ -74,5 +69,5 @@ sequelize
     });
   })
   .catch((err) => {
-    console.error("DB connection error:", err);
+    console.error('DB connection error:', err);
   });

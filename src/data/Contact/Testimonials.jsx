@@ -1,4 +1,4 @@
-import Persons from "data/Persons";
+import Persons from 'data/Persons';
 
 const data = [
   {
@@ -6,7 +6,7 @@ const data = [
       "Working together is the key to every child's success. Whether you're a parent, school or local authority, our friendly team is here to listen, understand your needs and create the right solutions together.",
     stars: false,
     person: Persons.AnamariaBlanaru,
-    theme: "primary-light",
+    theme: 'primary-light',
   },
 ];
 

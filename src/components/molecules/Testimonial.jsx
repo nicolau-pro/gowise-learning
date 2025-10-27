@@ -1,16 +1,14 @@
-import React from "react";
-import { Section, Row } from "layout";
-import Icon from "icons";
-import { JoinClasses } from "utils";
+import React from 'react';
+import { Section, Row } from 'layout';
+import Icon from 'icons';
+import { JoinClasses } from 'utils';
 
 export default function Testimonial({ className, data }) {
   const { quote, stars, person, theme } = data;
   const { name, title, portrait } = person;
 
   return (
-    <Section
-      className={JoinClasses(["testimonial", `theme-${theme}`, className])}
-    >
+    <Section className={JoinClasses(['testimonial', `theme-${theme}`, className])}>
       <Row>
         <div className="testimonial-body">
           <div className="quotation-mark">

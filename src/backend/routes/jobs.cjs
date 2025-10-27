@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Job = require("../models/job.cjs");
-const Company = require("../models/company.cjs");
+const Job = require('../models/job.cjs');
+const Company = require('../models/company.cjs');
 
 // GET all jobs
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const jobs = await Job.findAll();
     res.json(jobs);
@@ -14,33 +14,25 @@ router.get("/", async (req, res) => {
 });
 
 // GET job by ID
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const job = await Job.findByPk(req.params.id);
     if (job) res.json(job);
-    else res.status(404).json({ error: "Job not found" });
+    else res.status(404).json({ error: 'Job not found' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // POST create new job
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const {
-      companyId,
-      title,
-      dateFrom,
-      dateTo,
-      description,
-      bulletpoints,
-      tech,
-    } = req.body;
+    const { companyId, title, dateFrom, dateTo, description, bulletpoints, tech } = req.body;
 
     // Optionally check if company exists
     const company = await Company.findByPk(companyId);
     if (!company) {
-      return res.status(400).json({ error: "Company not found" });
+      return res.status(400).json({ error: 'Company not found' });
     }
 
     const newJob = await Job.create({
@@ -60,20 +52,12 @@ router.post("/", async (req, res) => {
 });
 
 // PUT update job by ID
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const job = await Job.findByPk(req.params.id);
-    if (!job) return res.status(404).json({ error: "Job not found" });
+    if (!job) return res.status(404).json({ error: 'Job not found' });
 
-    const {
-      companyId,
-      title,
-      dateFrom,
-      dateTo,
-      description,
-      bulletpoints,
-      tech,
-    } = req.body;
+    const { companyId, title, dateFrom, dateTo, description, bulletpoints, tech } = req.body;
 
     await job.update({
       companyId,
@@ -92,10 +76,10 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE job by ID
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const job = await Job.findByPk(req.params.id);
-    if (!job) return res.status(404).json({ error: "Job not found" });
+    if (!job) return res.status(404).json({ error: 'Job not found' });
 
     await job.destroy();
     res.status(204).send();

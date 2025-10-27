@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Tech = require("../models/tech.cjs");
+const Tech = require('../models/tech.cjs');
 
 // GET all tech items
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const techItems = await Tech.findAll();
     res.json(techItems);
@@ -13,18 +13,18 @@ router.get("/", async (req, res) => {
 });
 
 // GET tech by ID
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const tech = await Tech.findByPk(req.params.id);
     if (tech) res.json(tech);
-    else res.status(404).json({ error: "Tech not found" });
+    else res.status(404).json({ error: 'Tech not found' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // POST create new tech item
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { name, icon } = req.body;
     const newTech = await Tech.create({ name, icon });
@@ -35,10 +35,10 @@ router.post("/", async (req, res) => {
 });
 
 // PUT update tech by ID
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const tech = await Tech.findByPk(req.params.id);
-    if (!tech) return res.status(404).json({ error: "Tech not found" });
+    if (!tech) return res.status(404).json({ error: 'Tech not found' });
 
     const { name, icon } = req.body;
     await tech.update({ name, icon });
@@ -49,10 +49,10 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE tech by ID
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const tech = await Tech.findByPk(req.params.id);
-    if (!tech) return res.status(404).json({ error: "Tech not found" });
+    if (!tech) return res.status(404).json({ error: 'Tech not found' });
 
     await tech.destroy();
     res.status(204).send();

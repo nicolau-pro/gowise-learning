@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Award = require("../models/award.cjs");
+const Award = require('../models/award.cjs');
 
 // GET all awards
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const awards = await Award.findAll();
     res.json(awards);
@@ -13,29 +13,20 @@ router.get("/", async (req, res) => {
 });
 
 // GET award by ID
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const award = await Award.findByPk(req.params.id);
     if (award) res.json(award);
-    else res.status(404).json({ error: "Award not found" });
+    else res.status(404).json({ error: 'Award not found' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // POST create new award
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const {
-      companyId,
-      projectId,
-      prize,
-      icon,
-      event,
-      year,
-      description,
-      logo,
-    } = req.body;
+    const { companyId, projectId, prize, icon, event, year, description, logo } = req.body;
 
     const newAward = await Award.create({
       companyId,
@@ -55,10 +46,10 @@ router.post("/", async (req, res) => {
 });
 
 // PUT update award by ID
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const award = await Award.findByPk(req.params.id);
-    if (!award) return res.status(404).json({ error: "Award not found" });
+    if (!award) return res.status(404).json({ error: 'Award not found' });
 
     const updatedFields = req.body;
     await award.update(updatedFields);
@@ -70,10 +61,10 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE award by ID
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const award = await Award.findByPk(req.params.id);
-    if (!award) return res.status(404).json({ error: "Award not found" });
+    if (!award) return res.status(404).json({ error: 'Award not found' });
 
     await award.destroy();
     res.status(204).send();

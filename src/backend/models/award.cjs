@@ -1,8 +1,8 @@
-const Sequelize = require("sequelize");
-const sequelize = require("../db.cjs");
+const Sequelize = require('sequelize');
+const sequelize = require('../db.cjs');
 
 const Award = sequelize.define(
-  "Award",
+  'Award',
   {
     id: {
       type: Sequelize.INTEGER,
@@ -13,19 +13,19 @@ const Award = sequelize.define(
     companyId: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      comment: "ID of the company that received the award",
+      comment: 'ID of the company that received the award',
     },
 
     projectId: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      comment: "ID of the project that won the award",
+      comment: 'ID of the project that won the award',
     },
 
     prize: {
       type: Sequelize.STRING,
       allowNull: false,
-      comment: "Name of the prize or award",
+      comment: 'Name of the prize or award',
     },
 
     icon: {
@@ -37,32 +37,32 @@ const Award = sequelize.define(
     event: {
       type: Sequelize.STRING,
       allowNull: false,
-      comment: "Event where the award was given",
+      comment: 'Event where the award was given',
     },
 
     year: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      comment: "Year the award was received",
+      comment: 'Year the award was received',
     },
 
     description: {
       type: Sequelize.TEXT,
       allowNull: true,
-      comment: "Short description of the award",
+      comment: 'Short description of the award',
     },
 
     logo: {
       type: Sequelize.STRING,
       allowNull: true,
-      comment: "Logo filename or path for the award",
+      comment: 'Logo filename or path for the award',
     },
 
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
   },
   {
-    tableName: "awards",
+    tableName: 'awards',
     timestamps: true,
   }
 );
