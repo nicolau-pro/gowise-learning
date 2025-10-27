@@ -233,7 +233,7 @@ section.hero-quote {
 
       .quote {
         font-family: vars.$font-body;
-        font-size: 24px;
+        font-size: 34px;
         line-height: 1.5em;
         font-style: italic;
         font-weight: 200;
@@ -241,6 +241,7 @@ section.hero-quote {
         letter-spacing: 0.015em;
         color: white;
         @media (max-width: vars.$mobile-break-max) {
+          font-size: 24px;
           margin-left: 0;
           margin-top: 3em;
           margin-bottom: 1em;

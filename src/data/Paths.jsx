@@ -6,6 +6,7 @@ const data = {
   SCHOOLS_AND_LOCAL_AUTORITIES: "schools-and-local-authorities",
   ABOUT: "about-us",
   CONTACT: "contact",
+  CONTACT_FORMS: "contact", // !!! Forms
   PRIVACY_POLICY: "privacy-policy",
   SAFEGUARDING: "safeguarding-and-protection-policy",
   FORMS: {

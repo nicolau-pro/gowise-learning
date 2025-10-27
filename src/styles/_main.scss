@@ -131,6 +131,7 @@ footer {
 
 @media (min-width: vars.$mobile-break-min) {
   .desktop-hidden {
+    outline: 3px solid red;
     display: none !important;
   }
 }

@@ -23,9 +23,16 @@ export default function Hero({ data }) {
         <Col>
           {data.h1Mobile ? (
             <h1 className="hero desktop-hidden">{data.h1Mobile}</h1>
-          ) : (
-            <h1 className="hero">{data.h1}</h1>
-          )}
+          ) : null}
+
+          <h1
+            className={JoinClasses([
+              "hero",
+              data.h1Mobile ? "mobile-hidden" : undefined,
+            ])}
+          >
+            {data.h1}
+          </h1>
 
           {data.h1Mobile ? (
             <h2 className="hero-logo desktop-hidden">
@@ -36,9 +43,9 @@ export default function Hero({ data }) {
                 height="93"
               />
             </h2>
-          ) : (
-            <h2>{data.subtitle}</h2>
-          )}
+          ) : null}
+
+          <h2 className="mobile-hidden">{data.subtitle}</h2>
 
           <h3
             className={data.button ? undefined : "mb-3"}
