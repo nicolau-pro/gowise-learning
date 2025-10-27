@@ -40,7 +40,7 @@ const data = [
     image: Media.teacherExplainingMathInClassroom,
     theme: "light",
     button: {
-      text: "LEARN MORE",
+      text: "GET IN TOUCH",
       link: "/schools-and-local-authorities",
       ariaLabel: "learn more about GoWise for schools and local authorities",
       theme: "tertiary",
