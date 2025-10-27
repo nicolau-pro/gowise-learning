@@ -32,7 +32,7 @@ function Page() {
       />
 
       <main>
-        <Section className="gap-xl-desktop mt-2" style={{ marginBottom: '-6em' }}>
+        <Section className="gap-xl-desktop mt-2 pb-2" style={{ marginBottom: '-6em' }}>
           <Row>
             <Col>
               <h1 className="hero color-primary-highlight">Contact Us</h1>
