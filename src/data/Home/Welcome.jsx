@@ -14,7 +14,6 @@ const data = {
   GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root.`,
   button: {
     link: Paths.CONTACT_FORMS,
-    openInNewTab: true,
     theme: 'secondary',
     text: 'Book a FREE CONSULTATION',
   },

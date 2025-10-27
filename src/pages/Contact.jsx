@@ -72,6 +72,8 @@ function Page() {
 
         <TestimonialSection data={TestimonialsData[0]} />
 
+        <div id="register"></div>
+
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <Col>
