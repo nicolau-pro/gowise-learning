@@ -27,3 +27,7 @@
   "presite": {
   "wait": "#WELCOME"
   }
+
+## Remove trailing slashes in html files
+
+`npx prettier --write . && node remove-slashes.js`
