@@ -104,6 +104,10 @@ section.article {
           &:not(:last-of-type) {
             padding-bottom: 1em;
           }
+
+          a {
+            color: black;
+          }
         }
       }
 

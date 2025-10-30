@@ -79,6 +79,26 @@ const data = {
     src: '/media/confident-teacher-with-students.webp',
     alt: 'Confident teacher standing with arms crossed in front of a group of students collaborating in a classroom setting.',
   },
+  tutorHelpingStudentWithHomework: {
+    src: '/media/tutor-helping-student-with-homework.webp',
+    alt: 'Tutor helping a young student with homework and learning support at a classroom desk',
+  },
+  teacherHelpingStudentWithProject: {
+    src: '/media/teacher-helping-student-with-project.webp',
+    alt: 'Teacher helping a teenage student with a creative school project on recycling and environmental awareness',
+  },
+  childPaintingInArtClass: {
+    src: '/media/child-painting-in-art-class.webp',
+    alt: 'Young child painting during an art class, exploring creativity and colour mixing activities',
+  },
+  tutorAndChildOnlineLearning: {
+    src: '/media/tutor-and-child-online-learning.webp',
+    alt: 'Tutor guiding a child during an online learning session using a computer at home',
+  },
+  creativeLearningWithTutorAndChild: {
+    src: '/media/creative-learning-with-tutor-and-child.webp',
+    alt: 'Creative learning with tutor and child',
+  },
 };
 
 export default data;

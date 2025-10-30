@@ -18,6 +18,7 @@ import BulletsRow from 'components/BulletsRow';
 
 import WelcomeData from 'data/Home/Welcome';
 import ArticlesData from 'data/Home/Articles';
+import HowItWorksData from 'data/Home/HowItWorks';
 import CardsData from 'data/Home/Cards';
 import StepsData from 'data/Home/Steps';
 import TestimonialsData from 'data/Home/Testimonials';
@@ -59,7 +60,7 @@ function Page() {
             <h2>The GoWise Learning Framework</h2>
           </Row>
           <Row className="text-centered">
-            <h3 className="h4">
+            <h3 className="h4 color-primary-highlight">
               Our framework combines educational expertise with a strong focus on emotional
               wellbeing.
             </h3>
@@ -209,9 +210,46 @@ function Page() {
 
         <Section className="gap-xl">
           <Row>
+            <h2>How It Works</h2>
+          </Row>
+          <Row className="text-centered">
+            <Col />
+            <Col className="span-8">
+              <h3 className="h4">
+                At GoWise Learning, we believe that the right support begins with understanding your
+                child's needs. Our process is simple, personal and designed to make every family
+                feel confident from the very first step.
+              </h3>
+            </Col>
+            <Col />
+          </Row>
+          <Row className="text-centered">
+            <Col />
+            <Col className="span-3">
+              <h4 className="color-primary-highlight">
+                Help your child find their happy place in learning - where growth, confidence and
+                curiosity come together.
+              </h4>
+            </Col>
+            <Col />
+          </Row>
+        </Section>
+
+        <ArticleSection data={HowItWorksData[0]} />
+
+        <ArticleSection data={HowItWorksData[1]} />
+
+        <ArticleSection data={HowItWorksData[2]} />
+
+        <ArticleSection data={HowItWorksData[3]} />
+
+        <TestimonialSection data={TestimonialsData[8]} theme={'tertiary'} />
+
+        <Section className="gap-xl">
+          <Row>
             <Col />
             <Col>
-              <Button link={Paths.CONTACT} theme="secondary" text="Book a FREE CONSULTATION" />
+              <Button link={Paths.CONTACT} theme="primary" text="Book a FREE CONSULTATION" />
             </Col>
             <Col />
           </Row>

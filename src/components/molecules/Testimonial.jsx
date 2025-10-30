@@ -31,7 +31,7 @@ export default function Testimonial({ className, data }) {
                 </p>
               </>
             ) : (
-              <h2>{quote}</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: quote }} />
             )}
           </div>
           {portrait ? (

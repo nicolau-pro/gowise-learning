@@ -18,7 +18,7 @@ export default function ArticleSection({ data, className }) {
         <Row nogap nopadding>
           <Col className="content-wrapper">
             <div className="content">
-              {title ? <h3>{title}</h3> : null}
+              {title ? <h3 dangerouslySetInnerHTML={{ __html: title }} /> : null}
 
               {subtitle ? title ? <h4>{subtitle}</h4> : <h3 className="h4">{subtitle}</h3> : null}
 

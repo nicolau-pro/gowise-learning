@@ -73,6 +73,12 @@ const data = [
     },
     theme: 'tertiary',
   },
+  {
+    quote:
+      '<strong>Our Promise:</strong> From the first conversation to every milestone achieved, our priority is to ensure your family feels supported, informed and inspired. Because every child deserves to feel capable, calm and confident - every step of the way.',
+    person: Persons.AnamariaBlanaru,
+    theme: 'tertiary',
+  },
 ];
 
 export default data;
