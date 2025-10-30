@@ -42,6 +42,9 @@ article.step {
     text-align: center;
     border-radius: vars.$radius-large;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     // gradient border
     &::before {
@@ -67,12 +70,24 @@ article.step {
       color: currentColor;
     }
 
+    img {
+      border-radius: 50%;
+      box-shadow: 0 0 2.5em color-mix(in srgb, colors.$primary_highlight 30%, transparent);
+      outline: 1px solid colors.$primary_highlight;
+      scale: 0.9;
+    }
+
     p {
       font-size: 21px;
       line-height: 30px;
       font-weight: 300;
       max-width: 80%;
-      margin: 1em auto 0.5em auto;
+      margin: 0.25em auto 0.5em auto;
+      flex: 1 1 auto;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

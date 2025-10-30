@@ -72,10 +72,12 @@ const Footer = () => {
               ))}
             </Row>
             <Row className="bottom" nopadding>
-              <Col>
+              <Col className="span-2">
                 <p className="copyright">
                   ©2025 GoWise Learing / Anamaria Blanaru. All images and logos are proprietary to
-                  their respective owners.
+                  their respective owners. GoWise Learning is a trading name of Moms Academy Limited
+                  Registered in England and Wales. Company Number: 15618195
+                  {/* Registered Office: ??? */}
                 </p>
               </Col>
               <Col>

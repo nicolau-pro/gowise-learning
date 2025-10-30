@@ -16,7 +16,7 @@ function MetaTags(props) {
 
   return (
     <>
-      <title>{social.description}</title>
+      <title>GoWise Learning - Every Child. Every Need. Every Possibility.</title>
       <meta name="description" content={social.description} />
 
       <meta property="article:author" content={social.author} />

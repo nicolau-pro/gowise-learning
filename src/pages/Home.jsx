@@ -34,7 +34,7 @@ function Page() {
     <>
       <MetaTags
         section="GoWise Learning"
-        description="GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root."
+        description="Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs."
         url={Paths.ROOT}
         image="/social/GoWise-Learning.jpg"
       />
@@ -49,6 +49,28 @@ function Page() {
             {CardsData.map((item) => (
               <Col key={item.title}>
                 <Card data={item} />
+              </Col>
+            ))}
+          </Row>
+        </Section>
+
+        <Section className="gap-xl">
+          <Row>
+            <h2>The GoWise Learning Framework</h2>
+          </Row>
+          <Row className="text-centered">
+            <h3 className="h4">
+              Our framework combines educational expertise with a strong focus on emotional
+              wellbeing.
+            </h3>
+          </Row>
+          <Row className="text-centered">
+            <h4>We follow three key principles that guide every session:</h4>
+          </Row>
+          <Row>
+            {StepsData.map((item) => (
+              <Col key={item.number}>
+                <Step data={item} />
               </Col>
             ))}
           </Row>
@@ -187,24 +209,9 @@ function Page() {
 
         <Section className="gap-xl">
           <Row>
-            <h2>Easy as 1-2-3</h2>
-          </Row>
-          <Row>
-            {StepsData.map((item) => (
-              <Col key={item.number}>
-                <Step data={item} />
-              </Col>
-            ))}
-          </Row>
-          <Row>
             <Col />
             <Col>
-              <Button
-                link={Paths.FORMS.Parents}
-                openInNewTab
-                theme="secondary"
-                text="Book a FREE CONSULTATION"
-              />
+              <Button link={Paths.CONTACT} theme="secondary" text="Book a FREE CONSULTATION" />
             </Col>
             <Col />
           </Row>

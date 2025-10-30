@@ -61,8 +61,7 @@ function Page() {
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <h4 className="color-secondary mobile-centered">
-              Get in touch to explore how we can support your school or local authority, same from
-              the beginning:
+              Get in touch to explore how we can support your school or local authority:
             </h4>
           </Row>
           <Row nogap>

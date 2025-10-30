@@ -1,21 +1,26 @@
+import Media from 'media';
+
 const data = [
   {
     number: 1,
-    title: 'Book a consultation',
+    title: 'CONNECT',
+    image: Media.tutorTeachingDaughterAtHomeLearning,
     details:
-      'Share your learning needs to match with the ideal tutor, based on personality, learning level and goals.',
+      'We build trust first. Children learn best when they feel understood, safe and valued.',
   },
   {
     number: 2,
-    title: 'Try for free',
+    title: 'SUPPORT',
+    image: Media.teacherExplainingScienceToStudents,
     details:
-      'Join a free, non-binding trial lesson to try out tutoring. No card or commitment is required.',
+      "We tailor each session to the child's needs, integrating therapeutic strategies and structured learning techniques.",
   },
   {
     number: 3,
-    title: 'Start learning',
+    title: 'EMPOWER',
+    image: Media.teacherExplainingMathInClassroom,
     details:
-      'Book a customised lesson package to get started with a personalised plan to improve grades and confidence',
+      'We nurture independence, confidence and curiosity- helping children carry these skills into everyday life.',
   },
 ];
 
