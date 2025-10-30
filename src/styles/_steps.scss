@@ -19,12 +19,19 @@ article.step {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     font-family: vars.$font-headings;
     font-size: $number-size * 0.6;
     font-weight: 800;
-    box-shadow: inset 0 0 20px colors.$primary;
-    background: linear-gradient(to top, colors.$primary 0%, colors.$primary_highlight 70%);
+    box-shadow: inset 0 0 20px currentColor;
+    background: linear-gradient(
+      to top,
+      currentColor 0%,
+      color-mix(in srgb, currentColor 60%, white) 70%
+    );
+
+    span {
+      color: white;
+    }
 
     @media (max-width: vars.$mobile-break-max) {
       scale: 0.8;
@@ -33,12 +40,11 @@ article.step {
 
   .content {
     flex: 1;
-    $backround-shade: color-mix(in srgb, colors.$primary_highlight 10%, white);
+    $backround-shade: color-mix(in srgb, currentColor 10%, white);
     position: relative;
     z-index: 0;
     background: linear-gradient(to top, $backround-shade, white 70%);
     padding: vars.$gap-normal;
-    color: colors.$primary;
     text-align: center;
     border-radius: vars.$radius-large;
     overflow: hidden;
@@ -53,7 +59,7 @@ article.step {
       inset: 0;
       border-radius: inherit;
       padding: 2px;
-      background: linear-gradient(to bottom, colors.$primary_highlight 0%, $backround-shade 70%);
+      background: linear-gradient(to bottom, currentColor 0%, transparent 70%);
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -72,8 +78,9 @@ article.step {
 
     img {
       border-radius: 50%;
-      box-shadow: 0 0 2.5em color-mix(in srgb, colors.$primary_highlight 30%, transparent);
-      outline: 1px solid colors.$primary_highlight;
+      box-shadow: 0 0 2.5em color-mix(in srgb, currentColor 30%, transparent);
+      outline: 4px dotted color-mix(in srgb, currentColor 80%, white);
+      outline-offset: 5px;
       scale: 0.9;
     }
 

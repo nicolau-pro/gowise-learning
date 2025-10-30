@@ -4,6 +4,7 @@ const data = [
   {
     number: 1,
     title: 'CONNECT',
+    theme: 'primary',
     image: Media.teacherHelpingStudentWithProject,
     details:
       'We build trust first. Children learn best when they feel understood, safe and valued.',
@@ -11,6 +12,7 @@ const data = [
   {
     number: 2,
     title: 'SUPPORT',
+    theme: 'tertiary',
     image: Media.tutorHelpingStudentWithHomework,
     details:
       "We tailor each session to the child's needs, integrating therapeutic strategies and structured learning techniques.",
@@ -18,6 +20,7 @@ const data = [
   {
     number: 3,
     title: 'EMPOWER',
+    theme: 'secondary',
     image: Media.childPaintingInArtClass,
     details:
       'We nurture independence, confidence and curiosity- helping children carry these skills into everyday life.',
