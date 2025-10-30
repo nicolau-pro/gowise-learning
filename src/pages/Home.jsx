@@ -56,16 +56,16 @@ function Page() {
         </Section>
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile text-centered">
             <h2>The GoWise Learning Framework</h2>
           </Row>
-          <Row className="text-centered">
+          <Row className="tight-mobile text-centered">
             <h3 className="h4 color-primary-highlight">
               Our framework combines educational expertise with a strong focus on emotional
               wellbeing.
             </h3>
           </Row>
-          <Row className="text-centered">
+          <Row className="tight-mobile text-centered">
             <h4>We follow three key principles that guide every session:</h4>
           </Row>
           <Row>
@@ -78,7 +78,7 @@ function Page() {
         </Section>
 
         <Section className="gap-xl">
-          <Row className="tight-mobile">
+          <Row className="tight-mobile text-centered">
             <h2>Our Trusted Team of SEN Tutors & Specialists</h2>
           </Row>
         </Section>
@@ -86,7 +86,7 @@ function Page() {
         <ArticleSection data={ArticlesData[0]} />
 
         <Section className="gap-xl">
-          <Row className="tight-mobile">
+          <Row className="tight-mobile mobile-centered">
             <h2>How We Support Children with SEND and SEMH</h2>
           </Row>
         </Section>
@@ -209,10 +209,10 @@ function Page() {
         <TestimonialSection className="mt-0" data={TestimonialsData[7]} theme={'tertiary'} />
 
         <Section className="gap-xl">
-          <Row>
+          <Row className="tight-mobile text-centered">
             <h2>How It Works</h2>
           </Row>
-          <Row className="text-centered">
+          <Row className="tight-mobile text-centered" nogap>
             <Col />
             <Col className="span-8">
               <h3 className="h4">
@@ -223,7 +223,7 @@ function Page() {
             </Col>
             <Col />
           </Row>
-          <Row className="text-centered">
+          <Row className="tight-mobile text-centered" nogap>
             <Col />
             <Col className="span-3">
               <h4 className="color-primary-highlight">
@@ -245,14 +245,14 @@ function Page() {
 
         <TestimonialSection data={TestimonialsData[8]} theme={'tertiary'} />
 
-        <Row>
+        <Row nogap>
           <Col />
           <Col>
             <Button
-              link={Paths.CONTACT}
+              link={Paths.CONTACT_FORMS}
               theme="primary"
               text="Book a FREE CONSULTATION"
-              className="mt-3 mb-3"
+              className="my-3 px-1"
             />
           </Col>
           <Col />
