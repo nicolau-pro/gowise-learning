@@ -245,15 +245,18 @@ function Page() {
 
         <TestimonialSection data={TestimonialsData[8]} theme={'tertiary'} />
 
-        <Section className="gap-xl">
-          <Row>
-            <Col />
-            <Col>
-              <Button link={Paths.CONTACT} theme="primary" text="Book a FREE CONSULTATION" />
-            </Col>
-            <Col />
-          </Row>
-        </Section>
+        <Row>
+          <Col />
+          <Col>
+            <Button
+              link={Paths.CONTACT}
+              theme="primary"
+              text="Book a FREE CONSULTATION"
+              className="mt-3 mb-3"
+            />
+          </Col>
+          <Col />
+        </Row>
       </main>
     </>
   );
