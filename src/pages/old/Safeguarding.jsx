@@ -25,7 +25,7 @@ function Page() {
         section="Safeguarding and Protection Policy for Children and Young People"
         description="Every child and young person has the right to be protected from harm. At GoWise Learning, we are committed to creating a safe, caring environment where every student, whether in person or online, can learn and grow without fear"
         image="/social/GoWise-Learning.jpg"
-        url={Paths.SAFEGUARDING}
+        url={Paths.POLICIES_AND_SAFEGUARDING}
       />
 
       <main>

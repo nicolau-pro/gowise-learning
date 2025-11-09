@@ -24,7 +24,7 @@ function Page() {
         description="At GoWise Learning we take your privacy seriously. We collect and use personal information only to deliver high-quality tutoring and educational support while protecting your rights and
                 confidentiality"
         image="/social/GoWise-Learning.jpg"
-        url={Paths.PRIVACY_POLICY}
+        url={Paths.POLICIES_AND_SAFEGUARDING}
       />
 
       <main>
