@@ -3,9 +3,10 @@ import { MetaData, breadcrumbs } from 'variables';
 
 function MetaTags(props) {
   const { section, description, image, url } = props;
-  const { website, domain, fb_app_id } = MetaData;
+  const { website, motto, domain, fb_app_id } = MetaData;
 
   const social = {
+    title: `${website} ${breadcrumbs} ${motto}`,
     author: website,
     description: `${website} ${breadcrumbs} ${description}`,
     article: section,
@@ -16,7 +17,7 @@ function MetaTags(props) {
 
   return (
     <>
-      <title>GoWise Learning - Every Child. Every Need. Every Possibility.</title>
+      <title>{social.title}</title>
       <meta name="description" content={social.description} />
 
       <meta property="article:author" content={social.author} />
@@ -24,7 +25,7 @@ function MetaTags(props) {
       <meta property="article:section" content={social.article} />
 
       <meta property="fb:app_id" content={fb_app_id} />
-      <meta property="og:title" content={social.description} />
+      <meta property="og:title" content={social.title} />
       <meta property="og:description" content={social.description} />
       <meta property="og:type" content="article" />
       <meta property="og:locale" content="en_GB" />
@@ -37,7 +38,7 @@ function MetaTags(props) {
       <meta property="og:image:alt" content={social.imageAlt} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={social.description} />
+      <meta name="twitter:title" content={social.title} />
       <meta name="twitter:description" content={social.description} />
       <meta name="twitter:image" content={social.image} />
       <meta name="twitter:image:alt" content={social.imageAlt} />
