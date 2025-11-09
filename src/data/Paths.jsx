@@ -7,8 +7,6 @@ const data = {
   ABOUT: 'about-us',
   CONTACT: 'contact',
   CONTACT_FORMS: '/contact#register',
-  PRIVACY_POLICY: 'privacy-policy',
-  SAFEGUARDING: 'safeguarding-and-protection-policy',
   POLICIES_AND_SAFEGUARDING: 'policies-and-safeguarding',
   FORMS: {
     Parents: 'https://form.jotform.com/252963757028063',
