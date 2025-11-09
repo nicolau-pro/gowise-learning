@@ -32,7 +32,8 @@ function Page() {
         <Section className="gap-xl">
           <Row>
             <Col>
-              <h1 className="hero">Policies</h1>
+              <h1 className="hero">Policies,</h1>
+              <h2>Safeguarding and Protection</h2>
               <p>
                 <strong>Last Updated: November 2025</strong>
               </p>
@@ -45,7 +46,7 @@ function Page() {
               {Object.values(Paths.POLICIES).map(({ title, description, path }) => (
                 <div key={title} className="policy-item">
                   <hr />
-                  <h2 className="h4">{title}</h2>
+                  <h3 className="h4">{title}</h3>
                   <p>{description}</p>
                   {/* <Link to={`/policies/${path}`}>
                     <Icon className="icon">open_in_new</Icon> <span>{title}</span>
