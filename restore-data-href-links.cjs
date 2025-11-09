@@ -1,9 +1,3 @@
-#!/usr/bin/env node
-/**
- * restore-pdf-links.cjs
- * Replaces data-href="..." with href="..." in all HTML files inside .presite
- */
-
 const fs = require('fs');
 const path = require('path');
 

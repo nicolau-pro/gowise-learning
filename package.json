@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build-presite-old": "rimraf dist .presite && vite build && presite ./dist && node remove-js-presite.js && node generate-sitemap.cjs",
-    "build-presite": "rimraf dist .presite && vite build && presite ./dist && node remove-js-presite.js && node restore-pdf-links.cjs && node generate-sitemap.cjs",
+    "build-presite": "rimraf dist .presite && vite build && presite ./dist && node remove-js-presite.js && node restore-data-href-links.cjs && node generate-sitemap.cjs",
     "build": "vite build",
     "presite": "presite ./dist",
     "post-process": "python src/post.py",
