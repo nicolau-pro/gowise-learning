@@ -27,7 +27,7 @@ function Page() {
       <MetaTags
         section="About Us"
         description="About Us"
-        url={Paths.ABOUT}
+        url={`${Paths.ROOT}/${Paths.ABOUT}`}
         image="/social/GoWise-Learning.jpg"
       />
 
