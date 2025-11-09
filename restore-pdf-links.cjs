@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /**
  * restore-pdf-links.cjs
- * Converts <details data-link="pdf"> blocks into <a href="..."> elements
- * after PreSite finishes building static HTML.
+ * Replaces data-href="..." with href="..." in all HTML files inside .presite
  */
 
 const fs = require('fs');
@@ -21,24 +20,18 @@ function processDir(dir) {
     } else if (file.endsWith('.html')) {
       let html = fs.readFileSync(fullPath, 'utf8');
 
-      // Replace <details data-link="pdf"...>...</details> with <a href="...">...</a>
-      html = html.replace(
-        /<details\s+[^>]*data-link=["']pdf["'][^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*([^<>\s]+)\s*<\/details>/gi,
-        (match, summaryContent, pdfPath) => {
-          // Clean up any accidental JSX-like tags (Icon → span)
-          const cleanedSummary = summaryContent
-            .replace(/<Icon\b[^>]*>([\s\S]*?)<\/Icon>/gi, '<span class="icon">$1</span>')
-            .trim();
+      // Simple global replacement
+      const updated = html.replace(/data-href=/g, 'href=');
 
-          return `<a href="${pdfPath}" target="_blank" rel="noopener noreferrer" data-discover="true">${cleanedSummary}</a>`;
-        }
-      );
-
-      fs.writeFileSync(fullPath, html, 'utf8');
+      // Write back only if something changed
+      if (updated !== html) {
+        fs.writeFileSync(fullPath, updated, 'utf8');
+        console.log(`✅ Updated: ${fullPath}`);
+      }
     }
   }
 }
 
-console.log('🔗 Restoring PDF links in .presite...');
+console.log('🔗 Replacing data-href with href in .presite...');
 processDir(presiteDir);
-console.log('✅ PDF <details> blocks converted to <a> links successfully.');
+console.log('✅ All replacements completed successfully.');

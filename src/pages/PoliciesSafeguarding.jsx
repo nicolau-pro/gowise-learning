@@ -48,16 +48,9 @@ function Page() {
                   <hr />
                   <h3 className="h4">{title}</h3>
                   <p>{description}</p>
-                  {/* <Link to={`/policies/${path}`}>
+                  <Link data-href={`/policies/${path}`} target="_blank" rel="noopener noreferrer">
                     <Icon className="icon">open_in_new</Icon> <span>{title}</span>
-                  </Link> */}
-
-                  <details data-link="pdf" open>
-                    <summary>
-                      <Icon className="icon">open_in_new</Icon> <span>{title}</span>
-                    </summary>
-                    {`/policies/${path}`}
-                  </details>
+                  </Link>
                 </div>
               ))}
             </Col>
