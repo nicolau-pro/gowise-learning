@@ -9,7 +9,7 @@ const data = {
   CONTACT_FORMS: '/contact#register',
   PRIVACY_POLICY: 'privacy-policy',
   SAFEGUARDING: 'safeguarding-and-protection-policy',
-  PRIVACY_POLICY_SAFEGUARDING: 'policies-and-safeguarding',
+  POLICIES_AND_SAFEGUARDING: 'policies-and-safeguarding',
   FORMS: {
     Parents: 'https://form.jotform.com/252963757028063',
     Tutors: 'https://form.jotform.com/252974916520362',
