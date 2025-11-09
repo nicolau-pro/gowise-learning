@@ -52,7 +52,7 @@ const Header = () => {
 
         <ul>
           {Links.map((link) => (
-            <li key={link.name}>
+            <li key={link.path}>
               <Link
                 to={`${Paths.HOME}${link.path}`}
                 className={CurrentPath === link.path ? 'current' : null}

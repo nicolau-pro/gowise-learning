@@ -4,7 +4,6 @@ import Button from 'atoms/Button';
 import { JoinClasses } from 'utils';
 
 export default function Hero({ data }) {
-  console.log(data);
   return (
     <Section
       className={JoinClasses(['hero', data.strip ? 'sliding-strip' : 'no-strip'])}
