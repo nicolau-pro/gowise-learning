@@ -54,7 +54,7 @@ function Page() {
                 </span>
               </Link>
               {SocialData.map((item) => (
-                <Link to={item.link} target="_blank" rel="noopener noreferrer">
+                <Link key={item.link} to={item.link} target="_blank" rel="noopener noreferrer">
                   <Icon>open_in_new</Icon>
                   <span className="text">
                     <span className="channel">{item.network}: </span>
