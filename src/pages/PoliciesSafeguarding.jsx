@@ -47,9 +47,16 @@ function Page() {
                   <hr />
                   <h2 className="h4">{title}</h2>
                   <p>{description}</p>
-                  <a href={`/policies/${path}`}>
+                  {/* <Link to={`/policies/${path}`}>
                     <Icon className="icon">open_in_new</Icon> <span>{title}</span>
-                  </a>
+                  </Link> */}
+
+                  <details data-link="pdf" open>
+                    <summary>
+                      <Icon className="icon">open_in_new</Icon> <span>{title}</span>
+                    </summary>
+                    {`/policies/${path}`}
+                  </details>
                 </div>
               ))}
             </Col>
