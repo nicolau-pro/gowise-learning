@@ -7,12 +7,12 @@ const data = {
   ABOUT: 'about-us',
   CONTACT: 'contact',
   CONTACT_FORMS: '/contact#register',
-  POLICIES_AND_SAFEGUARDING: 'policies-and-safeguarding',
   FORMS: {
     Parents: 'https://form.jotform.com/252963757028063',
     Tutors: 'https://form.jotform.com/252974916520362',
     Schools: 'https://form.jotform.com/252974758283372',
   },
+  POLICIES_AND_SAFEGUARDING: 'policies-and-safeguarding',
   POLICIES: {
     ABSENCE_AND_SICKNESS: {
       path: 'GoWise_Learning_Absence_and_Sickness_Policy.pdf',
