@@ -46,11 +46,11 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col style={{ paddingTop: '0.5em' }}>
-                <Link to={Paths.SAFEGUARDING} className="strong hidden-decoration fit-text">
-                  Safeguarding and Protection Policy
-                </Link>
-                <Link to={Paths.PRIVACY_POLICY} className="strong hidden-decoration fit-text">
-                  Privacy Policy
+                <Link
+                  to={Paths.PRIVACY_POLICY_SAFEGUARDING}
+                  className="strong hidden-decoration fit-text"
+                >
+                  Policies and Safeguarding
                 </Link>
               </Col>
               <Col></Col>

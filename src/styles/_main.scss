@@ -1,3 +1,4 @@
+@use 'colors';
 @use 'variables' as vars;
 
 main {
@@ -133,5 +134,23 @@ footer {
   .desktop-hidden {
     outline: 3px solid red;
     display: none !important;
+  }
+}
+
+.policy-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+
+  hr {
+    margin-bottom: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: colors.$primary;
+    font-size: 1.3em;
+    width: max-content;
   }
 }
