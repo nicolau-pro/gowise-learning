@@ -26,7 +26,7 @@ function Page() {
     <>
       <MetaTags
         section="About Us"
-        description="About Us"
+        description="We focus on the whole child. Academic progress is always linked with wellbeing, confidence and social-emotional growth. By combining holistic support with professional expertise, we help children grow in resilience, self-esteem and motivation - skills that carry them far beyond the classroom."
         url={`${Paths.ROOT}/${Paths.ABOUT}`}
         image="/social/GoWise-Learning.jpg"
       />

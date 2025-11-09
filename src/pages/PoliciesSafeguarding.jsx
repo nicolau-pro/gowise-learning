@@ -43,7 +43,7 @@ function Page() {
           <Row>
             <Col>
               {Object.values(Paths.POLICIES).map(({ title, description, path }) => (
-                <div key={path} className="policy-item">
+                <div key={title} className="policy-item">
                   <hr />
                   <h2 className="h4">{title}</h2>
                   <p>{description}</p>
