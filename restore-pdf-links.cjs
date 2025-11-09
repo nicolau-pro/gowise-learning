@@ -30,7 +30,7 @@ function processDir(dir) {
             .replace(/<Icon\b[^>]*>([\s\S]*?)<\/Icon>/gi, '<span class="icon">$1</span>')
             .trim();
 
-          return `<a href="${pdfPath}" data-discover="true">${cleanedSummary}</a>`;
+          return `<a href="${pdfPath}" target="_blank" rel="noopener noreferrer" data-discover="true">${cleanedSummary}</a>`;
         }
       );
 
