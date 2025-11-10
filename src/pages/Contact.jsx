@@ -42,14 +42,14 @@ function Page() {
               <Link to={ContactData.Phone.link} target="_blank" rel="noopener noreferrer">
                 <Icon>{ContactData.Phone.icon}</Icon>
                 <span className="text">
-                  <span className="channel">Phone: </span>
+                  <span className="channel small-mobile-hidden">Phone: </span>
                   <span>{ContactData.Phone.text}</span>
                 </span>
               </Link>
               <Link to={ContactData.Email.link} target="_blank" rel="noopener noreferrer">
                 <Icon>{ContactData.Email.icon}</Icon>
                 <span className="text">
-                  <span className="channel">Email: </span>
+                  <span className="channel small-mobile-hidden">Email: </span>
                   <span>{ContactData.Email.text}</span>
                 </span>
               </Link>

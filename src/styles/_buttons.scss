@@ -54,4 +54,9 @@ a[role='button'] {
     font-family: vars.$font-headings-compact;
     font-size: 22px;
   }
+
+  @media (max-width: vars.$mobile-break-small) {
+    font-size: 18px;
+    height: 48px;
+  }
 }

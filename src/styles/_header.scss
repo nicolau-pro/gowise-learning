@@ -122,8 +122,8 @@ header {
             font-size: 13px;
           }
 
-          @media (max-width: 399px) {
-            font-size: 12px;
+          @media (max-width: vars.$mobile-break-small) {
+            font-size: 11px;
           }
         }
 

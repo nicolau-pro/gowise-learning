@@ -129,6 +129,11 @@ footer {
     gap: 0 !important;
   }
 }
+@media (max-width: vars.$mobile-break-small) {
+  .small-mobile-hidden {
+    display: none !important;
+  }
+}
 
 @media (min-width: vars.$mobile-break-min) {
   .desktop-hidden {
