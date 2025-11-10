@@ -73,7 +73,8 @@ const Footer = () => {
                 <p className="copyright">
                   ©2025 GoWise Learing / Anamaria Blanaru. All images and logos are proprietary to
                   their respective owners. GoWise Learning is a trading name of Moms Academy Limited
-                  Registered in England and Wales. Company Number: 15618195
+                  Registered in England and Wales. Company Number: 15618195. Registered Office
+                  Address: 167-169 Great Portland Street, 5th Floor, London W1W 5PF
                   {/* Registered Office: ??? */}
                 </p>
               </Col>

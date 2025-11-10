@@ -45,53 +45,53 @@ function Page() {
           <Row>
             <Col>
               <p className="large">
-                I've been teaching for as long as I can remember, genuinely, since I was able to
-                speak. Helping others understand, guiding, explaining, calming… it always came
-                naturally. I would lose track of time completely when I was teaching and to this
-                day, that hasn't changed.
+                GoWise Learning was created from a simple vision - to raise the standard of SEND
+                tutoring by combining empathy, structure and evidence- based practice in every
+                interaction with our learners.
               </p>
             </Col>
           </Row>
           <Row>
             <Col>
               <p className="large">
-                Over the past decade, I've worked across education and behaviour support,
-                specialising in children with additional needs. Over the years, I've worked with so
-                many children who just needed to be understood a little differently. Sometimes, when
-                they're overwhelmed or unsure how to express what they're feeling, it can come
-                across as difficult behaviour, but underneath it all, they're often doing their best
-                to cope.
+                Behind this vision is years of insight gathered from education, psychology and
+                hands-on experience supporting children and young people with SEND and SEMH needs.
+                Through my work in schools, colleges, behaviour support and with senior
+                psychologists, I saw how powerfully children respond when learning is consistent,
+                compassionate and built around who they truly are — their strengths, interests and
+                rhythms.
               </p>
             </Col>
           </Row>
           <Row>
             <Col>
               <p className="large">
-                That's why I founded GoWise Learning. Because children with SEND and SEMH deserve
-                more than just tutoring, they deserve someone who truly sees them. Someone who
-                understands their emotions, their triggers, their rhythms. Someone who isn't just
-                trying to get through a lesson, but is willing to PAUSE, CONNECT and GUIDE them
-                forward with patience and insight.
+                At GoWise Learning, we believe children thrive when they are given tools and
+                strategies that speak to them — approaches that match their individual learning
+                styles, personalities and needs. This philosophy underpins everything we do. Our
+                tutors are carefully selected, guided and supported to deliver this vision. Each one
+                shares our belief that real progress begins with understanding the child first, and
+                that academic growth follows naturally when emotional and self-regulation needs are
+                met.
               </p>
             </Col>
           </Row>
           <Row>
             <Col>
               <p className="large">
-                We also care deeply about the people who work with them too. We invest in our
-                tutors' wellbeing and development, because when our team feels supported and
-                confident, they bring their very best to the children they teach.
+                My background as a Qualified Teacher (QTS) with a degree in Psychology, clinical
+                experience with neurodiverse children and adults and a Diploma in Management and
+                Leadership has shaped how GoWise Learning operates: structured, reflective and
+                always human-centred.
               </p>
             </Col>
           </Row>
           <Row>
             <Col>
               <p className="large">
-                GoWise Learning is built on the belief that every learner can flourish when they
-                feel calm in their body, confident in their mind, and connected to the world around
-                them. Our holistic tutors combine empathy, expertise, and genuine care to nurture
-                growth from the inside out, allowing academic progress to follow naturally, as
-                confidence and wellbeing take root.
+                Today, our mission is simple — to help every learner feel safe, capable and inspired
+                to reach their full potential. GoWise Learning is not just about education; it's
+                about creating genuine connections and confidence that last well beyond the lesson.
               </p>
             </Col>
           </Row>
