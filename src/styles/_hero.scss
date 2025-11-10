@@ -30,6 +30,7 @@ section.hero {
       @media (max-width: vars.$mobile-break-max) {
         margin-top: vars.$gap-normal * 0.2;
         line-height: 1.2em;
+        font-size: 2.85em;
       }
     }
 
@@ -42,6 +43,7 @@ section.hero {
 
       @media (max-width: vars.$mobile-break-max) {
         margin-bottom: 0;
+        font-size: 2.5em;
       }
     }
 
@@ -71,7 +73,7 @@ section.hero {
       max-width: 78%;
 
       @media (max-width: vars.$mobile-break-max) {
-        font-size: 19px;
+        font-size: 18px;
         max-width: initial;
         margin-top: vars.$gap-small;
       }
@@ -212,7 +214,7 @@ section.hero {
 
 .hero-logo {
   filter: brightness(1.75);
-  width: min(280px, 50vw);
+  width: min(220px, 60vw);
 }
 
 .hero-small-image {

@@ -95,6 +95,10 @@ article.step {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: vars.$mobile-break-max) {
+        max-width: unset;
+      }
     }
   }
 }
