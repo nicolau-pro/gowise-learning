@@ -12,7 +12,7 @@ const data = {
     Tutors: 'https://form.jotform.com/252974916520362',
     Schools: 'https://form.jotform.com/252974758283372',
   },
-  POLICIES_AND_SAFEGUARDING: 'policies-and-safeguarding',
+  POLICIES_AND_SAFEGUARDING: 'policies',
   POLICIES: {
     ABSENCE_AND_SICKNESS: {
       path: 'GoWise_Learning_Absence_and_Sickness_Policy.pdf',
@@ -73,6 +73,12 @@ const data = {
       title: 'Whistleblowing and Complaints Procedure',
       description:
         'This policy provides a transparent and supportive process for raising concerns or complaints about misconduct, safeguarding issues, or unethical behaviour. It ensures confidentiality, fairness, and protection for individuals who speak up, helping maintain trust, integrity, and safety within GoWise Learning.',
+    },
+    PREVENT_DUTY: {
+      path: 'GoWise_Learning_Prevent_Duty_Policy.pdf',
+      title: 'Prevent Duty Policy',
+      description:
+        "This policy outlines GoWise Learning's commitment to safeguarding children and young people from radicalisation, extremism, and terrorism. It ensures all tutors understand their responsibilities under the Counter-Terrorism and Security Act 2015, follow the Prevent Duty principles, and work with parents, schools, and local authorities to promote safety, inclusion, and early intervention across all learning environments.",
     },
     SAFEGUARDING_AND_PROTECTION: {
       path: 'GoWise_Learning_Safeguarding_and_Protection_Policy_for_Children_and_Young_People.pdf',

@@ -47,7 +47,7 @@ const Footer = () => {
               </Col>
               <Col style={{ paddingTop: '0.5em' }}>
                 <Link to={Paths.POLICIES_AND_SAFEGUARDING} className="strong hidden-decoration">
-                  Policies and Safeguarding
+                  Policies
                 </Link>
               </Col>
               <Col></Col>
