@@ -99,6 +99,10 @@ const data = {
     src: '/media/creative-learning-with-tutor-and-child.webp',
     alt: 'Creative learning with tutor and child',
   },
+  teamHandsTogether: {
+    src: '/media/team-hands-together.webp',
+    alt: 'Diverse team standing in a circle and joining hands together to show unity, teamwork, and collaboration in a modern office setting',
+  },
 };
 
 export default data;

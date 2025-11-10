@@ -3,7 +3,7 @@ import Media from 'media';
 
 const data = {
   strip: false,
-  background: Media.woodenCountingToys,
+  background: Media.teamHandsTogether,
   theme: 'tertiary-dark',
   h1: 'Partnerships',
   subtitle: 'With Schools and Local Authorities',

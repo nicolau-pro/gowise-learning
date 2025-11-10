@@ -39,7 +39,7 @@ const data = [
   {
     theme: 'tertiary',
     contentSide: 'left',
-    image: Media.teacherExplainingMathInClassroom,
+    image: Media.teamHandsTogether,
     title: 'For Schools & Local Authorities',
     subtitle: 'Trusted Partnerships for SEND, SEMH & EHCP Support',
     paragraphs: [
