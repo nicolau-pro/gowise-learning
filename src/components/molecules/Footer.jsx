@@ -43,12 +43,13 @@ const Footer = () => {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link to={Paths.POLICIES_AND_SAFEGUARDING}>
+                      <Icon className="icon">auto_stories</Icon>
+                      <span className="text">Policies</span>
+                    </Link>
+                  </li>
                 </ul>
-              </Col>
-              <Col style={{ paddingTop: '0.5em' }}>
-                <Link to={Paths.POLICIES_AND_SAFEGUARDING} className="strong hidden-decoration">
-                  Policies
-                </Link>
               </Col>
               <Col></Col>
             </Row>
