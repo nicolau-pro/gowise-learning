@@ -98,13 +98,13 @@ function Page() {
             <Col>
               <h3>Our holistic, child-centred approach</h3>
               <p className="large">
-                To meet these needs, we use a blend of UK-recognised, evidence-based approaches such
-                as the SCERTS Model, PECS and Makaton to support communication, alongside Social
-                Stories, to build understanding and social confidence. We also integrate Play
-                Therapy, the DIR/Floortime Model, the PACE Approach and Positive Behaviour Support
-                (PBS) to strengthen emotional regulation, positive behaviour and resilience. This
-                holistic, child-centred approach ensures every learner feels valued, understood and
-                fully supported to achieve their potential - at school, at home and in the wider
+                We use a blend of UK-recognised, evidence-based approaches such as the SCERTS Model,
+                PECS and Makaton to support communication, alongside Social Stories, to build
+                understanding and social confidence. We also integrate Play Therapy, the
+                DIR/Floortime Model, the PACE Approach and Positive Behaviour Support (PBS) to
+                strengthen emotional regulation, positive behaviour and resilience. This holistic,
+                child-centred approach ensures every learner feels valued, understood and fully
+                supported to achieve their potential - at school, at home and in the wider
                 community.
               </p>
               <p className="large">

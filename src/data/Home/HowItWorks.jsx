@@ -36,7 +36,7 @@ const data = [
     contentSide: 'right',
     image: Media.creativeLearningWithTutorAndChild,
     title: 'Step Three:<br/>Paid Trial Session',
-    subtitle: "We recommend starting with a trial session at the tutor's usual rate.",
+    subtitle: 'We recommend starting with a trial session.',
     paragraphs: [
       'This allows your child and tutor to spend a full session together, building rapport and ensuring our approach feels right for your family.',
       "After the trial, we'll follow up with a call or email to gather your feedback and answer any questions. There's no obligation to continue - we want every family to feel completely comfortable before committing.",
@@ -50,7 +50,8 @@ const data = [
     subtitle:
       "If you choose to continue, we'll help you select the tutoring package that best suits your child and your family.",
     paragraphs: [
-      "We work in blocks of four sessions, giving you flexibility to arrange timings directly with your tutor. After the paid trial, we'll invoice for the remaining three sessions in the first block, and thereafter at the start of each new block.",
+      'We work in blocks of four sessions.',
+      " After the paid trial, we'll invoice for the remaining three sessions in the first block, and thereafter at the start of each new block.",
       "Your tutor will provide ongoing updates and feedback, so you can see your child's progress, confidence and love of learning grow with every session.",
     ],
   },
