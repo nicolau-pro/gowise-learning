@@ -29,6 +29,14 @@ section.hero {
       color: white;
     }
 
+    .pre-h1 {
+      color: colors.$warning;
+      font-size: 3em;
+      font-weight: 200;
+      margin-top: vars.$gap-normal;
+      margin-bottom: vars.$gap-normal * -1;
+    }
+
     h2 {
       color: colors.$warning;
       font-size: 51px;
@@ -52,7 +60,7 @@ section.hero {
       color: white;
       font-weight: 300;
       margin-top: vars.$gap-normal;
-      max-width: 70%;
+      max-width: 90%;
 
       @media (max-width: vars.$mobile-break-max) {
         font-size: 19px;

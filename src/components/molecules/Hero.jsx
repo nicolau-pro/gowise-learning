@@ -17,6 +17,8 @@ export default function Hero({ data }) {
     >
       <Row className={`theme-${data.theme}`}>
         <Col>
+          {data.preh1 ? <p className="pre-h1">{data.preh1}</p> : null}
+
           {data.h1Mobile ? (
             <h1 className="hero desktop-hidden mobile-centered">{data.h1Mobile}</h1>
           ) : null}

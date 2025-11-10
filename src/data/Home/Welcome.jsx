@@ -5,13 +5,13 @@ const data = {
   strip: '/media/hero-strip.jpg',
   background: false,
   theme: 'primary',
-  h1: 'WELCOME',
-  h1Mobile: 'Welcome to',
-  subtitle: 'To GoWise Learning',
+  preh1: 'Welcome to GoWise Learning',
+  h1: 'Specialist SEND Tutoring',
+  h1Mobile: 'Specialist SEND Tutoring',
+  subtitle: 'Where every child is seen, heard and supported.',
   subtitleHideMobile: true,
-  h3: `<span>Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs</span>
-  <img class="hero-small-image desktop-hidden" src="/media/creative-learning-with-tutor-and-child.webp" alt="Creative learning with tutor and child" />
-  GoWise Learning is built on the belief that every learner can flourish when they feel calm in their body, confident in their mind and connected to the world around them. Our holistic tutors combine empathy, expertise and genuine care to nurture growth from the inside out, allowing academic progress to follow naturally, as confidence and wellbeing take root.`,
+  h3: `We deliver high-quality 1:1 and small-group SEND tutoring across Carshalton, Sutton, Merton, Wallington, Cheam, Epsom and nearby Surrey areas, supporting children and young people aged 0-25 with Special Educational Needs and Disabilities (SEND), Social, Emotional and Mental Health (SEMH) needs and Education, Health and Care Plans (EHCPs). Our qualified tutors combine emotional, sensory and academic support to create truly individualised learning experiences, ensuring every learner feels safe, understood and motivated to reach their full potential.
+`,
   button: {
     link: Paths.CONTACT_FORMS,
     theme: 'secondary',

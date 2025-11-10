@@ -1,6 +1,6 @@
 const MetaData = {
   website: 'GoWise Learning',
-  motto: 'Every Child. Every Need. Every Possibility.',
+  motto: 'Where every child is seen, heard and supported',
   domain: 'gowiselearning.co.uk',
   fb_app_id: '61582691489833',
 };

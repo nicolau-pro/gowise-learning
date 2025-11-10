@@ -35,7 +35,7 @@ function Page() {
     <>
       <MetaTags
         section="GoWise Learning"
-        description="Qualified Holistic SEND Tutors - Tailored Support for Every Child's Unique Needs."
+        description="Specialist SEND Tutoring That Puts Every Child First"
         url={Paths.ROOT}
         image="/social/GoWise-Learning.jpg"
       />
