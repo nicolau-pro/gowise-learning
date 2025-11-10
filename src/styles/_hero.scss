@@ -25,8 +25,12 @@ section.hero {
     );
 
     .hero {
-      margin-top: vars.$gap-normal;
       color: white;
+      margin-top: vars.$gap-normal;
+      @media (max-width: vars.$mobile-break-max) {
+        margin-top: vars.$gap-normal * 0.2;
+        line-height: 1.2em;
+      }
     }
 
     .pre-h1 {
@@ -35,6 +39,10 @@ section.hero {
       font-weight: 200;
       margin-top: vars.$gap-normal;
       margin-bottom: vars.$gap-normal * -1;
+
+      @media (max-width: vars.$mobile-break-max) {
+        margin-bottom: 0;
+      }
     }
 
     h2 {
@@ -204,8 +212,7 @@ section.hero {
 
 .hero-logo {
   filter: brightness(1.75);
-  width: 280px;
-  margin-bottom: -3em;
+  width: min(280px, 50vw);
 }
 
 .hero-small-image {

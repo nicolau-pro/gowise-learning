@@ -17,15 +17,10 @@ export default function Hero({ data }) {
     >
       <Row className={`theme-${data.theme}`}>
         <Col>
-          {data.preh1 ? <p className="pre-h1">{data.preh1}</p> : null}
-
-          {data.h1Mobile ? (
-            <h1 className="hero desktop-hidden mobile-centered">{data.h1Mobile}</h1>
+          {data.preh1 ? <p className="pre-h1 mobile-hidden">{data.preh1}</p> : null}
+          {data.preh1Mobile ? (
+            <p className="pre-h1 desktop-hidden mobile-centered">{data.preh1Mobile}</p>
           ) : null}
-
-          <h1 className={JoinClasses(['hero', data.h1Mobile ? 'mobile-hidden' : undefined])}>
-            {data.h1}
-          </h1>
 
           {data.h1Mobile ? (
             <h2 className="hero-logo desktop-hidden mobile-centered">
@@ -33,10 +28,15 @@ export default function Hero({ data }) {
             </h2>
           ) : null}
 
+          {data.h1Mobile ? (
+            <h1 className="hero desktop-hidden mobile-centered">{data.h1Mobile}</h1>
+          ) : null}
+          <h1 className={JoinClasses(['hero', data.h1Mobile ? 'mobile-hidden' : undefined])}>
+            {data.h1}
+          </h1>
           <h2 className="mobile-hidden">{data.subtitle}</h2>
-
           <h3
-            className={JoinClasses([data.button ? undefined : 'mb-3', 'mobile-centered'])}
+            className={JoinClasses([data.button ? undefined : 'mb-3'])}
             dangerouslySetInnerHTML={{ __html: data.h3 }}
           />
           {data.buttons ? (
@@ -53,7 +53,6 @@ export default function Hero({ data }) {
               ))}
             </div>
           ) : null}
-
           {data.button ? (
             <div className="hero-one-button">
               <Button
