@@ -14,8 +14,8 @@ const BASE_URL = 'https://gowiselearning.co.uk'; // your root URL
 const SOURCE_DIR = path.join(process.cwd(), '.presite'); // ← changed to .presite
 const OUTPUT_FILE = path.join(process.cwd(), '.presite', 'sitemap.xml');
 
-// === RECURSIVELY GET ALL HTML FILES ===
-function getHtmlFiles(dir) {
+// === RECURSIVELY GET ALL FILES (HTML + /legal) ===
+function getAllFiles(dir) {
   let files = [];
   if (!fs.existsSync(dir)) return files;
   const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -23,8 +23,8 @@ function getHtmlFiles(dir) {
   for (const item of items) {
     const fullPath = path.join(dir, item.name);
     if (item.isDirectory()) {
-      files = files.concat(getHtmlFiles(fullPath));
-    } else if (item.isFile() && item.name.endsWith('.html')) {
+      files = files.concat(getAllFiles(fullPath));
+    } else {
       files.push(fullPath);
     }
   }
@@ -58,17 +58,32 @@ ${xmlUrls}
     process.exit(1);
   }
 
-  // Ensure /public exists
+  // Ensure output directory exists
   const publicDir = path.dirname(OUTPUT_FILE);
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  // Collect all HTML files
-  const htmlFiles = getHtmlFiles(SOURCE_DIR);
+  // Collect all files
+  let allFiles = getAllFiles(SOURCE_DIR);
+
+  // 🚫 Skip unwanted files/folders
+  allFiles = allFiles.filter((file) => {
+    const basename = path.basename(file).toLowerCase();
+    const relPath = path.relative(SOURCE_DIR, file).replace(/\\/g, '/').toLowerCase();
+
+    const isGoogleFile = basename.startsWith('google');
+    const isEmailFolder = relPath.includes('/email/') || relPath.startsWith('email/');
+    const isHtml = file.endsWith('.html');
+    const isLegalFolder = relPath.startsWith('legal/') || relPath.includes('/legal/');
+
+    // ✅ Include all files in /legal/
+    // ✅ Include only .html elsewhere, skipping google* and /email/
+    return isLegalFolder || (isHtml && !isGoogleFile && !isEmailFolder);
+  });
 
   // Build full URLs
-  const urls = htmlFiles.map((file) => {
+  const urls = allFiles.map((file) => {
     const relPath = path.relative(SOURCE_DIR, file);
     const urlPath = relPath
       .replace(/\\/g, '/')
@@ -80,9 +95,9 @@ ${xmlUrls}
   // Generate sitemap content
   const sitemap = createSitemap(urls);
 
-  // Write to /public/sitemap.xml
+  // Write to .presite/sitemap.xml
   fs.writeFileSync(OUTPUT_FILE, sitemap, 'utf8');
 
   console.log(`✅ Sitemap created: ${OUTPUT_FILE}`);
-  console.log(`📄 ${urls.length} URLs added`);
+  console.log(`📄 ${urls.length} URLs added (included /legal/, skipped google*.html & /email/)`);
 })();
