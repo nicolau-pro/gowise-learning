@@ -1,6 +1,6 @@
 $crosshatch-size: 5em;
 $menu-desktop-height: 120px;
-$menu-desktop-block: 200px;
+$menu-desktop-block: 190px;
 $menu-mobile-height: 80px;
 $content-width: 1400px;
 $footer-height: 560px;
@@ -25,4 +25,7 @@ $font-icons: 'Material Icons';
 
 $mobile-break-max: 1024px;
 $mobile-break-min: $mobile-break-max + 1px;
-$mobile-break-small: 399px;
+$mobile-break-medium: 767px;
+$mobile-break-logo: 899px;
+$mobile-break-large: 1279px;
+$mobile-break-small: 374px;

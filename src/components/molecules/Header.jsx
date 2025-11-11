@@ -58,7 +58,7 @@ const Header = () => {
                 className={CurrentPath === link.path ? 'current' : null}
                 aria-label={CurrentPath === link.path ? `${link.name}, current section` : null}
               >
-                <Icon className="desktop-hidden">{link.icon}</Icon>
+                <Icon className="desktop-hidden-large">{link.icon}</Icon>
                 {link.name}
               </Link>
             </li>
