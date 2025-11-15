@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <svg viewBox="0 0 512 512" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
-  <title>bimi-svg-tiny-12-ps</title>
+  <title>bimi-gowise-logo</title>
   <circle cx="256" cy="256" r="256" fill="#FFFFFF"/>
   <path d="M127.4,250c2.75-68.48,59.31-123.34,128.45-123.34.01,0,.02,0,.04,0s.02,0,.04,0c69.14,0,125.69,54.86,128.45,123.34h114c-2.79-131.35-110.5-237.35-242.52-237.35S16.13,118.65,13.33,250h114.06Z" fill="#289aff"/>
   <path d="M255.88,136.36c-63.77.02-115.96,50.52-118.71,113.64h237.42c-2.75-63.11-54.94-113.62-118.71-113.64Z" fill="#f3d350"/>
