@@ -2,7 +2,7 @@
 
 /**
  * Simple sitemap generator
- * Run manually with: npx ./generate-sitemap.js
+ * Run manually with: npx ./generate-sitemap.cjs
  * or automatically from package.json
  */
 
@@ -11,7 +11,7 @@ const path = require('path');
 
 // === CONFIGURATION ===
 const BASE_URL = 'https://gowiselearning.co.uk'; // your root URL
-const SOURCE_DIR = path.join(process.cwd(), '.presite'); // ← changed to .presite
+const SOURCE_DIR = path.join(process.cwd(), '.presite'); // where HTML + legal files are
 const OUTPUT_FILE = path.join(process.cwd(), '.presite', 'sitemap.xml');
 
 // === RECURSIVELY GET ALL FILES (HTML + /legal) ===
@@ -32,21 +32,54 @@ function getAllFiles(dir) {
 }
 
 // === GENERATE XML ===
-function createSitemap(urls) {
-  const xmlUrls = urls
-    .map(
-      (url) => `
+function createSitemap(entries) {
+  function getPriority(url) {
+    const priorityMap = [
+      ['/', 1],
+      ['/parents', 1],
+      ['/tutors', 1],
+      ['/schools-and-local-authorities', 1],
+      ['/contact', 0.8],
+      ['/about-us', 0.6],
+      ['/policies', 0.3],
+    ];
+
+    try {
+      const u = new URL(url);
+
+      // PDF rule — always lowest priority except 0.0
+      if (u.pathname.toLowerCase().endsWith('.pdf')) {
+        return 0.1;
+      }
+
+      let path = u.pathname; // e.g. "/about-us/"
+
+      // Normalize: remove trailing slash except root "/"
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.slice(0, -1); // "/about-us"
+      }
+
+      const match = priorityMap.find(([p]) => p === path);
+      return match ? match[1] : 0.5; // fallback default
+    } catch {
+      return 0.5;
+    }
+  }
+
+  const xmlUrls = entries
+    .map(({ url, lastmod }) => {
+      return `
   <url>
     <loc>${url}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`
-    )
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>${getPriority(url)}</priority>
+  </url>`;
+    })
     .join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
 </urlset>`;
 }
@@ -77,19 +110,27 @@ ${xmlUrls}
     const isHtml = file.endsWith('.html');
     const isLegalFolder = relPath.startsWith('legal/') || relPath.includes('/legal/');
 
-    // ✅ Include all files in /legal/
-    // ✅ Include only .html elsewhere, skipping google* and /email/
+    // ✅ Include everything in /legal/
+    // ✅ Otherwise include only .html and skip google* + /email/
     return isLegalFolder || (isHtml && !isGoogleFile && !isEmailFolder);
   });
 
-  // Build full URLs
+  // Build full URL + lastmod
   const urls = allFiles.map((file) => {
     const relPath = path.relative(SOURCE_DIR, file);
     const urlPath = relPath
       .replace(/\\/g, '/')
       .replace(/index\.html$/, '')
       .replace(/\.html$/, '');
-    return `${BASE_URL}/${urlPath}`;
+
+    // lastmod = YYYY-MM-DD
+    const stats = fs.statSync(file);
+    const lastmod = stats.mtime.toISOString().split('T')[0];
+
+    return {
+      url: `${BASE_URL}/${urlPath}`,
+      lastmod,
+    };
   });
 
   // Generate sitemap content
@@ -99,5 +140,5 @@ ${xmlUrls}
   fs.writeFileSync(OUTPUT_FILE, sitemap, 'utf8');
 
   console.log(`✅ Sitemap created: ${OUTPUT_FILE}`);
-  console.log(`📄 ${urls.length} URLs added (included /legal/, skipped google*.html & /email/)`);
+  console.log(`📄 ${urls.length} URLs added (with lastmod, including /legal/)`);
 })();
