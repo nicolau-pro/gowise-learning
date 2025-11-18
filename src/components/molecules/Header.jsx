@@ -10,16 +10,19 @@ const Header = () => {
   const Links = [
     {
       path: Paths.PARENTS,
+      label: 'Parents',
       name: <span>PARENTS</span>,
       icon: 'supervisor_account',
     },
     {
       path: Paths.TUTORS,
+      label: 'Tutors',
       name: <span>TUTORS</span>,
       icon: 'interactive_space',
     },
     {
       path: Paths.SCHOOLS_AND_LOCAL_AUTORITIES,
+      label: 'Schools and Local Authorities',
       name: (
         <>
           <span>SCHOOLS</span>
@@ -28,8 +31,8 @@ const Header = () => {
       ),
       icon: 'school',
     },
-    { path: Paths.ABOUT, name: <span>ABOUT US</span>, icon: 'diversity_1' },
-    { path: Paths.CONTACT, name: <span>CONTACT</span>, icon: 'emoji_people' },
+    { path: Paths.ABOUT, label: 'About us', name: <span>ABOUT US</span>, icon: 'diversity_1' },
+    { path: Paths.CONTACT, label: 'Contact', name: <span>CONTACT</span>, icon: 'emoji_people' },
   ];
 
   useEffect(() => {
@@ -56,7 +59,7 @@ const Header = () => {
               <Link
                 to={`${Paths.HOME}${link.path}`}
                 className={CurrentPath === link.path ? 'current' : null}
-                aria-label={CurrentPath === link.path ? `${link.name}, current section` : null}
+                aria-label={CurrentPath === link.path ? `${link.label}, current section` : null}
               >
                 <Icon className="desktop-hidden-large">{link.icon}</Icon>
                 {link.name}
