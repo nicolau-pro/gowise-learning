@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router';
-// import ContactData from 'data/Contact';
+
+import CardsData from 'data/Home/Cards';
 
 import Row from 'layout/Row';
 import Col from 'layout/Col';
@@ -8,7 +8,6 @@ import Section from 'layout/Section';
 import MetaTags from 'metaTags';
 import Paths from 'paths';
 import Card from 'components/Card';
-import CardsData from 'data/Home/Cards';
 
 import { useAppState } from 'appState';
 
@@ -23,8 +22,7 @@ function Page() {
     <>
       <MetaTags
         section="Page Not Found"
-        description="Sorry, the page you are looking for doesn't exist or has been moved.
-              "
+        description="Sorry, the page you are looking for doesn't exist or has been moved."
         image="/social/GoWise-Learning.jpg"
         url={Paths.ROOT}
       />
