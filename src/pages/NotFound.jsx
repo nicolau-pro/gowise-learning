@@ -7,7 +7,8 @@ import Col from 'layout/Col';
 import Section from 'layout/Section';
 import MetaTags from 'metaTags';
 import Paths from 'paths';
-import Icon from 'icons';
+import Card from 'components/Card';
+import CardsData from 'data/Home/Cards';
 
 import { useAppState } from 'appState';
 
@@ -38,6 +39,15 @@ function Page() {
                 Sorry, the page you are looking for doesn't exist or has been moved.
               </p>
             </Col>
+          </Row>
+        </Section>
+        <Section className="gap-xl">
+          <Row>
+            {CardsData.map((item) => (
+              <Col key={item.title}>
+                <Card data={item} />
+              </Col>
+            ))}
           </Row>
         </Section>
       </main>

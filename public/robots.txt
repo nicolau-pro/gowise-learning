@@ -1,0 +1,11 @@
+# ------------------------------
+# 🤖 GoWise Learning – robots.txt
+# ------------------------------
+
+User-agent: *
+
+# Allow everything on the public website
+Allow: /
+
+# Sitemap location
+Sitemap: https://gowiselearning.co.uk/sitemap.xml
