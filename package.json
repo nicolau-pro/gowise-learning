@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build-presite": "rimraf dist .presite && vite build && presite ./dist && node remove-js-presite.js && node restore-data-href-links.cjs && node inject-canonicals.cjs && node generate-sitemap.cjs",
+    "build-presite": "rimraf dist .presite && vite build && presite ./dist && node create-404.cjs && node remove-js-presite.js && node restore-data-href-links.cjs && node inject-canonicals.cjs && node generate-sitemap.cjs",
     "build": "vite build",
     "presite": "presite ./dist",
     "post-process": "python src/post.py",
@@ -40,6 +40,9 @@
     "vite": "^7.0.5"
   },
   "presite": {
-    "wait": "#WELCOME"
+    "wait": "#WELCOME",
+    "routes": [
+      "/__presite_404"
+    ]
   }
 }

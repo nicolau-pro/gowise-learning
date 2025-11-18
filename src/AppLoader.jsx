@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import Parents from './pages/Parents';
 import Tutors from './pages/Tutors';
 import Schools from './pages/Schools';
@@ -23,27 +24,24 @@ function AppLoader() {
   return (
     <BrowserRouter>
       <RouteChangeListener onPathChange={handlePathChange} />
+
       <Routes>
+        {/* Main layout */}
         <Route path={Paths.HOME} element={<Dashboard />}>
           <Route index element={<Home />} />
-          <Route path={Paths.PARENTS}>
-            <Route index element={<Parents />} />
-          </Route>
-          <Route path={Paths.TUTORS}>
-            <Route index element={<Tutors />} />
-          </Route>
-          <Route path={Paths.SCHOOLS_AND_LOCAL_AUTORITIES}>
-            <Route index element={<Schools />} />
-          </Route>
-          <Route path={Paths.ABOUT}>
-            <Route index element={<About />} />
-          </Route>
-          <Route path={Paths.CONTACT}>
-            <Route index element={<Contact />} />
-          </Route>
-          <Route path={Paths.POLICIES_AND_SAFEGUARDING}>
-            <Route index element={<PoliciesSafeguarding />} />
-          </Route>
+
+          <Route path={Paths.PARENTS} element={<Parents />} />
+          <Route path={Paths.TUTORS} element={<Tutors />} />
+          <Route path={Paths.SCHOOLS_AND_LOCAL_AUTORITIES} element={<Schools />} />
+          <Route path={Paths.ABOUT} element={<About />} />
+          <Route path={Paths.CONTACT} element={<Contact />} />
+          <Route path={Paths.POLICIES_AND_SAFEGUARDING} element={<PoliciesSafeguarding />} />
+
+          {/* 404 inside Dashboard */}
+          <Route path="*" element={<NotFound />} />
+
+          {/* static 404 for PreSite */}
+          {import.meta.env.VITE_PRESITE && <Route path="/__presite_404" element={<NotFound />} />}
         </Route>
       </Routes>
     </BrowserRouter>
