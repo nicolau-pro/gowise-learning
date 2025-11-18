@@ -68,17 +68,29 @@ const data = {
       description:
         'We set clear expectations for professional conduct, respect, and integrity among our tutors. By upholding strong ethical standards and healthy boundaries, we ensure teaching is consistent, respectful, and student-focused—creating positive, safe, and inspiring learning relationships built on trust and accountability.',
     },
-    WHISTLEBLOWING_AND_COMPLAINTS: {
-      path: 'GoWise_Learning_Whistleblowing_and_Complaints_Procedure.pdf',
-      title: 'Whistleblowing and Complaints Procedure',
-      description:
-        'We encourage open communication and provide a safe, confidential way to raise concerns or complaints. Our fair and transparent process ensures that all issues are handled with care, integrity, and protection for those who speak up—helping us maintain trust, safeguarding, and ethical standards in everything we do.',
-    },
     PREVENT_DUTY: {
       path: 'GoWise_Learning_Prevent_Duty_Policy.pdf',
       title: 'Prevent Duty Policy',
       description:
         'We are committed to protecting children and young people from radicalisation, extremism, and related online risks. Our tutors are trained to identify early warning signs, respond appropriately, and work with parents, schools, and local authorities to create safe, inclusive, and supportive learning environments for every learner.',
+    },
+    COMPLAINTS_POLICY: {
+      path: 'GoWise_Learning_Complaints_Policy.pdf',
+      title: 'Complaints Policy',
+      description:
+        'Outlines how parents, tutors, schools, and partners can raise concerns fairly and transparently. We aim to resolve issues promptly, learn from feedback, and ensure that all complaints are handled professionally, confidentially, and in a way that continually improves the quality of our services.',
+    },
+    PROFESSIONAL_BOUNDARIES: {
+      path: 'GoWise_Learning_Professional_Boundaries_Policy.pdf',
+      title: 'Professional Boundaries Policy',
+      description:
+        'Sets clear expectations for maintaining safe, respectful, and professional relationships between tutors, learners, and families. It outlines conduct standards, communication rules, physical contact guidelines, and reporting duties to ensure transparency, safeguarding, and the protection of everyone involved.',
+    },
+    WHISTLEBLOWING_POLICY: {
+      path: 'GoWise_Learning_Whistleblowing_Policy.pdf',
+      title: 'Whistleblowing Policy',
+      description:
+        'Ensures tutors, staff, parents, and partners can raise concerns about wrongdoing safely, confidentially, and without fear of retaliation. It explains what whistleblowing is, how to report concerns, and how GoWise Learning investigates issues to protect learners and uphold the highest standards of safety and integrity.',
     },
     SAFEGUARDING_AND_PROTECTION: {
       path: 'GoWise_Learning_Safeguarding_and_Protection_Policy_for_Children_and_Young_People.pdf',
