@@ -97,6 +97,9 @@ function createSitemap(entries) {
   }
 
   // Collect all files
+  let allFiles = getAllFiles(SOURCE_DIR);
+
+  // 🚫 Skip unwanted files/folders
   allFiles = allFiles.filter((file) => {
     const basename = path.basename(file).toLowerCase();
     const relPath = path.relative(SOURCE_DIR, file).replace(/\\/g, '/').toLowerCase();
