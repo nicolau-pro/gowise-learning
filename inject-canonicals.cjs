@@ -23,7 +23,7 @@ function walk(dir) {
 
       const url = BASE + (relative.endsWith('/') ? relative : relative + '/');
 
-      html = html.replace('</head>', `\n\n  <link rel="canonical" href="${url}" />\n</head>`);
+      html = html.replace('</head>', `\n\n  <link rel="canonical" href="${url}">\n</head>`);
 
       fs.writeFileSync(full, html, 'utf8');
     }
