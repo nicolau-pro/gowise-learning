@@ -97,9 +97,6 @@ function createSitemap(entries) {
   }
 
   // Collect all files
-  let allFiles = getAllFiles(SOURCE_DIR);
-
-  // 🚫 Skip unwanted files/folders
   allFiles = allFiles.filter((file) => {
     const basename = path.basename(file).toLowerCase();
     const relPath = path.relative(SOURCE_DIR, file).replace(/\\/g, '/').toLowerCase();
@@ -109,9 +106,12 @@ function createSitemap(entries) {
     const isHtml = file.endsWith('.html');
     const isLegalFolder = relPath.startsWith('legal/') || relPath.includes('/legal/');
 
-    // ✅ Include everything in /legal/
-    // ✅ Otherwise include only .html and skip google* + /email/
-    return isLegalFolder || (isHtml && !isGoogleFile && !isEmailFolder);
+    // 🚫 Exclude 404 page
+    const is404 =
+      relPath === '404.html' || relPath === '404/index.html' || relPath.endsWith('/404.html');
+
+    // Final allow rule
+    return !is404 && (isLegalFolder || (isHtml && !isGoogleFile && !isEmailFolder));
   });
 
   // Build full URL + lastmod
