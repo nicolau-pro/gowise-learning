@@ -1,4 +1,21 @@
 # -------------------------
+# ✅ Force Trailing Slash for Directories (Canonical URLs)
+# -------------------------
+RewriteEngine On
+
+# Do NOT redirect if the request is a real file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Do NOT redirect if URL ends with a known file extension (pdf, images, css, js, etc)
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
+
+# Do NOT redirect if it already has a trailing slash
+RewriteCond %{REQUEST_URI} !/$
+
+# Redirect to URL with trailing slash
+RewriteRule ^(.*)$ https://gowiselearning.co.uk/$1/ [L,R=301]
+
+# -------------------------
 # ✅ Browser Caching for Static Assets
 # -------------------------
 

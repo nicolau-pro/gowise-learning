@@ -73,7 +73,7 @@ function createSitemap(entries) {
     <loc>${url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>${getPriority(url)}</priority>
+    <priority>${getPriority(url).toFixed(1)}</priority>
   </url>`;
     })
     .join('');
