@@ -43,7 +43,7 @@ const data = [
     title: 'For Schools & Local Authorities',
     subtitle: 'Trusted Partnerships for SEND, SEMH & EHCP Support',
     paragraphs: [
-      'We work closely with schools and local authorities to deliver targeted, high-quality support for children with SEND, SEMH needs and those with EHCPs.',
+      'We work closely with schools, local authorities and SEND service partners to deliver targeted, high-quality support for children with SEND, SEMH needs and those with EHCPs.',
       'Our experienced tutors and specialists collaborate with your team to ensure consistent progress, wellbeing and measurable outcomes, so every learner receives the care and attention they deserve.',
     ],
     cta: {

@@ -79,7 +79,7 @@ function Page() {
 
         <Section className="gap-xl">
           <Row className="tight-mobile text-centered">
-            <h2>Our Trusted Team of SEN Tutors & Specialists</h2>
+            <h2>Our Team of Trusted SEN Tutors & Specialists</h2>
           </Row>
         </Section>
 

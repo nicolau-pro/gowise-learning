@@ -6,7 +6,7 @@ const data = [
     theme: 'primary',
     contentSide: 'left',
     image: Media.learningTogetherSupportSession,
-    title: 'Our Team',
+    title: 'Specialist GoWise Tutors, Chosen with Care',
     subtitle: "Where expertise meets empathy to bring out every child's best.",
     paragraphs: [
       'At GoWise Learning, we believe that every child deserves to be seen, understood and supported as a whole person, not just as a learner. We only welcome tutors who combine professional expertise with kindness, empathy and a genuine passion for helping children with additional needs thrive.',

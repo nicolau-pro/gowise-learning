@@ -10,8 +10,9 @@ const data = [
     title: 'Step One:<br/>Free Consultation',
     paragraphs: [
       "Begin your child's journey by completing our short enquiry form — take your time to tell us about their learning needs, interests and goals. After carefully reviewing the information you've shared, our friendly team will get in touch within 2-3 working days.",
-      `Alternatively, you can get in touch with us directly and book a free consultation with one of our friendly education consultants. Call us on <a href="${ContactData.Phone.link}">${ContactData.Phone.text}</a> or email us at <a href="${ContactData.Email.link}">${ContactData.Email.text}</a> - we're happy to help.During this conversation, we'll listen carefully and gather all the information needed to create your child's <strong>Individualised Learning Plan (ILP).</strong>`,
-      'This ensures we understand exactly what support will help your child feel safe, confident and ready to learn.',
+      `Alternatively, you can get in touch with us directly and book a free consultation with one of our friendly education consultants. Call us on <a href="${ContactData.Phone.link}">${ContactData.Phone.text}</a> or email us at <a href="${ContactData.Email.link}">${ContactData.Email.text}</a> - we're happy to help.During this conversation, we'll listen carefully and gather all the information needed to create your child's <strong>Individualised Learning Plan (ILP)</strong>. This ensures we understand exactly what support will help your child feel safe, confident and ready to learn.`,
+
+      "To begin the matching process and prepare your child's ILP, a small non-refundable admin fee applies, as outlined in our Terms of Service.",
     ],
     cta: {
       link: Paths.FORMS.Parents,
@@ -51,7 +52,7 @@ const data = [
       "If you choose to continue, we'll help you select the tutoring package that best suits your child and your family.",
     paragraphs: [
       'We work in blocks of four sessions.',
-      " After the paid trial, we'll invoice for the remaining three sessions in the first block, and thereafter at the start of each new block.",
+      'After the paid trial session, if you decide to continue, we will invoice you for your first full block of four sessions. Each block is paid in advance to ensure consistent, uninterrupted support for your child.',
       "Your tutor will provide ongoing updates and feedback, so you can see your child's progress, confidence and love of learning grow with every session.",
     ],
   },

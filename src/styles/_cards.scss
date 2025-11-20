@@ -30,13 +30,14 @@
 
     h2 {
       font-size: 40px;
+      line-height: 66px;
       height: 60px;
     }
 
     h3 {
       font-size: 30px;
       height: 39px;
-      line-height: 1em;
+      line-height: 30px;
       font-weight: 500;
       @media (max-width: vars.$mobile-break-max) {
         font-size: 21px;

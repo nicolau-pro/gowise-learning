@@ -29,8 +29,8 @@ function Page() {
   return (
     <>
       <MetaTags
-        section="Partnerships with Schools and Local Authorities"
-        description="At GoWise Learning, we believe the best outcomes happen when we work together. Collaboration between families, schools, and local authorities is at the heart of everything we do. By putting each child's wellbeing and academic development at the centre, we make sure support is meaningful, consistent, and effective."
+        section="Partnerships with Schools, Local Authorities and SEND Service Partners"
+        description="At GoWise Learning, we believe the best outcomes happen when we work together. Collaboration between families, schools, local authorities, and SEND service partners is at the heart of everything we do. Putting each child's wellbeing and academic development at the centre, ensures support is meaningful, consistent and effective."
         image="/social/GoWise-Learning.jpg"
         url={`${Paths.ROOT}/${Paths.SCHOOLS_AND_LOCAL_AUTORITIES}`}
       />
@@ -61,7 +61,7 @@ function Page() {
         <Section className="gap-xl">
           <Row className="tight-mobile">
             <h4 className="color-secondary mobile-centered">
-              Get in touch to explore how we can support your school or local authority:
+              Get in touch to explore how we can support your organisation:
             </h4>
           </Row>
           <Row nogap>

@@ -32,11 +32,11 @@ const data = [
     },
   },
   {
-    title: 'Schools,',
-    subtitle: 'Local Authorities',
-    titleFooter: 'Schools & Local Authorities',
+    title: 'Local Authorities,',
+    subtitle: 'Schools, SEND service partners',
+    titleFooter: 'Schools, Local Authorities and SEND Service Partners',
     details:
-      'We work closely with schools and local authorities to deliver targeted, high-quality support for children with SEND, SEMH needs and those with EHCPs.',
+      'We work closely with schools, local authorities and SEND service partners to deliver targeted, high-quality support for children with SEND, SEMH needs and those with EHCPs.',
     image: Media.teamHandsTogether,
     theme: 'light',
     button: {

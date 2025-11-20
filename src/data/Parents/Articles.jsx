@@ -5,7 +5,7 @@ const data = [
     theme: 'primary',
     contentSide: 'left',
     image: Media.teacherSupportingChildLearning,
-    title: 'EHCP-Ready',
+    title: 'Your Child, Their Needs, Our Support',
     subtitle: 'Every child is unique',
     paragraphs: [
       'Especially when it comes to Special Educational Needs and Disabilities (SEND) and children with neurodiverse profiles.',
@@ -17,9 +17,9 @@ const data = [
     theme: 'primary',
     contentSide: 'right',
     image: Media.teacherPaintingActivity,
-    title: 'Hand-picked, quality tutors',
+    title: 'Specialist GoWise Tutors, Chosen with Care',
     subtitle:
-      "We know that trusting someone else with your child's learning and wellbeing can feel like a big step",
+      "We know that trusting someone else with your child's learning and wellbeing can feel like an important step",
     paragraphs: [
       "That's why our approach is transparent, professional, and rooted in genuine care.",
       'Parents who work with us often tell us they feel a sense of relief, knowing their child is not only supported academically but is also happy, safe, and progressing at their own pace.',
