@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAppState } from 'appState';
 import MetaTags from 'metaTags';
 import Paths from 'paths';
+import ContactData from 'data/Contact';
 
 import Row from 'layout/Row';
 import Col from 'layout/Col';
@@ -67,14 +68,27 @@ function Page() {
           </Row>
           <Row nogap>
             <Col />
-            <Col className="text-centered">
+            <Col className="text-centered span-2">
               <Button
-                link={Paths.FORMS.Parents}
+                link={ContactData.Calendy.link}
                 theme="secondary"
-                text="Book a FREE CONSULTATION"
+                text="Book Your Free 30-minute Consultation"
+                className="mb-1"
+                openInNewTab
               />
+              <h4 className="large text-centered">
+                or call <a href="tel:+447398693595">07398 693 595</a>
+              </h4>
             </Col>
             <Col />
+          </Row>
+          <Row nogap>
+            <Col double>
+              <h5 className="large text-centered">
+                Select a time that suits you and let's explore how we can help your child feel safe,
+                confident and ready to learn again.
+              </h5>
+            </Col>
           </Row>
         </Section>
       </main>

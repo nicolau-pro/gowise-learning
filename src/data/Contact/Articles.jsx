@@ -1,4 +1,5 @@
 import Paths from 'paths';
+import ContactData from 'data/Contact';
 import Media from 'media';
 
 const data = [
@@ -13,10 +14,10 @@ const data = [
       'At GoWise Learning, we believe every child deserves the right support to reach their full potential, whether they need help catching up, stretching further or managing additional learning challenges.',
     ],
     cta: {
-      link: Paths.FORMS.Parents,
+      link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'primary',
-      text: 'Discover How We Support You',
+      text: "Book a Free 30' Consultation",
     },
   },
   {

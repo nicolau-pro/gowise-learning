@@ -62,7 +62,7 @@ export default function Hero({ data }) {
                 openInNewTab={data.button.openInNewTab}
                 theme={data.button.theme}
                 text={data.button.text}
-                textMobile={button.textMobile}
+                textMobile={data.button.textMobile}
               />
             </div>
           ) : null}

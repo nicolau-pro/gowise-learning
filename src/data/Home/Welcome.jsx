@@ -1,5 +1,4 @@
 import Persons from 'data/Persons';
-import Paths from 'paths';
 import ContactData from 'data/Contact';
 
 const data = {
@@ -17,7 +16,7 @@ const data = {
 `,
   buttons: [
     {
-      link: ContactData.Calendy.min30,
+      link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'secondary',
       text: 'Book Your Free 30-minute Consultation',

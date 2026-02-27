@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAppState } from 'appState';
 import MetaTags from 'metaTags';
 import Paths from 'paths';
+import ContactData from 'data/Contact';
 
 import { Section, Row, Col } from 'layout';
 // import { JoinClasses } from "utils";
@@ -52,6 +53,18 @@ function Page() {
                 <Card data={item} />
               </Col>
             ))}
+          </Row>
+        </Section>
+
+        <Section>
+          <Row>
+            <Col>
+              <h2 className="text-centered h3 color-secondary">
+                We currently support families across Carshalton, Sutton, Croydon, Merton,
+                Wallington, Cheam, Epsom and surrounding Surrey areas and are available to work with
+                local authorities where specialist provision is required.
+              </h2>
+            </Col>
           </Row>
         </Section>
 
@@ -248,10 +261,11 @@ function Page() {
         <Row nogap>
           <Col>
             <Button
-              link={Paths.CONTACT_FORMS}
+              link={ContactData.Calendy.link}
               theme="primary"
               text="Book Your Free 30-minute Consultation"
               className="mt-3 px-1 mb-1"
+              openInNewTab
             />
             <h2 className="large text-centered h4">
               or call <a href="tel:+447398693595">07398 693 595</a>
@@ -262,10 +276,10 @@ function Page() {
         <Section>
           <Row nogap>
             <Col double>
-              <h2 className="large text-centered h5">
+              <h3 className="large text-centered h5">
                 Select a time that suits you and let's explore how we can help your child feel safe,
                 confident and ready to learn again.
-              </h2>
+              </h3>
             </Col>
           </Row>
         </Section>

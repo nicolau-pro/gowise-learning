@@ -10,7 +10,9 @@ const data = {
     icon: 'mail',
   },
   Calendy: {
-    min30: 'https://calendly.com/gowiselearning-info/30min',
+    text: 'Book a free consultation',
+    link: 'https://calendly.com/gowiselearning-info/30min',
+    icon: 'open_in_new',
   },
 };
 
