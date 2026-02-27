@@ -53,6 +53,13 @@ function Page() {
                   <span>{ContactData.Email.text}</span>
                 </span>
               </Link>
+              <Link to={ContactData.Calendy.link} target="_blank" rel="noopener noreferrer">
+                <Icon>{ContactData.Calendy.icon}</Icon>
+                <span className="text">
+                  <span className="channel small-mobile-hidden">Calendy: </span>
+                  <span>{ContactData.Calendy.text}</span>
+                </span>
+              </Link>
               {SocialData.map((item) => (
                 <Link key={item.link} to={item.link} target="_blank" rel="noopener noreferrer">
                   <Icon>open_in_new</Icon>

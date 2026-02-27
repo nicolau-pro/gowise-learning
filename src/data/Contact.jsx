@@ -9,6 +9,11 @@ const data = {
     link: 'mailto:info@gowiselearning.co.uk',
     icon: 'mail',
   },
+  Calendy: {
+    text: 'Book a free consultation',
+    link: 'https://calendly.com/gowiselearning-info/30min',
+    icon: 'open_in_new',
+  },
 };
 
 export default data;

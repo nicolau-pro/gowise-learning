@@ -43,7 +43,7 @@ const data = [
       "He's happier, calmer and genuinely enjoys being part of his school environment. I couldn't be more thankful for the support and care my son has received.",
     stars: 5,
     person: {
-      name: 'Olivia P.',
+      name: 'Parent of a child with ADHD, Mitcham',
     },
     theme: 'primary',
   },
@@ -52,7 +52,7 @@ const data = [
       "My son's confidence has flourished through his sessions. This is something we had been working toward for a long time.",
     stars: 5,
     person: {
-      name: 'Mia H.',
+      name: 'Parent of a non-verbal autistic child with a PDA profile, Croydon',
     },
     theme: 'tertiary',
   },
@@ -61,7 +61,7 @@ const data = [
       'The creative and structured approach has helped him feel safe, engaged and confident in his learning. Outstanding support and progress.',
     stars: 5,
     person: {
-      name: 'Alice H.',
+      name: 'Parent of a child with SEND, Croydon',
     },
     theme: 'primary',
   },
@@ -69,7 +69,7 @@ const data = [
     quote: "It's amazing to see her enjoying learning and gaining confidence.",
     stars: 5,
     person: {
-      name: 'Emma M.',
+      name: 'Parent of a child with anxiety, Sutton',
     },
     theme: 'tertiary',
   },

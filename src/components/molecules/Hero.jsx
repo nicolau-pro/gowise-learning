@@ -49,6 +49,7 @@ export default function Hero({ data }) {
                   openInNewTab={button.openInNewTab}
                   theme={button.theme}
                   text={button.text}
+                  textMobile={button.textMobile}
                 />
               ))}
             </div>
@@ -61,9 +62,12 @@ export default function Hero({ data }) {
                 openInNewTab={data.button.openInNewTab}
                 theme={data.button.theme}
                 text={data.button.text}
+                textMobile={data.button.textMobile}
               />
             </div>
           ) : null}
+
+          {data.subtext ? <p className="subtext">{data.subtext}</p> : null}
         </Col>
       </Row>
     </Section>
