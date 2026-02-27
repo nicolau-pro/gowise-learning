@@ -9,6 +9,9 @@ const data = {
     link: 'mailto:info@gowiselearning.co.uk',
     icon: 'mail',
   },
+  Calendy: {
+    min30: 'https://calendly.com/gowiselearning-info/30min',
+  },
 };
 
 export default data;

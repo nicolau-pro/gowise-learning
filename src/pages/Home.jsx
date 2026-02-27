@@ -246,17 +246,29 @@ function Page() {
         <TestimonialSection data={TestimonialsData[8]} theme={'tertiary'} />
 
         <Row nogap>
-          <Col />
           <Col>
             <Button
               link={Paths.CONTACT_FORMS}
               theme="primary"
-              text="Book a FREE CONSULTATION"
-              className="my-3 px-1"
+              text="Book Your Free 30-minute Consultation"
+              className="mt-3 px-1 mb-1"
             />
+            <h2 className="large text-centered h4">
+              or call <a href="tel:+447398693595">07398 693 595</a>
+            </h2>
           </Col>
-          <Col />
         </Row>
+
+        <Section>
+          <Row nogap>
+            <Col double>
+              <h2 className="large text-centered h5">
+                Select a time that suits you and let's explore how we can help your child feel safe,
+                confident and ready to learn again.
+              </h2>
+            </Col>
+          </Row>
+        </Section>
       </main>
     </>
   );
