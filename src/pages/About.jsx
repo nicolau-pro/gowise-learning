@@ -54,12 +54,12 @@ function Page() {
           <Row>
             <Col>
               <p className="large">
-                Behind this vision is years of insight gathered from education, psychology and
+                Behind this vision are years of insight gathered from education, psychology and
                 hands-on experience supporting children and young people with SEND and SEMH needs.
-                Through my work in schools, colleges, behaviour support and with senior
-                psychologists, I saw how powerfully children respond when learning is consistent,
-                compassionate and built around who they truly are — their strengths, interests and
-                rhythms.
+                Through my work in schools, colleges, behaviour support, one-to-one holistic
+                tailored tuition, and with senior psychologists, I saw how powerfully children
+                respond when learning is consistent, compassionate and built around who they truly
+                are — their strengths, interests and rhythms.
               </p>
             </Col>
           </Row>

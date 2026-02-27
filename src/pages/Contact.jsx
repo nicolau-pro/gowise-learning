@@ -25,7 +25,7 @@ function Page() {
     <>
       <MetaTags
         section="Contact"
-        description="Working together is the key to every child's success. Whether you're a parent, school or local authority, our friendly team is here to listen, understand your needs and create the right solutions together."
+        description="Working together is the key to every child's success. Whether you're a parent, school, local authority or SEND service partner, our friendly team is here to listen, understand your needs and create the right solutions together."
         url={`${Paths.ROOT}/${Paths.CONTACT}`}
         image="/social/GoWise-Learning.jpg"
       />
