@@ -11,7 +11,7 @@ import PoliciesSafeguarding from './pages/PoliciesSafeguarding';
 
 import Paths from 'paths';
 
-import { useAppState } from './AppStateContext';
+import { useAppState } from 'appState';
 import { RouteChangeListener } from './RouteChangeListener';
 
 function AppLoader() {

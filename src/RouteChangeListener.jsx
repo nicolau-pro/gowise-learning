@@ -6,7 +6,7 @@ export function RouteChangeListener({ onPathChange }) {
 
   useEffect(() => {
     onPathChange(location.pathname);
-  }, [location.pathname]);
+  }, [location.pathname, onPathChange]);
 
   return null;
 }

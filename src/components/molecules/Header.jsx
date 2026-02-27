@@ -37,7 +37,7 @@ const Header = () => {
 
   useEffect(() => {
     setHeaderReady(true);
-  }, []);
+  }, [setHeaderReady]);
 
   return (
     <header>

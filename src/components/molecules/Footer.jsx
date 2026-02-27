@@ -15,7 +15,7 @@ const Footer = () => {
 
   useEffect(() => {
     setFooterReady(true);
-  }, []);
+  }, [setFooterReady]);
 
   return (
     <footer>

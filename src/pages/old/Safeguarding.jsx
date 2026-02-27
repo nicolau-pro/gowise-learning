@@ -17,7 +17,7 @@ function Page() {
 
   useEffect(() => {
     setOutletReady(true);
-  }, []);
+  }, [setOutletReady]);
 
   return (
     <>

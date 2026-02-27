@@ -4,7 +4,7 @@ import { Section, Row, Col } from 'layout';
 import Button from 'atoms/Button';
 
 export default function ArticleSection({ data, className }) {
-  const { title, subtitle, contentSide, theme, paragraphs, image, imageAlt } = data;
+  const { title, subtitle, contentSide, theme, paragraphs, image } = data;
 
   return (
     <Section key={title} className="article">
