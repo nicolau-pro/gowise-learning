@@ -48,7 +48,6 @@ const data = [
     paragraphs: [
       'When we started my son struggled with routines, expectations and understanding how to connect with others. School was overwhelming and he had very limited communication.',
       "Now he's able to take part in school activities, understands what's expected of him, follows routines and even says a few words to express himself. He's eating a much wider variety of foods after being gradually introduced to new textures and tastes. He even takes part in cooking activities, which has helped him feel more confident and curious about trying new things.",
-      ,
     ],
   },
   {

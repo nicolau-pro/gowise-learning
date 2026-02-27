@@ -1,6 +1,5 @@
-import { createContext, useContext, useState } from 'react';
-
-const AppStateContext = createContext();
+import React, { useState } from 'react';
+import { AppStateContext } from 'contexts/AppStateContext.jsx';
 
 export const AppStateProvider = ({ children }) => {
   const [CurrentPath, setCurrentPath] = useState(null);
@@ -21,5 +20,3 @@ export const AppStateProvider = ({ children }) => {
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;
 };
-
-export const useAppState = () => useContext(AppStateContext);
