@@ -17,7 +17,8 @@ const data = [
       link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'primary',
-      text: "Book a Free 30' Consultation",
+      text: ContactData.Calendy.button.short,
+      subtext: ContactData.Calendy.subtext,
     },
   },
   {

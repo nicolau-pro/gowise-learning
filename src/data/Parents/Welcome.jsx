@@ -13,13 +13,13 @@ const data = {
       link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'secondary',
-      text: 'Book Your Free 30-minute Consultation',
-      textMobile: "Book a Free 30' Consultation",
+      text: ContactData.Calendy.button.long,
+      textMobile: ContactData.Calendy.button.shorter,
     },
     {
       link: ContactData.Phone.link,
       theme: 'primary',
-      text: '...or call 07398 693 595',
+      text: `...or call ${ContactData.Phone.short}`,
     },
   ],
 };

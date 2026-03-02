@@ -9,16 +9,17 @@ const data = [
     image: Media.teacherHelpingChildLearning,
     title: 'Step One:<br/>Free Consultation',
     paragraphs: [
-      "Begin your child's journey by completing our short enquiry form — take your time to tell us about their learning needs, interests and goals. After carefully reviewing the information you've shared, our friendly team will get in touch within 2-3 working days.",
-      `Alternatively, you can get in touch with us directly and book a free consultation with one of our friendly education consultants. Call us on <a href="${ContactData.Phone.link}">${ContactData.Phone.text}</a> or email us at <a href="${ContactData.Email.link}">${ContactData.Email.text}</a> - we're happy to help.During this conversation, we'll listen carefully and gather all the information needed to create your child's <strong>Individualised Learning Plan (ILP)</strong>. This ensures we understand exactly what support will help your child feel safe, confident and ready to learn.`,
-
-      "To begin the matching process and prepare your child's ILP, a small non-refundable admin fee applies, as outlined in our Terms of Service.",
+      "Begin your child's journey by booking a free 30-minute consultation at a time that suits you. This is a relaxed opportunity for us to talk about your child's needs, strengths and goals, and explore how we can support them.",
+      `Alternatively, you are welcome to contact us directly to arrange your consultation. Call us on <a href="${ContactData.Phone.link}">${ContactData.Phone.text}</a> or email us at <a href="${ContactData.Email.link}">${ContactData.Email.text}</a> - we are always happy to help.`,
+      "During our conversation, we will listen carefully and gather the key information needed to design your child's Individualised Learning Plan (ILP). This ensures we fully understand the support required to help your child feel safe, confident and ready to learn.",
+      "To begin the personalised matching process and prepare your child's ILP, a small non-refundable administration fee applies, as outlined in our Terms of Service.",
     ],
     cta: {
-      link: Paths.FORMS.Parents,
+      link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'secondary',
-      text: 'Book a FREE CONSULTATION',
+      text: ContactData.Calendy.button.short,
+      subtext: ContactData.Calendy.subtext,
     },
   },
   {
