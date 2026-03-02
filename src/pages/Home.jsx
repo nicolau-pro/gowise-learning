@@ -263,23 +263,20 @@ function Page() {
             <Button
               link={ContactData.Calendy.link}
               theme="primary"
-              text="Book Your Free 30-minute Consultation"
+              text={ContactData.Calendy.button.long}
               className="mt-3 px-1 mb-1"
               openInNewTab
             />
             <h2 className="large text-centered h4">
-              or call <a href="tel:+447398693595">07398 693 595</a>
+              or call <a href={ContactData.Phone.link}>{ContactData.Phone.short}</a>
             </h2>
           </Col>
         </Row>
 
         <Section>
           <Row nogap>
-            <Col double>
-              <h3 className="large text-centered h5">
-                Select a time that suits you and let's explore how we can help your child feel safe,
-                confident and ready to learn again.
-              </h3>
+            <Col>
+              <h3 className="large text-centered h5">{ContactData.Calendy.subtext}</h3>
             </Col>
           </Row>
         </Section>

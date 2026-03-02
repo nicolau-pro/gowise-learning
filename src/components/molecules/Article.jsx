@@ -37,6 +37,7 @@ export default function ArticleSection({ data, className }) {
                     theme={data.cta.theme}
                     text={data.cta.text}
                   />
+                  {data.cta.subtext ? <p className="small mt-1">{data.cta.subtext}</p> : null}
                 </>
               ) : null}
             </div>

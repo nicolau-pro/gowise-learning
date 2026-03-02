@@ -19,18 +19,17 @@ const data = {
       link: ContactData.Calendy.link,
       openInNewTab: true,
       theme: 'secondary',
-      text: 'Book Your Free 30-minute Consultation',
-      textMobile: "Book a Free 30' Consultation",
+      text: ContactData.Calendy.button.long,
+      textMobile: ContactData.Calendy.button.shorter,
     },
     {
       link: ContactData.Phone.link,
       theme: 'primary',
-      text: '...or call 07398 693 595',
+      text: `...or call ${ContactData.Phone.short}`,
     },
   ],
 
-  subtext:
-    "Select a time that suits you and let's explore how we can help your child feel safe, confident and ready to learn again.",
+  subtext: ContactData.Calendy.subtext,
 
   person: {
     ...Persons.AnamariaBlanaru,
